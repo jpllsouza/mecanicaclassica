@@ -29,29 +29,51 @@ document.getElementById("motorForm").addEventListener("submit", function(e) {
     <p>Especializados em restauração e preparação de motores antigos.</p>
   </header>
   <main>
-    <section id="calculadora">
-  <h2>🔧 Calculadora de Dimensionamento de Motor</h2>
-  <form id="motorForm">
-    <label>Diâmetro do cilindro (mm):
-      <input type="number" id="diametro" value="101.4" step="0.01" required>
-    </label><br>
-    <label>Curso do pistão (mm):
-      <input type="number" id="curso" value="76.2" step="0.01" required>
-    </label><br>
-    <label>Número de cilindros:
-      <input type="number" id="cilindros" value="4" required>
-    </label><br>
-    <label>Velocidade média do pistão (m/s):
-      <input type="number" id="vmp" value="17" step="0.1" required>
-    </label><br><br>
+    <form id="motorForm">
+      <h2>Parâmetros de Entrada</h2>
+      <label>Diâmetro do cilindro (mm):<input type="number" id="diametro" step="0.1" required></label>
+      <label>Curso do pistão (mm):<input type="number" id="curso" step="0.1" required></label>
+      <label>Quantidade de cilindros:<input type="number" id="cilindros" required></label>
+      <label>Velocidade média do pistão (m/s):<input type="number" id="vmp" step="0.1"></label>
+      <label>Eficiência volumétrica (%):<input type="number" id="eficiencia" step="0.1"></label>
+      <label>Taxa de compressão:<input type="number" id="taxaCompressao" step="0.1"></label>
+      <label>Pressão de turbo (bar):<input type="number" id="turbo" step="0.1"></label>
+      <label>Graduação do comando:<input type="number" id="comando"></label>
+      <label>Cruzamento de válvulas (graus):<input type="number" id="cruzamento"></label>
+      <label>Levante do comando (mm):<input type="number" id="levante" step="0.01"></label>
+      <label>Diâmetro da válvula de admissão (mm):<input type="number" id="valvula" step="0.01"></label>
+      <label>Tempo do motor (graus):<input type="number" id="tempo"></label>
+      <label>Temperatura de funcionamento (ºC):<input type="number" id="temperatura"></label>
 
-    <button type="submit">Calcular</button>
-  </form>
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="resultados" style="margin-top: 30px;">
+      <h2>Resultados</h2>
+      <p><strong>Deslocamento total:</strong> <span id="deslocamento">0</span> cm³</p>
+      <p><strong>RPM máximo estimado:</strong> <span id="rpm">0</span> rpm</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mecânica Clássica</p>
+  </footer>
+  <script>
+    document.getElementById("motorForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const d = parseFloat(document.getElementById("diametro").value);
+      const c = parseFloat(document.getElementById("curso").value);
+      const n = parseInt(document.getElementById("cilindros").value);
+      const vmp = parseFloat(document.getElementById("vmp").value);
 
-  <div id="resultados" style="margin-top: 20px;">
-    <p><strong>Deslocamento total:</strong> <span id="deslocamento">0</span> cm³</p>
-    <p><strong>RPM máximo estimado:</strong> <span id="rpm">0</span> rpm</p>
-  </div>
+      const pi = 3.14159265359;
+      const volume = (pi * Math.pow(d / 10, 2) / 4) * (c / 10) * n;
+      const rpm = (vmp * 60 * 2) / (c / 1000);
+
+      document.getElementById("deslocamento").innerText = volume.toFixed(2);
+      document.getElementById("rpm").innerText = rpm.toFixed(0);
+    });
+  </script>
+
+  
 </section>
 
     <section>
