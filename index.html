@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8435996809678021"
+     crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Performance de Motores - A. Graham Bell</title>
@@ -237,23 +240,7 @@
             color: var(--primary);
         }
         
-        .gearbox {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .gear-input {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .gear-input label {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-        
+               
         footer {
             text-align: center;
             padding: 20px;
@@ -272,8 +259,6 @@
                 font-size: 14px;
             }
             
-            .gearbox {
-                grid-template-columns: 1fr;
             }
             
             .engine-image img {
@@ -290,7 +275,7 @@
         </header>
         
         <div class="engine-image">
-            <img src="/asset/img/antoinette-v-16-engine-display.jpg" alt="Motor Antoinette V-16" onerror="this.style.display='none'; document.getElementById('engine-placeholder').style.display='block';">
+            <img src="asset/img/antoinette-v-16-engine-display.jpg" alt="Motor Antoinette V-16" onerror="this.style.display='none'; document.getElementById('engine-placeholder').style.display='block';">
             <div id="engine-placeholder" class="engine-placeholder" style="display: none;">⚙️</div>
         </div>
         
@@ -572,6 +557,7 @@
                 const areaPistao = Math.PI * Math.pow(raioPistao, 2);
                 const cilindradaUnitaria = areaPistao * (cursoPistao / 10); // cm³
                 const cilindradaTotal = cilindradaUnitaria * numCilindros;
+                const potenciaAspirada = (cilindradaTotal/1000 * 11.5 * rpmMax) / 716 * 0.85;
                 
                 // Relação R/L corrigida: (1/2 do curso) / comprimento da biela
                 const relacaoRL = (cursoPistao / 2) / tamanhoBiela;
@@ -620,13 +606,17 @@
                 // Torque específico (kgfm por 1000 cm³)
                 const torqueEspecifico = torqueMotorKgfm / (cilindradaTotal / 1000);
                 
-                // Pressão de sobrealimentação necessária
+                // Pressão de sobrealimentação necessária (bar)
                 let pressaoSobre = 0;
-                if (velocidadePistao > 15) {
-                    // Calcular pressão adicional necessária para compensar a alta velocidade do pistão
-                    const fatorPressao = Math.max(0, (velocidadePistao - 15) / 5);
-                    pressaoSobre = 0.5 + (fatorPressao * 0.3); // bar
-                }
+                
+                if (potenciaNecessaria > potenciaAspirada) {
+                // razão de ganho
+                const ganho = potenciaNecessaria / potenciaAspirada;
+
+               // pressão necessária (em bar relativos)
+               pressaoSobre = (ganho *1,15);
+
+               
                 
                 // Exibir resultados formatados
                 document.getElementById('potenciaRoda').textContent = formatNumber(potenciaRoda, 2) + " CV";
