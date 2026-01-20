@@ -555,7 +555,7 @@
                 const areaPistao = Math.PI * Math.pow(raioPistao, 2);
                 const cilindradaUnitaria = areaPistao * (cursoPistao / 10); // cm³
                 const cilindradaTotal = cilindradaUnitaria * numCilindros;
-                const potenciaAspirada = (cilindradaTotal/1000 * 11.5 * rpmMax) / 716 * 0.85;
+                
                 
                 // Relação R/L corrigida: (1/2 do curso) / comprimento da biela
                 const relacaoRL = (cursoPistao / 2) / tamanhoBiela;
@@ -567,6 +567,7 @@
                 
                 // Usar RPM mais realista
                 let rpmMax = Math.min(8000, rpmMaxRealista);
+                const potenciaAspirada = (cilindradaTotal/1000 * 11.5 * rpmMax) / 716 * 0.85;
                 
                 // Velocidade média do pistão
                 const velocidadePistao = (2 * cursoPistao * rpmMax) / 60000; // m/s
