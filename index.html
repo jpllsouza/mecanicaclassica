@@ -641,6 +641,7 @@
                     document.getElementById('torqueEspecifico').textContent = "-";
                     document.getElementById('pressaoSobre').textContent = "-";
                     document.getElementById('avisos').innerHTML = '<p class="helper">Preencha os campos do básico e clique em Calcular.</p>';
+                    limparCamposVisiveis();
                     return;
                 }
                 
@@ -742,6 +743,8 @@
                 // Gerar avisos
                 gerarAvisos(relacaoRL, velocidadePistao, torqueEspecifico, pressaoSobre);
                 
+                limparCamposVisiveis();
+                
             } catch (error) {
                 console.error('Erro no cálculo:', error);
                 alert('Ocorreu um erro durante o cálculo. Verifique os valores informados.');
@@ -836,6 +839,15 @@
             }
             
             return (0.5 * 1.2 * cd * area * Math.pow(velocidade/3.6, 3) + 0.015 * peso * 9.8 * velocidade/3.6) / 735.5;
+        }
+        
+        function limparCamposVisiveis() {
+            const inputs = document.querySelectorAll('.input-section input[type="text"]');
+            inputs.forEach(input => {
+                if (input.offsetParent !== null) {
+                    input.value = '';
+                }
+            });
         }
         
         function atualizarVisibilidadeAvancado() {
