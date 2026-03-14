@@ -11,6 +11,10 @@
       "handle": "filesystem"
     },
     {
+      "src": "/asset/(.*)",
+      "dest": "/asset/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
