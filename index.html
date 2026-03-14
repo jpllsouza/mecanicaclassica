@@ -346,17 +346,7 @@
             <div class="input-section">
                 <div id="Basico" class="tabcontent active">
                     <h3 class="section-title">Potência Necessária (Básico)</h3>
-                    <div class="form-group">
-                        <label for="objetivoBasico">Objetivo:</label>
-                        <select id="objetivoBasico">
-                            <option value="Velocidade">Velocidade Máxima</option>
-                            <option value="Aceleracao">Aceleração (0-100 km/h)</option>
-                            <option value="Rampa">Rampa</option>
-                            <option value="Carga">Arrastar Carga</option>
-                        </select>
-                        <div class="helper">Preencha apenas os campos abaixo. Não precisa de dados do motor, câmbio ou pneus.</div>
-                    </div>
-                    
+                    <div class="helper">Preencha apenas os campos abaixo. Não precisa de dados do motor, câmbio ou pneus.</div>
                     <div id="basicoVelocidade" class="form-grid">
                         <div class="form-group">
                             <label for="velocidadeMaxBasico">Velocidade Máxima Desejada (km/h):</label>
@@ -373,39 +363,6 @@
                         <div class="form-group">
                             <label for="areaFrontalBasico">Área Frontal (m²):</label>
                             <input type="text" id="areaFrontalBasico" value="2,2" placeholder="Use vírgula para decimais">
-                        </div>
-                    </div>
-                    
-                    <div id="basicoAceleracao" class="form-grid hidden">
-                        <div class="form-group">
-                            <label for="tempo0a100Basico">Tempo 0-100 km/h (segundos):</label>
-                            <input type="text" id="tempo0a100Basico" value="8" placeholder="Use vírgula para decimais">
-                        </div>
-                        <div class="form-group">
-                            <label for="pesoVeiculoAcelBasico">Peso do Veículo (kg):</label>
-                            <input type="text" id="pesoVeiculoAcelBasico" value="1200" placeholder="Use vírgula para decimais">
-                        </div>
-                    </div>
-                    
-                    <div id="basicoRampa" class="form-grid hidden">
-                        <div class="form-group">
-                            <label for="inclinacaoRampaBasico">Inclinação da Rampa (%):</label>
-                            <input type="text" id="inclinacaoRampaBasico" value="30" placeholder="Use vírgula para decimais">
-                        </div>
-                        <div class="form-group">
-                            <label for="pesoVeiculoRampaBasico">Peso do Veículo (kg):</label>
-                            <input type="text" id="pesoVeiculoRampaBasico" value="1200" placeholder="Use vírgula para decimais">
-                        </div>
-                    </div>
-                    
-                    <div id="basicoCarga" class="form-grid hidden">
-                        <div class="form-group">
-                            <label for="pesoCargaBasico">Peso da Carga a Arrastar (kg):</label>
-                            <input type="text" id="pesoCargaBasico" value="500" placeholder="Use vírgula para decimais">
-                        </div>
-                        <div class="form-group">
-                            <label for="coeficienteAtritoBasico">Coeficiente de Atrito:</label>
-                            <input type="text" id="coeficienteAtritoBasico" value="0,7" placeholder="Use vírgula para decimais">
                         </div>
                     </div>
                 </div>
@@ -652,10 +609,6 @@
             // Atualizar a aba ativa
             abaAtiva = tabName;
             
-            if (tabName === 'Basico') {
-                atualizarBasico();
-            }
-            
             atualizarVisibilidadeAvancado();
         }
         
@@ -872,85 +825,17 @@
         }
         
         function calcularPotenciaBasico() {
-            const objetivo = document.getElementById('objetivoBasico').value;
+            const velocidade = parseNumber(document.getElementById('velocidadeMaxBasico').value);
+            const peso = parseNumber(document.getElementById('pesoVeiculoBasico').value);
+            const cd = parseNumber(document.getElementById('coeficienteArBasico').value);
+            const area = parseNumber(document.getElementById('areaFrontalBasico').value);
             
-            if (objetivo === 'Velocidade') {
-                const velocidade = parseNumber(document.getElementById('velocidadeMaxBasico').value);
-                const peso = parseNumber(document.getElementById('pesoVeiculoBasico').value);
-                const cd = parseNumber(document.getElementById('coeficienteArBasico').value);
-                const area = parseNumber(document.getElementById('areaFrontalBasico').value);
-                
-                if ([velocidade, peso, cd, area].some(isNaN)) {
-                    alert('Por favor, preencha todos os campos básicos de velocidade com valores numéricos válidos.');
-                    return 0;
-                }
-                
-                return (0.5 * 1.2 * cd * area * Math.pow(velocidade/3.6, 3) + 0.015 * peso * 9.8 * velocidade/3.6) / 735.5;
+            if ([velocidade, peso, cd, area].some(isNaN)) {
+                alert('Por favor, preencha todos os campos básicos com valores numéricos válidos.');
+                return 0;
             }
             
-            if (objetivo === 'Aceleracao') {
-                const tempo0a100 = parseNumber(document.getElementById('tempo0a100Basico').value);
-                const pesoAcel = parseNumber(document.getElementById('pesoVeiculoAcelBasico').value);
-                
-                if ([tempo0a100, pesoAcel].some(isNaN)) {
-                    alert('Por favor, preencha todos os campos básicos de aceleração com valores numéricos válidos.');
-                    return 0;
-                }
-                
-                const energia = 0.5 * pesoAcel * Math.pow(100/3.6, 2);
-                return (energia / tempo0a100) / 735.5;
-            }
-            
-            if (objetivo === 'Rampa') {
-                const inclinacao = parseNumber(document.getElementById('inclinacaoRampaBasico').value);
-                const pesoRampa = parseNumber(document.getElementById('pesoVeiculoRampaBasico').value);
-                const velocidadeRampa = 50;
-                
-                if ([inclinacao, pesoRampa].some(isNaN)) {
-                    alert('Por favor, preencha todos os campos básicos de rampa com valores numéricos válidos.');
-                    return 0;
-                }
-                
-                const angulo = Math.atan(inclinacao/100);
-                const forca = pesoRampa * 9.8 * Math.sin(angulo);
-                return (forca * velocidadeRampa/3.6) / 735.5;
-            }
-            
-            if (objetivo === 'Carga') {
-                const pesoCarga = parseNumber(document.getElementById('pesoCargaBasico').value);
-                const atrito = parseNumber(document.getElementById('coeficienteAtritoBasico').value);
-                const velocidadeCarga = 20;
-                
-                if ([pesoCarga, atrito].some(isNaN)) {
-                    alert('Por favor, preencha todos os campos básicos de carga com valores numéricos válidos.');
-                    return 0;
-                }
-                
-                const forcaAtrito = atrito * pesoCarga * 9.8;
-                return (forcaAtrito * velocidadeCarga/3.6) / 735.5;
-            }
-            
-            return 0;
-        }
-        
-        function atualizarBasico() {
-            const objetivo = document.getElementById('objetivoBasico')?.value;
-            const secVel = document.getElementById('basicoVelocidade');
-            const secAcel = document.getElementById('basicoAceleracao');
-            const secRampa = document.getElementById('basicoRampa');
-            const secCarga = document.getElementById('basicoCarga');
-            
-            if (!secVel) return;
-            
-            secVel.classList.add('hidden');
-            secAcel.classList.add('hidden');
-            secRampa.classList.add('hidden');
-            secCarga.classList.add('hidden');
-            
-            if (objetivo === 'Velocidade') secVel.classList.remove('hidden');
-            if (objetivo === 'Aceleracao') secAcel.classList.remove('hidden');
-            if (objetivo === 'Rampa') secRampa.classList.remove('hidden');
-            if (objetivo === 'Carga') secCarga.classList.remove('hidden');
+            return (0.5 * 1.2 * cd * area * Math.pow(velocidade/3.6, 3) + 0.015 * peso * 9.8 * velocidade/3.6) / 735.5;
         }
         
         function atualizarVisibilidadeAvancado() {
@@ -1031,8 +916,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Configurar o botão calcular
             document.getElementById('calcularBtn').addEventListener('click', calcular);
-            document.getElementById('objetivoBasico')?.addEventListener('change', atualizarBasico);
-            atualizarBasico();
             atualizarVisibilidadeAvancado();
             
             // Adicionar validação em tempo real para os campos numéricos
