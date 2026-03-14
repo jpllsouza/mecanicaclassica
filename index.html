@@ -567,45 +567,47 @@
                     <span class="result-label">Potência Necessária na Roda:</span>
                     <span class="result-value" id="potenciaRoda">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Torque Necessário na Roda (kgfm):</span>
                     <span class="result-value" id="torqueRoda">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Potência no Motor:</span>
                     <span class="result-value" id="potenciaMotor">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Torque no Motor (kgfm):</span>
                     <span class="result-value" id="torqueMotor">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Cilindrada Total:</span>
                     <span class="result-value" id="cilindrada">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Relação R/L:</span>
                     <span class="result-value" id="relacaoRL">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">RPM de Potência Máxima:</span>
                     <span class="result-value" id="rpmMax">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Velocidade Média do Pistão:</span>
                     <span class="result-value" id="velocidadePistao">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Torque Específico:</span>
                     <span class="result-value" id="torqueEspecifico">-</span>
                 </div>
-                <div class="result-item">
+                <div class="result-item result-advanced">
                     <span class="result-label">Pressão de Sobrealimentação:</span>
                     <span class="result-value" id="pressaoSobre">-</span>
                 </div>
                 
-                <h3 class="section-title">Avisos e Recomendações</h3>
-                <div id="avisos"></div>
+                <div class="result-advanced">
+                    <h3 class="section-title">Avisos e Recomendações</h3>
+                    <div id="avisos"></div>
+                </div>
             </div>
         </div>
         
@@ -962,6 +964,10 @@
             avancado.classList.toggle('hidden', !mostrar);
             motor.classList.toggle('hidden', !mostrar);
             trans.classList.toggle('hidden', !mostrar);
+            
+            document.querySelectorAll('.result-advanced').forEach(el => {
+                el.classList.toggle('hidden', !mostrar);
+            });
         }
         
         function calcularEficienciaTransmissao() {
