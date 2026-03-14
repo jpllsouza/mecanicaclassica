@@ -410,6 +410,10 @@
                     </div>
                 </div>
                 
+                <div id="avancadoCampos">
+                    <div class="badge-lite">Avançado</div>
+                </div>
+                
                 <div id="Velocidade" class="tabcontent">
                     <h3 class="section-title">Potência para Velocidade Máxima</h3>
                     <div class="form-group">
@@ -470,84 +474,88 @@
                     </div>
                 </div>
                 
-                <h3 class="section-title">Dados do Motor</h3>
-                <div class="form-group">
-                    <label for="diametroPistao">Diâmetro do Pistão (mm):</label>
-                    <input type="text" id="diametroPistao" value="86" placeholder="Use vírgula para decimais">
-                </div>
-                <div class="form-group">
-                    <label for="cursoPistao">Curso do Pistão (mm):</label>
-                    <input type="text" id="cursoPistao" value="86" placeholder="Use vírgula para decimais">
-                </div>
-                <div class="form-group">
-                    <label for="numCilindros">Número de Cilindros:</label>
-                    <input type="text" id="numCilindros" value="4" placeholder="Use vírgula para decimais">
-                </div>
-                <div class="form-group">
-                    <label for="numValvulas">Número de Válvulas por Cilindro:</label>
-                    <input type="text" id="numValvulas" value="4" placeholder="Use vírgula para decimais">
-                </div>
-                <div class="form-group">
-                    <label for="tamanhoBiela">Tamanho das Bielas (mm):</label>
-                    <input type="text" id="tamanhoBiela" value="150" placeholder="Use vírgula para decimais">
-                </div>
-                
-                <h3 class="section-title">Dados de Transmissão e Pneus</h3>
-                <div class="form-group">
-                    <label for="diametroPneu">Diâmetro do Pneu (mm):</label>
-                    <input type="text" id="diametroPneu" value="650" placeholder="Use vírgula para decimais">
-                </div>
-                <div class="form-group">
-                    <label for="tracao">Tipo de Tração:</label>
-                    <select id="tracao">
-                        <option value="dianteira">Dianteira</option>
-                        <option value="traseira">Traseira</option>
-                        <option value="4x4" selected>4x4 (Integral)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="posicaoMotor">Posição do Motor:</label>
-                    <select id="posicaoMotor">
-                        <option value="dianteiro">Dianteiro Longitudinal</option>
-                        <option value="dianteiroTransversal" selected>Dianteiro Transversal</option>
-                        <option value="central">Central</option>
-                        <option value="traseiro">Traseiro</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Relação de Marchas:</label>
-                    <div class="gearbox">
-                        <div class="gear-input">
-                            <label for="marcha1">1ª Marcha:</label>
-                            <input type="text" id="marcha1" value="3,4" placeholder="Ex: 3,4">
-                        </div>
-                        <div class="gear-input">
-                            <label for="marcha2">2ª Marcha:</label>
-                            <input type="text" id="marcha2" value="2,1" placeholder="Ex: 2,1">
-                        </div>
-                        <div class="gear-input">
-                            <label for="marcha3">3ª Marcha:</label>
-                            <input type="text" id="marcha3" value="1,45" placeholder="Ex: 1,45">
-                        </div>
-                        <div class="gear-input">
-                            <label for="marcha4">4ª Marcha:</label>
-                            <input type="text" id="marcha4" value="1,0" placeholder="Ex: 1,0">
-                        </div>
-                        <div class="gear-input">
-                            <label for="marcha5">5ª Marcha:</label>
-                            <input type="text" id="marcha5" value="0,8" placeholder="Ex: 0,8">
-                        </div>
-                        <div class="gear-input">
-                            <label for="marcha6">6ª Marcha:</label>
-                            <input type="text" id="marcha6" value="0,68" placeholder="Ex: 0,68">
-                        </div>
+                <div id="dadosMotor">
+                    <h3 class="section-title">Dados do Motor</h3>
+                    <div class="form-group">
+                        <label for="diametroPistao">Diâmetro do Pistão (mm):</label>
+                        <input type="text" id="diametroPistao" value="86" placeholder="Use vírgula para decimais">
+                    </div>
+                    <div class="form-group">
+                        <label for="cursoPistao">Curso do Pistão (mm):</label>
+                        <input type="text" id="cursoPistao" value="86" placeholder="Use vírgula para decimais">
+                    </div>
+                    <div class="form-group">
+                        <label for="numCilindros">Número de Cilindros:</label>
+                        <input type="text" id="numCilindros" value="4" placeholder="Use vírgula para decimais">
+                    </div>
+                    <div class="form-group">
+                        <label for="numValvulas">Número de Válvulas por Cilindro:</label>
+                        <input type="text" id="numValvulas" value="4" placeholder="Use vírgula para decimais">
+                    </div>
+                    <div class="form-group">
+                        <label for="tamanhoBiela">Tamanho das Bielas (mm):</label>
+                        <input type="text" id="tamanhoBiela" value="150" placeholder="Use vírgula para decimais">
                     </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="relacaoDiferencial">Relação do Diferencial:</label>
-                    <input type="text" id="relacaoDiferencial" value="3,5" placeholder="Use vírgula para decimais">
+                <div id="dadosTransmissao">
+                    <h3 class="section-title">Dados de Transmissão e Pneus</h3>
+                    <div class="form-group">
+                        <label for="diametroPneu">Diâmetro do Pneu (mm):</label>
+                        <input type="text" id="diametroPneu" value="650" placeholder="Use vírgula para decimais">
+                    </div>
+                    <div class="form-group">
+                        <label for="tracao">Tipo de Tração:</label>
+                        <select id="tracao">
+                            <option value="dianteira">Dianteira</option>
+                            <option value="traseira">Traseira</option>
+                            <option value="4x4" selected>4x4 (Integral)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="posicaoMotor">Posição do Motor:</label>
+                        <select id="posicaoMotor">
+                            <option value="dianteiro">Dianteiro Longitudinal</option>
+                            <option value="dianteiroTransversal" selected>Dianteiro Transversal</option>
+                            <option value="central">Central</option>
+                            <option value="traseiro">Traseiro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Relação de Marchas:</label>
+                        <div class="gearbox">
+                            <div class="gear-input">
+                                <label for="marcha1">1ª Marcha:</label>
+                                <input type="text" id="marcha1" value="3,4" placeholder="Ex: 3,4">
+                            </div>
+                            <div class="gear-input">
+                                <label for="marcha2">2ª Marcha:</label>
+                                <input type="text" id="marcha2" value="2,1" placeholder="Ex: 2,1">
+                            </div>
+                            <div class="gear-input">
+                                <label for="marcha3">3ª Marcha:</label>
+                                <input type="text" id="marcha3" value="1,45" placeholder="Ex: 1,45">
+                            </div>
+                            <div class="gear-input">
+                                <label for="marcha4">4ª Marcha:</label>
+                                <input type="text" id="marcha4" value="1,0" placeholder="Ex: 1,0">
+                            </div>
+                            <div class="gear-input">
+                                <label for="marcha5">5ª Marcha:</label>
+                                <input type="text" id="marcha5" value="0,8" placeholder="Ex: 0,8">
+                            </div>
+                            <div class="gear-input">
+                                <label for="marcha6">6ª Marcha:</label>
+                                <input type="text" id="marcha6" value="0,68" placeholder="Ex: 0,68">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="relacaoDiferencial">Relação do Diferencial:</label>
+                        <input type="text" id="relacaoDiferencial" value="3,5" placeholder="Use vírgula para decimais">
+                    </div>
                 </div>
                 
                 <button class="btn" id="calcularBtn">Calcular Performance</button>
@@ -645,6 +653,8 @@
             if (tabName === 'Basico') {
                 atualizarBasico();
             }
+            
+            atualizarVisibilidadeAvancado();
         }
         
         // Função para obter as relações de marcha
@@ -941,6 +951,19 @@
             if (objetivo === 'Carga') secCarga.classList.remove('hidden');
         }
         
+        function atualizarVisibilidadeAvancado() {
+            const avancado = document.getElementById('avancadoCampos');
+            const motor = document.getElementById('dadosMotor');
+            const trans = document.getElementById('dadosTransmissao');
+            const mostrar = abaAtiva !== 'Basico';
+            
+            if (!avancado || !motor || !trans) return;
+            
+            avancado.classList.toggle('hidden', !mostrar);
+            motor.classList.toggle('hidden', !mostrar);
+            trans.classList.toggle('hidden', !mostrar);
+        }
+        
         function calcularEficienciaTransmissao() {
             const tracao = document.getElementById('tracao').value;
             const posicaoMotor = document.getElementById('posicaoMotor').value;
@@ -1004,6 +1027,7 @@
             document.getElementById('calcularBtn').addEventListener('click', calcular);
             document.getElementById('objetivoBasico')?.addEventListener('change', atualizarBasico);
             atualizarBasico();
+            atualizarVisibilidadeAvancado();
             
             // Adicionar validação em tempo real para os campos numéricos
             const numericInputs = document.querySelectorAll('input[type="text"]');
