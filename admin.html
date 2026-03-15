@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Fichas Técnicas</title>
+  <style>
+    body { font-family: "Poppins", "Segoe UI", Tahoma, sans-serif; background:#f7f8fa; color:#0b0c0f; padding:24px; }
+    .wrap { max-width: 900px; margin: 0 auto; background:#fff; border:1px solid #e6e8ec; border-radius:16px; padding:20px; }
+    h1 { margin-top:0; }
+    .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; }
+    label { display:flex; flex-direction:column; gap:6px; font-weight:600; }
+    input, textarea { border:1px solid #e6e8ec; border-radius:10px; padding:10px 12px; font-size:14px; }
+    button { background:#0b0c0f; color:#fff; border:0; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600; }
+    .row { margin-top:14px; }
+    .note { font-size:12px; color:#6b7280; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Admin - Nova Ficha Técnica</h1>
+    <div class="note">Preencha e clique em Salvar. Use o cabeçalho X-Admin-Key configurado no Vercel.</div>
+
+    <div class="row grid">
+      <label>Marca<input id="make" /></label>
+      <label>Modelo<input id="model" /></label>
+      <label>Ano<input id="year" type="number" /></label>
+      <label>Versão<input id="trim" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Motor (cc)<input id="engine_cc" type="number" /></label>
+      <label>Potência (hp)<input id="power_hp" type="number" /></label>
+      <label>Torque (Nm)<input id="torque_nm" type="number" /></label>
+      <label>Peso (kg)<input id="weight_kg" type="number" /></label>
+      <label>Cx<input id="cd_cx" type="number" step="0.001" /></label>
+      <label>Área frontal (m²)<input id="frontal_area_m2" type="number" step="0.01" /></label>
+      <label>Diâmetro do pneu (mm)<input id="tire_diameter_mm" type="number" /></label>
+      <label>Tração<input id="drivetrain" /></label>
+      <label>Relações de marcha<input id="gear_ratios" placeholder="Ex: 3.4,2.1,1.45,1.0,0.8" /></label>
+      <label>Diferencial<input id="final_drive" type="number" step="0.001" /></label>
+    </div>
+
+    <div class="row">
+      <label>Notas<textarea id="notes" rows="3"></textarea></label>
+    </div>
+
+    <div class="row">
+      <label>Admin Key<input id="admin_key" type="password" /></label>
+    </div>
+
+    <div class="row">
+      <button id="save">Salvar</button>
+      <span id="msg" class="note"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("save").addEventListener("click", async () => {
+      const payload = {
+        make: document.getElementById("make").value,
+        model: document.getElementById("model").value,
+        year: parseInt(document.getElementById("year").value, 10),
+        trim: document.getElementById("trim").value,
+        specs: {
+          engine_cc: toNum("engine_cc"),
+          power_hp: toNum("power_hp"),
+          torque_nm: toNum("torque_nm"),
+          weight_kg: toNum("weight_kg"),
+          cd_cx: toNum("cd_cx"),
+          frontal_area_m2: toNum("frontal_area_m2"),
+          tire_diameter_mm: toNum("tire_diameter_mm"),
+          drivetrain: document.getElementById("drivetrain").value || null,
+          gear_ratios: document.getElementById("gear_ratios").value || null,
+          final_drive: toNum("final_drive"),
+          notes: document.getElementById("notes").value || null
+        }
+      };
+
+      const adminKey = document.getElementById("admin_key").value;
+      const msg = document.getElementById("msg");
+      msg.textContent = "Salvando...";
+
+      const res = await fetch("/api/admin/upsert", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Admin-Key": adminKey
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        msg.textContent = "Salvo com sucesso.";
+      } else {
+        const err = await res.json().catch(() => ({}));
+        msg.textContent = "Erro: " + (err.error || res.status);
+      }
+    });
+
+    function toNum(id) {
+      const v = document.getElementById(id).value;
+      if (!v) return null;
+      const n = Number(v);
+      return Number.isFinite(n) ? n : null;
+    }
+  </script>
+</body>
+</html>

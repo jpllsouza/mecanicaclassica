@@ -24,4 +24,8 @@ async function query(text, params) {
   }
 }
 
-module.exports = { query };
+async function getClient() {
+  return await getPool().connect();
+}
+
+module.exports = { query, getClient };
