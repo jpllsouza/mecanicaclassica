@@ -19,6 +19,10 @@
       "dest": "/api/$1"
     },
     {
+      "src": "/api",
+      "dest": "/api/health"
+    },
+    {
       "src": "/asset/(.*)",
       "dest": "/asset/$1"
     },
