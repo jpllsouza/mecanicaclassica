@@ -31,14 +31,14 @@
     <div class="row grid">
       <label>Motor (cc)<input id="engine_cc" type="number" /></label>
       <label>Potência (hp)<input id="power_hp" type="number" /></label>
-      <label>Torque (Nm)<input id="torque_nm" type="number" /></label>
+      <label>Torque (kgfm)<input id="torque_kgfm" type="text" /></label>
       <label>Peso (kg)<input id="weight_kg" type="number" /></label>
-      <label>Cx<input id="cd_cx" type="number" step="0.001" /></label>
-      <label>Área frontal (m²)<input id="frontal_area_m2" type="number" step="0.01" /></label>
+      <label>Cx<input id="cd_cx" type="text" /></label>
+      <label>Área frontal (m²)<input id="frontal_area_m2" type="text" /></label>
       <label>Diâmetro do pneu (mm)<input id="tire_diameter_mm" type="number" /></label>
       <label>Tração<input id="drivetrain" /></label>
-      <label>Relações de marcha<input id="gear_ratios" placeholder="Ex: 3.4,2.1,1.45,1.0,0.8" /></label>
-      <label>Diferencial<input id="final_drive" type="number" step="0.001" /></label>
+      <label>Relações de marcha<input id="gear_ratios" placeholder="Ex: 3,4 2,1 1,45 1,0 0,8" /></label>
+      <label>Diferencial<input id="final_drive" type="text" /></label>
     </div>
 
     <div class="row">
@@ -65,13 +65,13 @@
         specs: {
           engine_cc: toNum("engine_cc"),
           power_hp: toNum("power_hp"),
-          torque_nm: toNum("torque_nm"),
+          torque_nm: toKgfmToNm("torque_kgfm"),
           weight_kg: toNum("weight_kg"),
           cd_cx: toNum("cd_cx"),
           frontal_area_m2: toNum("frontal_area_m2"),
           tire_diameter_mm: toNum("tire_diameter_mm"),
           drivetrain: document.getElementById("drivetrain").value || null,
-          gear_ratios: document.getElementById("gear_ratios").value || null,
+          gear_ratios: normalizeGearRatios(document.getElementById("gear_ratios").value),
           final_drive: toNum("final_drive"),
           notes: document.getElementById("notes").value || null
         }
@@ -81,7 +81,7 @@
       const msg = document.getElementById("msg");
       msg.textContent = "Salvando...";
 
-      const res = await fetch("/api/admin/upsert", {
+      const res = await fetch("/api/admin-upsert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,8 +101,24 @@
     function toNum(id) {
       const v = document.getElementById(id).value;
       if (!v) return null;
-      const n = Number(v);
+      const n = Number(String(v).replace(",", "."));
       return Number.isFinite(n) ? n : null;
+    }
+    
+    function toKgfmToNm(id) {
+      const v = toNum(id);
+      if (v === null) return null;
+      return v * 9.80665;
+    }
+    
+    function normalizeGearRatios(raw) {
+      if (!raw) return null;
+      const parts = String(raw)
+        .trim()
+        .split(/\s+/)
+        .map(p => p.replace(",", "."))
+        .filter(p => p.length > 0);
+      return parts.length ? parts.join(",") : null;
     }
   </script>
 </body>
