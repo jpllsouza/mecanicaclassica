@@ -29,16 +29,89 @@
     </div>
 
     <div class="row grid">
-      <label>Motor (cc)<input id="engine_cc" type="number" /></label>
-      <label>Potência (hp)<input id="power_hp" type="number" /></label>
+      <label>Instalação do motor<input id="engine_installation" /></label>
+      <label>Disposição<input id="engine_layout" /></label>
+      <label>Cilindros<input id="cylinders" /></label>
+      <label>Tuchos<input id="lifters" /></label>
+      <label>Cilindrada (cc)<input id="engine_cc" type="number" /></label>
+      <label>Cilindrada unitária (cc)<input id="displacement_unit_cc" type="number" /></label>
+      <label>Válvulas por cilindro<input id="valves_per_cyl" type="number" /></label>
+      <label>Razão de compressão<input id="compression_ratio" /></label>
+      <label>Código do motor<input id="engine_code" /></label>
+      <label>Peso/potência (kg/cv)<input id="weight_power_ratio_kg_cv" type="text" /></label>
+      <label>Peso/torque (kg/kgfm)<input id="weight_torque_ratio_kg_kgfm" type="text" /></label>
+      <label>Aspiração<input id="aspiration" /></label>
+      <label>Alimentação<input id="fuel_system" /></label>
+      <label>Comando de válvulas<input id="valve_train" /></label>
+      <label>Acionamento comando<input id="timing_drive" /></label>
+      <label>Diâmetro do cilindro (mm)<input id="bore_mm" type="text" /></label>
+      <label>Curso do pistão (mm)<input id="stroke_mm" type="text" /></label>
+      <label>Potência (cv)<input id="power_cv" type="number" /></label>
+      <label>RPM potência máxima<input id="power_rpm" type="number" /></label>
       <label>Torque (kgfm)<input id="torque_kgfm" type="text" /></label>
-      <label>Peso (kg)<input id="weight_kg" type="number" /></label>
-      <label>Cx<input id="cd_cx" type="text" /></label>
-      <label>Área frontal (m²)<input id="frontal_area_m2" type="text" /></label>
-      <label>Diâmetro do pneu (mm)<input id="tire_diameter_mm" type="number" /></label>
+      <label>RPM torque máximo<input id="torque_rpm" type="number" /></label>
+      <label>Torque específico (kgfm/L)<input id="torque_specific_kgfm_l" type="text" /></label>
+      <label>Potência específica (cv/L)<input id="power_specific_cv_l" type="text" /></label>
+    </div>
+
+    <div class="row grid">
       <label>Tração<input id="drivetrain" /></label>
+      <label>Câmbio<input id="transmission_type" /></label>
+      <label>Acoplamento (embreagem)<input id="clutch" /></label>
       <label>Relações de marcha<input id="gear_ratios" placeholder="Ex: 3,4 2,1 1,45 1,0 0,8" /></label>
       <label>Diferencial<input id="final_drive" type="text" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Suspensão dianteira<input id="front_suspension" /></label>
+      <label>Suspensão traseira<input id="rear_suspension" /></label>
+      <label>Elemento elástico dianteiro<input id="front_spring" /></label>
+      <label>Elemento elástico traseiro<input id="rear_spring" /></label>
+      <label>Freios dianteiros<input id="front_brakes" /></label>
+      <label>Freios traseiros<input id="rear_brakes" /></label>
+      <label>Direção (assistência)<input id="steering_assist" /></label>
+      <label>Diâmetro de giro (m)<input id="turning_diameter_m" type="text" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Pneu dianteiro<input id="front_tire" /></label>
+      <label>Pneu traseiro<input id="rear_tire" /></label>
+      <label>Estepe<input id="spare_tire" /></label>
+      <label>Altura do flanco (mm)<input id="sidewall_height_mm" type="number" /></label>
+      <label>Diâmetro do pneu (mm)<input id="tire_diameter_mm" type="number" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Comprimento (mm)<input id="length_mm" type="number" /></label>
+      <label>Largura (mm)<input id="width_mm" type="number" /></label>
+      <label>Altura (mm)<input id="height_mm" type="number" /></label>
+      <label>Entre-eixos (mm)<input id="wheelbase_mm" type="number" /></label>
+      <label>Bitola dianteira (mm)<input id="front_track_mm" type="number" /></label>
+      <label>Bitola traseira (mm)<input id="rear_track_mm" type="number" /></label>
+      <label>Porta-malas (L)<input id="trunk_l" type="number" /></label>
+      <label>Tanque (L)<input id="fuel_tank_l" type="number" /></label>
+      <label>Peso (kg)<input id="weight_kg" type="number" /></label>
+      <label>Carga útil (kg)<input id="payload_kg" type="number" /></label>
+      <label>Reboque sem freio (kg)<input id="tow_no_brake_kg" type="number" /></label>
+      <label>Reboque com freio (kg)<input id="tow_with_brake_kg" type="number" /></label>
+      <label>Altura mínima do solo (mm)<input id="ground_clearance_mm" type="number" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Área frontal (m²)<input id="frontal_area_m2" type="text" /></label>
+      <label>Área frontal corrigida (m²)<input id="frontal_area_corrected_m2" type="text" /></label>
+      <label>Cx<input id="cd_cx" type="text" /></label>
+    </div>
+
+    <div class="row grid">
+      <label>Velocidade máxima (km/h)<input id="top_speed_kmh" type="number" /></label>
+      <label>0-100 km/h (s)<input id="accel_0_100_s" type="text" /></label>
+      <label>Aceleração lateral (g)<input id="lateral_accel_g" type="text" /></label>
+      <label>Retomada 40-100 km/h (s)<input id="accel_40_100_s" type="text" /></label>
+      <label>Consumo urbano (km/l)<input id="city_km_l" type="text" /></label>
+      <label>Consumo rodoviário (km/l)<input id="highway_km_l" type="text" /></label>
+      <label>Autonomia urbana (km)<input id="city_range_km" type="number" /></label>
+      <label>Autonomia rodoviária (km)<input id="highway_range_km" type="number" /></label>
     </div>
 
     <div class="row">
@@ -63,16 +136,73 @@
         year: parseInt(document.getElementById("year").value, 10),
         trim: document.getElementById("trim").value,
         specs: {
+          engine_installation: document.getElementById("engine_installation").value || null,
+          engine_layout: document.getElementById("engine_layout").value || null,
+          cylinders: document.getElementById("cylinders").value || null,
+          lifters: document.getElementById("lifters").value || null,
           engine_cc: toNum("engine_cc"),
+          displacement_unit_cc: toNum("displacement_unit_cc"),
+          valves_per_cyl: toNum("valves_per_cyl"),
+          compression_ratio: document.getElementById("compression_ratio").value || null,
+          engine_code: document.getElementById("engine_code").value || null,
+          weight_power_ratio_kg_cv: toNum("weight_power_ratio_kg_cv"),
+          weight_torque_ratio_kg_kgfm: toNum("weight_torque_ratio_kg_kgfm"),
+          aspiration: document.getElementById("aspiration").value || null,
+          fuel_system: document.getElementById("fuel_system").value || null,
+          valve_train: document.getElementById("valve_train").value || null,
+          timing_drive: document.getElementById("timing_drive").value || null,
+          bore_mm: toNum("bore_mm"),
+          stroke_mm: toNum("stroke_mm"),
+          power_cv: toNum("power_cv"),
+          power_rpm: toNum("power_rpm"),
           power_hp: toNum("power_hp"),
+          torque_kgfm: toNum("torque_kgfm"),
+          torque_rpm: toNum("torque_rpm"),
           torque_nm: toKgfmToNm("torque_kgfm"),
+          torque_specific_kgfm_l: toNum("torque_specific_kgfm_l"),
+          power_specific_cv_l: toNum("power_specific_cv_l"),
           weight_kg: toNum("weight_kg"),
           cd_cx: toNum("cd_cx"),
           frontal_area_m2: toNum("frontal_area_m2"),
+          frontal_area_corrected_m2: toNum("frontal_area_corrected_m2"),
+          length_mm: toNum("length_mm"),
+          width_mm: toNum("width_mm"),
+          height_mm: toNum("height_mm"),
+          wheelbase_mm: toNum("wheelbase_mm"),
+          front_track_mm: toNum("front_track_mm"),
+          rear_track_mm: toNum("rear_track_mm"),
+          trunk_l: toNum("trunk_l"),
+          fuel_tank_l: toNum("fuel_tank_l"),
+          payload_kg: toNum("payload_kg"),
+          tow_no_brake_kg: toNum("tow_no_brake_kg"),
+          tow_with_brake_kg: toNum("tow_with_brake_kg"),
+          ground_clearance_mm: toNum("ground_clearance_mm"),
           tire_diameter_mm: toNum("tire_diameter_mm"),
           drivetrain: document.getElementById("drivetrain").value || null,
+          transmission_type: document.getElementById("transmission_type").value || null,
+          clutch: document.getElementById("clutch").value || null,
           gear_ratios: normalizeGearRatios(document.getElementById("gear_ratios").value),
           final_drive: toNum("final_drive"),
+          front_suspension: document.getElementById("front_suspension").value || null,
+          rear_suspension: document.getElementById("rear_suspension").value || null,
+          front_spring: document.getElementById("front_spring").value || null,
+          rear_spring: document.getElementById("rear_spring").value || null,
+          front_brakes: document.getElementById("front_brakes").value || null,
+          rear_brakes: document.getElementById("rear_brakes").value || null,
+          steering_assist: document.getElementById("steering_assist").value || null,
+          turning_diameter_m: toNum("turning_diameter_m"),
+          front_tire: document.getElementById("front_tire").value || null,
+          rear_tire: document.getElementById("rear_tire").value || null,
+          spare_tire: document.getElementById("spare_tire").value || null,
+          sidewall_height_mm: toNum("sidewall_height_mm"),
+          top_speed_kmh: toNum("top_speed_kmh"),
+          accel_0_100_s: toNum("accel_0_100_s"),
+          lateral_accel_g: toNum("lateral_accel_g"),
+          accel_40_100_s: toNum("accel_40_100_s"),
+          city_km_l: toNum("city_km_l"),
+          highway_km_l: toNum("highway_km_l"),
+          city_range_km: toNum("city_range_km"),
+          highway_range_km: toNum("highway_range_km"),
           notes: document.getElementById("notes").value || null
         }
       };
