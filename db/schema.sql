@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS specs (
   power_hp INTEGER,
   torque_kgfm NUMERIC(6,2),
   torque_rpm INTEGER,
-  torque_nm INTEGER,
+  torque_nm NUMERIC(8,3),
   torque_specific_kgfm_l NUMERIC(6,2),
   power_specific_cv_l NUMERIC(6,2),
   -- Dimensoes e aerodinamica
