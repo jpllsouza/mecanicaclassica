@@ -229,7 +229,9 @@
     });
 
     function toNum(id) {
-      const v = document.getElementById(id).value;
+      const el = document.getElementById(id);
+      if (!el) return null;
+      const v = el.value;
       if (!v) return null;
       const n = Number(String(v).replace(",", "."));
       return Number.isFinite(n) ? n : null;
