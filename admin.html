@@ -121,6 +121,9 @@
     <div class="row">
       <label>Admin Key<input id="admin_key" type="password" /></label>
     </div>
+    <div class="row note">
+      Use a lista em <a href="/admin-list.html">/admin-list.html</a> para editar fichas.
+    </div>
 
     <div class="row">
       <button id="save">Salvar</button>
@@ -129,6 +132,90 @@
   </div>
 
   <script>
+    async function loadExisting(trimId) {
+      const adminKey = document.getElementById("admin_key").value;
+      if (!adminKey) return;
+      const res = await fetch(`/api/admin/get?trim_id=${trimId}`, {
+        headers: { "X-Admin-Key": adminKey }
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      const set = (id, val) => {
+        const el = document.getElementById(id);
+        if (el && val !== null && val !== undefined) el.value = val;
+      };
+      set("make", data.make);
+      set("model", data.model);
+      set("year", data.year);
+      set("trim", data.trim);
+      set("engine_installation", data.engine_installation);
+      set("engine_layout", data.engine_layout);
+      set("cylinders", data.cylinders);
+      set("lifters", data.lifters);
+      set("engine_cc", data.engine_cc);
+      set("displacement_unit_cc", data.displacement_unit_cc);
+      set("valves_per_cyl", data.valves_per_cyl);
+      set("compression_ratio", data.compression_ratio);
+      set("engine_code", data.engine_code);
+      set("weight_power_ratio_kg_cv", data.weight_power_ratio_kg_cv);
+      set("weight_torque_ratio_kg_kgfm", data.weight_torque_ratio_kg_kgfm);
+      set("aspiration", data.aspiration);
+      set("fuel_system", data.fuel_system);
+      set("valve_train", data.valve_train);
+      set("timing_drive", data.timing_drive);
+      set("bore_mm", data.bore_mm);
+      set("stroke_mm", data.stroke_mm);
+      set("power_cv", data.power_cv);
+      set("power_rpm", data.power_rpm);
+      set("torque_kgfm", data.torque_kgfm);
+      set("torque_rpm", data.torque_rpm);
+      set("torque_specific_kgfm_l", data.torque_specific_kgfm_l);
+      set("power_specific_cv_l", data.power_specific_cv_l);
+      set("drivetrain", data.drivetrain);
+      set("transmission_type", data.transmission_type);
+      set("clutch", data.clutch);
+      set("gear_ratios", data.gear_ratios);
+      set("final_drive", data.final_drive);
+      set("front_suspension", data.front_suspension);
+      set("rear_suspension", data.rear_suspension);
+      set("front_spring", data.front_spring);
+      set("rear_spring", data.rear_spring);
+      set("front_brakes", data.front_brakes);
+      set("rear_brakes", data.rear_brakes);
+      set("steering_assist", data.steering_assist);
+      set("turning_diameter_m", data.turning_diameter_m);
+      set("front_tire", data.front_tire);
+      set("rear_tire", data.rear_tire);
+      set("spare_tire", data.spare_tire);
+      set("sidewall_height_mm", data.sidewall_height_mm);
+      set("tire_diameter_mm", data.tire_diameter_mm);
+      set("length_mm", data.length_mm);
+      set("width_mm", data.width_mm);
+      set("height_mm", data.height_mm);
+      set("wheelbase_mm", data.wheelbase_mm);
+      set("front_track_mm", data.front_track_mm);
+      set("rear_track_mm", data.rear_track_mm);
+      set("trunk_l", data.trunk_l);
+      set("fuel_tank_l", data.fuel_tank_l);
+      set("weight_kg", data.weight_kg);
+      set("payload_kg", data.payload_kg);
+      set("tow_no_brake_kg", data.tow_no_brake_kg);
+      set("tow_with_brake_kg", data.tow_with_brake_kg);
+      set("ground_clearance_mm", data.ground_clearance_mm);
+      set("frontal_area_m2", data.frontal_area_m2);
+      set("frontal_area_corrected_m2", data.frontal_area_corrected_m2);
+      set("cd_cx", data.cd_cx);
+      set("top_speed_kmh", data.top_speed_kmh);
+      set("accel_0_100_s", data.accel_0_100_s);
+      set("lateral_accel_g", data.lateral_accel_g);
+      set("accel_40_100_s", data.accel_40_100_s);
+      set("city_km_l", data.city_km_l);
+      set("highway_km_l", data.highway_km_l);
+      set("city_range_km", data.city_range_km);
+      set("highway_range_km", data.highway_range_km);
+      set("notes", data.notes);
+    }
+
     document.getElementById("save").addEventListener("click", async () => {
       const payload = {
         make: document.getElementById("make").value,
@@ -251,6 +338,13 @@
         .map(p => p.replace(",", "."))
         .filter(p => p.length > 0);
       return parts.length ? parts.join(",") : null;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const trimId = params.get("trim_id");
+    if (trimId) {
+      const adminInput = document.getElementById("admin_key");
+      adminInput.addEventListener("change", () => loadExisting(trimId));
     }
   </script>
 </body>
