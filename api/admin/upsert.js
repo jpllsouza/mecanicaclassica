@@ -94,6 +94,7 @@ module.exports = async function handler(req, res) {
       fuel_system,
       valve_train,
       timing_drive,
+      rod_length_mm,
       bore_mm,
       stroke_mm,
       power_cv,
@@ -164,7 +165,7 @@ module.exports = async function handler(req, res) {
       `INSERT INTO specs (
          trim_id, engine_installation, engine_layout, cylinders, lifters, engine_cc, displacement_unit_cc,
          valves_per_cyl, compression_ratio, engine_code, weight_power_ratio_kg_cv, weight_torque_ratio_kg_kgfm,
-         aspiration, fuel_system, valve_train, timing_drive, bore_mm, stroke_mm, power_cv, power_rpm, power_hp,
+         aspiration, fuel_system, valve_train, timing_drive, rod_length_mm, bore_mm, stroke_mm, power_cv, power_rpm, power_hp,
          torque_kgfm, torque_rpm, torque_nm, torque_specific_kgfm_l, power_specific_cv_l, weight_kg, cd_cx,
          frontal_area_m2, frontal_area_corrected_m2, length_mm, width_mm, height_mm, wheelbase_mm, front_track_mm,
          rear_track_mm, trunk_l, fuel_tank_l, payload_kg, tow_no_brake_kg, tow_with_brake_kg, ground_clearance_mm,
@@ -176,7 +177,7 @@ module.exports = async function handler(req, res) {
        VALUES (
          $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,
          $27,$28,$29,$30,$31,$32,$33,$34,$35,$36,$37,$38,$39,$40,$41,$42,$43,$44,$45,$46,$47,$48,$49,$50,
-         $51,$52,$53,$54,$55,$56,$57,$58,$59,$60,$61,$62,$63,$64,$65,$66,$67,$68,$69
+         $51,$52,$53,$54,$55,$56,$57,$58,$59,$60,$61,$62,$63,$64,$65,$66,$67,$68,$69,$70
        )
        ON CONFLICT (trim_id) DO UPDATE SET
          engine_installation = EXCLUDED.engine_installation,
@@ -194,6 +195,7 @@ module.exports = async function handler(req, res) {
          fuel_system = EXCLUDED.fuel_system,
          valve_train = EXCLUDED.valve_train,
          timing_drive = EXCLUDED.timing_drive,
+         rod_length_mm = EXCLUDED.rod_length_mm,
          bore_mm = EXCLUDED.bore_mm,
          stroke_mm = EXCLUDED.stroke_mm,
          power_cv = EXCLUDED.power_cv,
@@ -264,6 +266,7 @@ module.exports = async function handler(req, res) {
         fuel_system || null,
         valve_train || null,
         timing_drive || null,
+        num(rod_length_mm),
         num(bore_mm),
         num(stroke_mm),
         int(power_cv),

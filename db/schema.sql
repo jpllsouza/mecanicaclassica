@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS specs (
   fuel_system TEXT,
   valve_train TEXT,
   timing_drive TEXT,
+  rod_length_mm NUMERIC(6,2),
   bore_mm NUMERIC(6,2),
   stroke_mm NUMERIC(6,2),
   power_cv INTEGER,
