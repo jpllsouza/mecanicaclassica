@@ -198,7 +198,7 @@
             margin: 0 24px 18px 24px;
             padding: 6px;
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: 6px;
         }
         
@@ -340,6 +340,7 @@
             <button class="tablinks" onclick="openTab(event, 'Aceleracao')">Aceleração</button>
             <button class="tablinks" onclick="openTab(event, 'Rampa')">Rampa</button>
             <button class="tablinks" onclick="openTab(event, 'Carga')">Carga</button>
+            <button class="tablinks" onclick="openTab(event, 'Arrancada')">Arrancada</button>
         </div>
         
         <div class="content">
@@ -448,6 +449,91 @@
                     <div class="form-group">
                         <label for="coeficienteAtrito">Coeficiente de Atrito:</label>
                         <input type="text" id="coeficienteAtrito" placeholder="Use vírgula para decimais">
+                    </div>
+                </div>
+
+                <div id="Arrancada" class="tabcontent">
+                    <h3 class="section-title">Simulação de Arrancada</h3>
+                    <div class="helper">Estimativa com aerodinâmica, rolamento, tração e trocas de marcha.</div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="pesoVeiculoArr">Peso do Veículo (kg):</label>
+                            <input type="text" id="pesoVeiculoArr" placeholder="Use vírgula para decimais">
+                        </div>
+                        <div class="form-group">
+                            <label for="potenciaMotorArr">Potência no Motor (CV):</label>
+                            <input type="text" id="potenciaMotorArr" placeholder="Ex: 200">
+                        </div>
+                        <div class="form-group">
+                            <label for="rpmPotenciaArr">RPM de Potência Máxima:</label>
+                            <input type="text" id="rpmPotenciaArr" placeholder="Ex: 6500">
+                        </div>
+                        <div class="form-group">
+                            <label for="torqueMotorArr">Torque Máximo (kgfm, opcional):</label>
+                            <input type="text" id="torqueMotorArr" placeholder="Ex: 30">
+                        </div>
+                        <div class="form-group">
+                            <label for="shiftRpmArr">RPM de Troca:</label>
+                            <input type="text" id="shiftRpmArr" placeholder="Ex: 6800">
+                        </div>
+                        <div class="form-group">
+                            <label for="shiftTimeArr">Tempo de Troca (s):</label>
+                            <input type="text" id="shiftTimeArr" placeholder="Ex: 0,25">
+                        </div>
+                        <div class="form-group">
+                            <label for="launchRpmArr">RPM de Largada:</label>
+                            <input type="text" id="launchRpmArr" placeholder="Ex: 3500">
+                        </div>
+                        <div class="form-group">
+                            <label for="muPneuArr">Coeficiente de Atrito (μ):</label>
+                            <input type="text" id="muPneuArr" placeholder="Ex: 1,1">
+                        </div>
+                        <div class="form-group">
+                            <label for="pneuPresetArr">Preset de Pneu:</label>
+                            <select id="pneuPresetArr">
+                                <option value="">Manual</option>
+                                <option value="street">Street</option>
+                                <option value="semi">Semi-slick</option>
+                                <option value="slick">Slick</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesoFrenteArr">% Peso na Frente:</label>
+                            <input type="text" id="pesoFrenteArr" placeholder="Ex: 58">
+                        </div>
+                        <div class="form-group">
+                            <label for="alturaCgArr">Altura do CG (m):</label>
+                            <input type="text" id="alturaCgArr" placeholder="Ex: 0,55">
+                        </div>
+                        <div class="form-group">
+                            <label for="entreEixosArr">Entre-eixos (mm):</label>
+                            <input type="text" id="entreEixosArr" placeholder="Ex: 2600">
+                        </div>
+                        <div class="form-group">
+                            <label for="reactionTimeArr">Tempo de Reação (s):</label>
+                            <input type="text" id="reactionTimeArr" placeholder="Ex: 0,20">
+                        </div>
+                        <div class="form-group">
+                            <label for="shiftCutArr">Corte de Torque na Troca (%):</label>
+                            <input type="text" id="shiftCutArr" placeholder="Ex: 40">
+                        </div>
+                        <div class="form-group">
+                            <label for="torqueCurveArr">Curva de Torque:</label>
+                            <select id="torqueCurveArr">
+                                <option value="street">Street (suave)</option>
+                                <option value="sport">Sport (cheia)</option>
+                                <option value="race">Race (alta)</option>
+                                <option value="custom">Custom (tabela)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="torqueTableArr">Tabela RPM×Torque (opcional):</label>
+                            <input type="text" id="torqueTableArr" placeholder="Ex: 2000:18, 3000:22, 4000:26">
+                        </div>
+                        <div class="form-group">
+                            <label>Prévia da Curva:</label>
+                            <canvas id="torqueChartArr" width="360" height="140" style="width:100%;border:1px solid #e6e8ec;border-radius:10px;background:#fff;"></canvas>
+                        </div>
                     </div>
                 </div>
                 
@@ -580,6 +666,22 @@
                     <span class="result-label">Pressão de Sobrealimentação:</span>
                     <span class="result-value" id="pressaoSobre">-</span>
                 </div>
+                <div class="result-item result-drag hidden">
+                    <span class="result-label">1/8 milha:</span>
+                    <span class="result-value" id="dragEighth">-</span>
+                </div>
+                <div class="result-item result-drag hidden">
+                    <span class="result-label">1/4 milha:</span>
+                    <span class="result-value" id="dragQuarter">-</span>
+                </div>
+                <div class="result-item result-drag hidden">
+                    <span class="result-label">1/2 milha:</span>
+                    <span class="result-value" id="dragHalf">-</span>
+                </div>
+                <div class="result-item result-drag hidden">
+                    <span class="result-label">1 milha:</span>
+                    <span class="result-value" id="dragMile">-</span>
+                </div>
                 
                 <div class="result-advanced">
                     <h3 class="section-title">Avisos e Recomendações</h3>
@@ -647,6 +749,10 @@
         // Função principal de cálculo
         function calcular() {
             try {
+                if (abaAtiva === 'Arrancada') {
+                    simularArrancada();
+                    return;
+                }
                 const potenciaRoda = calcularPotenciaRoda();
                 
                 if (abaAtiva === 'Basico') {
@@ -872,23 +978,26 @@
             trans.classList.toggle('hidden', !mostrar);
             
             document.querySelectorAll('.result-advanced').forEach(el => {
-                el.classList.toggle('hidden', !mostrar);
+                el.classList.toggle('hidden', !mostrar || abaAtiva === 'Arrancada');
+            });
+            document.querySelectorAll('.result-drag').forEach(el => {
+                el.classList.toggle('hidden', abaAtiva !== 'Arrancada');
             });
         }
         
         function calcularEficienciaTransmissao() {
-            const tracao = document.getElementById('tracao').value;
-            const posicaoMotor = document.getElementById('posicaoMotor').value;
+            const tracao = String(document.getElementById('tracao').value || '').toLowerCase();
+            const posicaoMotor = String(document.getElementById('posicaoMotor').value || '').toLowerCase();
             
             // Eficiências típicas de transmissão
             let eficiencia = 0.85; // Base para tração traseira
             
-            if (tracao === 'dianteira') eficiencia *= 0.97;
-            else if (tracao === '4x4') eficiencia *= 0.90;
+            if (tracao.includes('dianteira')) eficiencia *= 0.97;
+            else if (tracao.includes('4x4') || tracao.includes('integral')) eficiencia *= 0.90;
             
-            if (posicaoMotor === 'dianteiroTransversal') eficiencia *= 0.98;
-            else if (posicaoMotor === 'central') eficiencia *= 0.95;
-            else if (posicaoMotor === 'traseiro') eficiencia *= 0.92;
+            if (posicaoMotor.includes('dianteiro') && posicaoMotor.includes('transversal')) eficiencia *= 0.98;
+            else if (posicaoMotor.includes('central')) eficiencia *= 0.95;
+            else if (posicaoMotor.includes('traseiro')) eficiencia *= 0.92;
             
             return eficiencia;
         }
@@ -942,10 +1051,27 @@
             // Adicionar validação em tempo real para os campos numéricos
             const numericInputs = document.querySelectorAll('input[type="text"]');
             numericInputs.forEach(input => {
+                if (input.id === 'torqueTableArr') return;
                 input.addEventListener('input', function() {
                     this.value = this.value.replace(/[^0-9,]/g, '');
                 });
             });
+            
+            const presetSelect = document.getElementById('pneuPresetArr');
+            const muInput = document.getElementById('muPneuArr');
+            if (presetSelect && muInput) {
+                presetSelect.addEventListener('change', () => {
+                    const mu = getMuPreset(presetSelect.value);
+                    if (!isNaN(mu)) muInput.value = String(mu).replace('.', ',');
+                });
+            }
+
+            const torqueTableInput = document.getElementById('torqueTableArr');
+            if (torqueTableInput) {
+                const redraw = () => drawTorqueChart(parseTorqueTable(torqueTableInput.value));
+                torqueTableInput.addEventListener('input', redraw);
+                redraw();
+            }
             
             initSelects();
         });
@@ -1005,8 +1131,22 @@
                 setIf('coeficienteAr', specs.cd_cx);
                 setIf('areaFrontalBasico', specs.frontal_area_m2);
                 setIf('areaFrontal', specs.frontal_area_m2);
+                setIf('pesoVeiculoAcel', specs.weight_kg);
+                setIf('tempo0a100', specs.accel_0_100_s);
+                setIf('pesoVeiculoRampa', specs.weight_kg);
+                setIf('pesoCarga', specs.tow_with_brake_kg ?? specs.tow_no_brake_kg);
+                setIf('pesoVeiculoArr', specs.weight_kg);
+                setIf('potenciaMotorArr', specs.power_cv);
+                setIf('rpmPotenciaArr', specs.power_rpm);
+                setIf('torqueMotorArr', specs.torque_kgfm);
+                setIf('entreEixosArr', specs.wheelbase_mm);
+                setIf('diametroPistao', specs.bore_mm);
+                setIf('cursoPistao', specs.stroke_mm);
+                setIf('numCilindros', parseCylinders(specs.cylinders));
+                setIf('numValvulas', specs.valves_per_cyl);
                 setIf('diametroPneu', specs.tire_diameter_mm);
-                setIf('tracao', specs.drivetrain);
+                setSelectText('tracao', mapDrivetrain(specs.drivetrain));
+                setSelectText('posicaoMotor', mapEnginePosition(specs.engine_installation, specs.engine_layout));
                 setIf('relacaoDiferencial', specs.final_drive);
                 setGearRatios(specs.gear_ratios);
             });
@@ -1025,6 +1165,316 @@
                 const input = document.getElementById(`marcha${i+1}`);
                 if (input) input.value = v;
             });
+        }
+
+        function setSelectText(id, text) {
+            if (!text) return;
+            const el = document.getElementById(id);
+            if (!el) return;
+            const opt = Array.from(el.options || []).find(o => o.textContent === text);
+            if (opt) el.value = opt.value;
+        }
+
+        function parseCylinders(value) {
+            if (value === null || value === undefined) return null;
+            const m = String(value).match(/\d+/);
+            return m ? Number(m[0]) : null;
+        }
+
+        function mapDrivetrain(value) {
+            if (!value) return null;
+            const v = String(value).toLowerCase();
+            if (v.includes('fwd') || v.includes('dianteira')) return 'Dianteira';
+            if (v.includes('rwd') || v.includes('traseira')) return 'Traseira';
+            if (v.includes('awd') || v.includes('4x4') || v.includes('integral')) return '4x4 (Integral)';
+            return null;
+        }
+
+        function mapEnginePosition(installation, layout) {
+            const text = [installation, layout].filter(Boolean).join(' ').toLowerCase();
+            if (!text) return null;
+            if (text.includes('central')) return 'Central';
+            if (text.includes('traseir')) return 'Traseiro';
+            if (text.includes('dianteir') && text.includes('long')) return 'Dianteiro Longitudinal';
+            if (text.includes('dianteir') && text.includes('trans')) return 'Dianteiro Transversal';
+            if (text.includes('dianteir')) return 'Dianteiro Transversal';
+            return null;
+        }
+
+        function simularArrancada() {
+            const m = parseNumber(document.getElementById('pesoVeiculoArr').value);
+            const powerCv = parseNumber(document.getElementById('potenciaMotorArr').value);
+            const rpmPower = parseNumber(document.getElementById('rpmPotenciaArr').value);
+            const torqueKgfm = parseNumber(document.getElementById('torqueMotorArr').value);
+            const torqueTableRaw = String(document.getElementById('torqueTableArr').value || '');
+            const shiftRpm = parseNumber(document.getElementById('shiftRpmArr').value);
+            const shiftTime = parseNumber(document.getElementById('shiftTimeArr').value);
+            const launchRpm = parseNumber(document.getElementById('launchRpmArr').value);
+            const muManual = parseNumber(document.getElementById('muPneuArr').value);
+            const preset = String(document.getElementById('pneuPresetArr').value || '');
+            const frontPct = parseNumber(document.getElementById('pesoFrenteArr').value);
+            const cgHeight = parseNumber(document.getElementById('alturaCgArr').value);
+            const wheelbaseMm = parseNumber(document.getElementById('entreEixosArr').value);
+            const reactionTime = parseNumber(document.getElementById('reactionTimeArr').value);
+            const shiftCutPct = parseNumber(document.getElementById('shiftCutArr').value);
+            const torqueCurve = String(document.getElementById('torqueCurveArr').value || 'street');
+            const cd = parseNumber(document.getElementById('coeficienteAr').value);
+            const area = parseNumber(document.getElementById('areaFrontal').value);
+            const crr = 0.015;
+            const tireDia = parseNumber(document.getElementById('diametroPneu').value);
+            const relacaoDiferencial = parseNumber(document.getElementById('relacaoDiferencial').value);
+            const marchas = getRelacoesMarcha();
+            const torqueTable = parseTorqueTable(torqueTableRaw);
+
+            if ([m, powerCv, rpmPower, shiftRpm, shiftTime, launchRpm, frontPct, cgHeight, wheelbaseMm, cd, area, tireDia, relacaoDiferencial].some(isNaN)) {
+                alert('Preencha todos os campos da Arrancada com valores válidos.');
+                return;
+            }
+            if (torqueCurve === 'custom' && (!torqueTable || torqueTable.length < 2)) {
+                alert('Informe a tabela RPM×Torque com pelo menos 2 pontos.');
+                return;
+            }
+
+            const muPreset = getMuPreset(preset);
+            const mu = !isNaN(muManual) ? muManual : muPreset;
+            if (isNaN(mu)) {
+                alert('Informe o coeficiente de atrito ou selecione um preset de pneu.');
+                return;
+            }
+
+            const powerKw = powerCv * 0.7355;
+            const tireRadius = tireDia / 2000;
+            const wheelbase = wheelbaseMm / 1000;
+            const eff = calcularEficienciaTransmissao();
+            const drivetrain = String(document.getElementById('tracao').value || '').toLowerCase();
+            const frontFrac = frontPct / 100;
+            const drivenFrac = drivetrain.includes('dianteira') ? frontFrac : drivetrain.includes('4x4') ? 1.0 : (1 - frontFrac);
+            const torqueBaseNm = !isNaN(torqueKgfm) ? torqueKgfm * 9.80665 : (powerKw * 9550 / rpmPower);
+            const reaction = !isNaN(reactionTime) ? Math.max(0, reactionTime) : 0;
+            const shiftCut = !isNaN(shiftCutPct) ? Math.min(Math.max(shiftCutPct, 0), 100) / 100 : 0.4;
+
+            const targets = [
+                { name: 'dragEighth', dist: 201.168 },
+                { name: 'dragQuarter', dist: 402.336 },
+                { name: 'dragHalf', dist: 804.672 },
+                { name: 'dragMile', dist: 1609.344 }
+            ];
+            const results = simulateDrag({
+                m,
+                powerKw,
+                rpmPower,
+                torqueBaseNm,
+                shiftRpm,
+                shiftTime,
+                launchRpm,
+                mu,
+                drivenFrac,
+                cgHeight,
+                wheelbase,
+                cd,
+                area,
+                crr,
+                tireRadius,
+                eff,
+                reaction,
+                shiftCut,
+                torqueCurve,
+                torqueTable,
+                marchas,
+                finalDrive: relacaoDiferencial,
+                targets
+            });
+
+            results.forEach(r => {
+                const el = document.getElementById(r.name);
+                if (!el) return;
+                el.textContent = `${formatNumber(r.time, 2)} s @ ${formatNumber(r.speed * 3.6, 1)} km/h`;
+            });
+
+            document.getElementById('avisos').innerHTML = '<p class="helper">Arrancada calculada com simulação detalhada (arrasto, rolamento, tração e trocas).</p>';
+        }
+
+        function simulateDrag(opts) {
+            const dt = 0.02;
+            let t = 0;
+            let v = 0;
+            let s = 0;
+            let gearIdx = 0;
+            let shiftTimer = 0;
+            const maxTime = 120;
+            const results = [];
+
+            const targets = opts.targets.slice().sort((a, b) => a.dist - b.dist);
+            let targetIdx = 0;
+
+            while (t < maxTime && targetIdx < targets.length) {
+                const ratio = (opts.marchas[gearIdx] || opts.marchas[opts.marchas.length - 1] || 1) * opts.finalDrive;
+                const wheelRps = v / (2 * Math.PI * opts.tireRadius);
+                let rpm = wheelRps * 60 * ratio;
+                rpm = Math.max(rpm, opts.launchRpm);
+
+                if (shiftTimer <= 0 && rpm >= opts.shiftRpm && gearIdx < opts.marchas.length - 1) {
+                    gearIdx += 1;
+                    shiftTimer = opts.shiftTime;
+                }
+
+                let driveForce = 0;
+                if (shiftTimer > 0) {
+                    shiftTimer -= dt;
+                    const torqueNm = engineTorqueAtRpm(rpm, opts);
+                    const wheelTorque = torqueNm * ratio * opts.eff;
+                    driveForce = (wheelTorque / opts.tireRadius) * (1 - (opts.shiftCut || 0));
+                } else {
+                    const torqueNm = engineTorqueAtRpm(rpm, opts);
+                    const wheelTorque = torqueNm * ratio * opts.eff;
+                    driveForce = wheelTorque / opts.tireRadius;
+                }
+
+                const weightTransfer = (driveForce * opts.cgHeight) / opts.wheelbase;
+                const normalDriven = opts.m * 9.80665 * opts.drivenFrac + weightTransfer;
+                const tractionLimit = opts.mu * normalDriven;
+                driveForce = Math.min(driveForce, tractionLimit);
+
+                const aero = 0.5 * 1.2 * opts.cd * opts.area * v * v;
+                const roll = opts.crr * opts.m * 9.80665;
+                const resist = aero + roll;
+
+                const a = (driveForce - resist) / opts.m;
+                v = Math.max(0, v + a * dt);
+                s += v * dt;
+                t += dt;
+
+                while (targetIdx < targets.length && s >= targets[targetIdx].dist) {
+                    results.push({ name: targets[targetIdx].name, time: t + opts.reaction, speed: v });
+                    targetIdx += 1;
+                }
+            }
+
+            while (targetIdx < targets.length) {
+                results.push({ name: targets[targetIdx].name, time: NaN, speed: NaN });
+                targetIdx += 1;
+            }
+            return results;
+        }
+
+        function engineTorqueAtRpm(rpm, opts) {
+            const rpmClamped = Math.max(1000, rpm);
+            if (opts.torqueCurve === 'custom' && opts.torqueTable && opts.torqueTable.length > 1) {
+                return interpolateTorque(rpmClamped, opts.torqueTable);
+            }
+            const shape = torqueCurveFactor(rpmClamped / opts.rpmPower, opts.torqueCurve);
+            const torqueFromPower = (opts.powerKw * 9550) / rpmClamped;
+            const torqueBase = opts.torqueBaseNm * shape;
+            const torqueLimited = Math.min(torqueBase, torqueFromPower);
+            return torqueLimited;
+        }
+
+        function torqueCurveFactor(ratio, curve) {
+            const r = Math.max(0.2, Math.min(ratio, 1.4));
+            if (curve === 'race') {
+                if (r < 0.6) return 0.55 + 0.9 * r;
+                if (r < 1.0) return 0.95 + 0.15 * (r - 0.6) / 0.4;
+                return 1.0 - 0.2 * (r - 1.0);
+            }
+            if (curve === 'sport') {
+                if (r < 0.6) return 0.65 + 0.7 * r;
+                if (r < 1.0) return 0.95 + 0.05 * (r - 0.6) / 0.4;
+                return 1.0 - 0.15 * (r - 1.0);
+            }
+            if (r < 0.6) return 0.55 + 0.6 * r;
+            if (r < 1.0) return 0.90 + 0.08 * (r - 0.6) / 0.4;
+            return 0.98 - 0.12 * (r - 1.0);
+        }
+
+        function getMuPreset(preset) {
+            if (preset === 'street') return 0.95;
+            if (preset === 'semi') return 1.15;
+            if (preset === 'slick') return 1.35;
+            return NaN;
+        }
+
+        function parseTorqueTable(text) {
+            if (!text) return null;
+            const parts = text
+                .split(/[\n,]+/)
+                .map(p => p.trim())
+                .filter(Boolean);
+            const points = [];
+            parts.forEach(p => {
+                const seg = p.split(':').map(s => s.trim());
+                if (seg.length !== 2) return;
+                const rpm = parseFloat(seg[0].replace(',', '.'));
+                const tq = parseFloat(seg[1].replace(',', '.'));
+                if (!isNaN(rpm) && !isNaN(tq)) points.push([rpm, tq * 9.80665]);
+            });
+            if (points.length < 2) return null;
+            return points.sort((a, b) => a[0] - b[0]);
+        }
+
+        function interpolateTorque(rpm, table) {
+            if (rpm <= table[0][0]) return table[0][1];
+            if (rpm >= table[table.length - 1][0]) return table[table.length - 1][1];
+            for (let i = 0; i < table.length - 1; i++) {
+                const [r1, t1] = table[i];
+                const [r2, t2] = table[i + 1];
+                if (rpm >= r1 && rpm <= r2) {
+                    const k = (rpm - r1) / (r2 - r1);
+                    return t1 + (t2 - t1) * k;
+                }
+            }
+            return table[table.length - 1][1];
+        }
+
+        function drawTorqueChart(table) {
+            const canvas = document.getElementById('torqueChartArr');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(0, 0, w, h);
+            ctx.strokeStyle = '#e6e8ec';
+            ctx.strokeRect(0, 0, w, h);
+
+            if (!table || table.length < 2) {
+                ctx.fillStyle = '#6b7280';
+                ctx.font = '12px Poppins, Segoe UI, Tahoma, sans-serif';
+                ctx.fillText('Informe a tabela RPM×Torque para visualizar.', 10, h / 2);
+                return;
+            }
+
+            const rpms = table.map(p => p[0]);
+            const torques = table.map(p => p[1]);
+            const minR = Math.min(...rpms);
+            const maxR = Math.max(...rpms);
+            const minT = Math.min(...torques);
+            const maxT = Math.max(...torques);
+            const pad = 10;
+
+            const x = r => pad + (r - minR) / (maxR - minR) * (w - pad * 2);
+            const y = t => h - pad - (t - minT) / (maxT - minT) * (h - pad * 2);
+
+            ctx.strokeStyle = '#c7a76c';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            table.forEach((p, i) => {
+                const px = x(p[0]);
+                const py = y(p[1]);
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            });
+            ctx.stroke();
+
+            ctx.fillStyle = '#0b0c0f';
+            ctx.font = '11px Poppins, Segoe UI, Tahoma, sans-serif';
+            ctx.fillText(`${Math.round(minR)} rpm`, pad, h - 4);
+            ctx.fillText(`${Math.round(maxR)} rpm`, w - 70, h - 4);
+
+            ctx.fillStyle = '#111827';
+            ctx.fillText(`${Math.round(minT / 9.80665)} kgfm`, pad, 12);
+            ctx.fillText(`${Math.round(maxT / 9.80665)} kgfm`, w - 90, 12);
         }
     </script>
 </body>
