@@ -1,0 +1,62 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Ford",
+  "modelo": "Landau (Galaxie LTD Landau / Galaxie Landau)",
+  "producao_brasil": "1973-1983",
+  "observacao_nomenclatura": "'Landau' era a versão de topo de linha do Ford Galaxie/LTD; entre 1980-1983 tornou-se o único nome comercial do sedã grande da Ford no Brasil, com o 'Galaxie' removido.",
+  "motorizacoes": [
+    {
+      "codigo_motor": "292 V8 (família Y)",
+      "periodo_producao": "1973-1975 (aprox.)",
+      "aplicacao": "Galaxie LTD Landau (fase inicial)",
+      "configuracao": "V8 a 90°, bloco e cabeçote de ferro fundido, comando de válvulas no bloco (OHV) por engrenagens, tuchos hidráulicos",
+      "cilindrada_cm3": 4785,
+      "cilindrada_pol3": 292,
+      "diametro_cilindro_mm": 95.2,
+      "curso_pistao_mm": 83.8,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": "7.8:1",
+      "alimentacao": "Carburador",
+      "combustivel": "Gasolina",
+      "potencia_maxima_cv": 190,
+      "potencia_maxima_rpm": 4400,
+      "torque_maximo_kgfm": 37.1,
+      "torque_maximo_rpm": 2400,
+      "cambio": "Automático 3 marchas, conversor de torque",
+      "aceleracao_0_100_s": 17.4,
+      "velocidade_maxima_kmh": 160,
+      "observacoes": "Motor da família Y da Ford americana (mesma base usada nos F-350 nacionais). Fabricado no Brasil, diferente do 302 usado no Maverick que era importado do Canadá.",
+      "_fontes": ["garagemdoalan.com.br (Ford Galaxie LTD Landau 1973)"]
+    },
+    {
+      "codigo_motor": "302 V8 ('Canadense', família Windsor)",
+      "periodo_producao": "1976-1983",
+      "aplicacao": "Galaxie Landau, depois apenas 'Ford Landau' (1980-1983)",
+      "configuracao": "V8 a 90°, bloco e cabeçote de ferro, comando no bloco (OHV) - mesmo projeto usado no Maverick GT",
+      "cilindrada_cm3": 4949,
+      "cilindrada_pol3": 302,
+      "diametro_cilindro_mm": 101.6,
+      "curso_pistao_mm": 76.2,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao_gasolina": "8.0:1",
+      "taxa_compressao_alcool": "superior à gasolina (valor exato não encontrado - coletor de admissão em alumínio específico para álcool)",
+      "alimentacao": "Carburador",
+      "combustivel": "Gasolina (até 1979); Álcool oferecido a partir da linha 1980",
+      "potencia_maxima_cv": 199,
+      "torque_maximo_kgfm": 39.8,
+      "cambio": "Automático 3 marchas (C3 ou FMX conforme lote), conversor de torque - único disponível a partir de 1980",
+      "tanque_litros": 100,
+      "observacoes": "Substituiu o 292 na linha 1976. Versão a álcool (1980+) teve coletor de admissão em alumínio específico e tomada de ar quente do escapamento para lidar com a maior dificuldade de queima do combustível a frio - troca de combustível não alterava o rendimento segundo testes da época (revista Quatro Rodas). O Landau foi o carro oficial de autoridades governamentais brasileiras nos anos 80, especialmente na cor preta. Produção encerrada em 2 de abril de 1983, após 77.647 unidades da linha Landau.",
+      "_fontes": ["pastorecc.com.br", "jkcarros.com.br (Landau AT 1982)", "autolivraria.com.br (história Galaxie/LTD/Landau)", "fichacompleta.com.br"]
+    }
+  ],
+  "_nota_variacao_potencia": "Uma fonte (fichacompleta.com.br) registra o Landau 1982 com apenas 154cv a 4200rpm - divergência importante frente aos 199cv encontrados em outras fontes para o mesmo motor 302. Pode refletir diferença de metodologia de medição (líquido vs bruto) ou erro da fonte. Recomenda-se validação antes de usar no simulador.",
+  "_pendente_proxima_rodada": [
+    "Resolver divergência de potência do 302 no Landau (154cv vs 199cv entre fontes)",
+    "Comprimento de biela de ambos os motores (não encontrado)",
+    "Taxa de compressão exata da versão a álcool do 302",
+    "Confirmar se houve motor 6 cilindros como opção mais econômica no Landau (não confirmado - parece ter sido V8 exclusivo)"
+  ]
+}

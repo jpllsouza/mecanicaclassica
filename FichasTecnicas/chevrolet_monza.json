@@ -1,0 +1,83 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Chevrolet",
+  "modelo": "Monza",
+  "producao_brasil": "1982-1996",
+  "plataforma": "GM J-Body (derivado do Opel Ascona C)",
+  "familia_motor": "GM Família II (origem Opel)",
+  "motorizacoes": [
+    {
+      "codigo_motor": "1.6 (Família II)",
+      "periodo_producao": "1982-1988",
+      "aplicacao": "Monza Hatch/Sedan (versão de entrada)",
+      "configuracao": "4 cilindros em linha, transversal, comando de válvulas único no cabeçote (SOHC), tuchos hidráulicos",
+      "cilindrada_cm3": 1598,
+      "diametro_cilindro_mm": null,
+      "curso_pistao_mm": null,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": null,
+      "alimentacao": "Carburador",
+      "combustivel": "Gasolina ou Álcool (versões separadas)",
+      "potencia_maxima_cv_gasolina": 72,
+      "potencia_maxima_cv_alcool": 73,
+      "observacoes": "Diâmetro/curso não confirmados em fonte técnica primária - divergência entre fontes secundárias, não preenchido para evitar erro. Considerado o motor 'fraco' de estreia do Monza, criticado pela imprensa da época; motivou o lançamento do 1.8 já em 1983.",
+      "_fontes": ["autopapo.com.br", "reparacaoautomotiva.com.br", "en.wikipedia.org/wiki/Chevrolet_Monza"]
+    },
+    {
+      "codigo_motor": "1.8 (Família II)",
+      "periodo_producao": "1983-1996",
+      "aplicacao": "Monza (todas as versões, principal motorização)",
+      "configuracao": "4 cilindros em linha, transversal, SOHC, tuchos hidráulicos, tipo 'superquadrado' (diâmetro > curso)",
+      "cilindrada_cm3": 1796,
+      "diametro_cilindro_mm": 84.8,
+      "curso_pistao_mm": 79.5,
+      "diametro_pistao_std_mm": 84.78,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": null,
+      "alimentacao": "Carburador (Alfa 1 de corpo simples nas versões a álcool; corpo duplo em versões esportivas)",
+      "combustivel": "Gasolina ou Álcool",
+      "potencia_maxima_cv": 86,
+      "observacoes": "IMPORTANTE PARA PREPARAÇÃO: motoristas/preparadores relatam duas gerações de biela para os motores 1.8/2.0 - 'biela longa' até 1986 e 'biela curta' a partir de 1987 (mesmo diâmetro/curso, mudança na r/l). Comprimento exato não encontrado em fonte documentada - recomenda-se medição física para uso em simulador. Virabrequim do 1.8 tem curso de 79,5mm (referência usada em preparações de aumento de cilindrada).",
+      "_fontes": ["mecatronicab2.forumbrasil.net (tabela diâmetro x curso)", "forum.monzeiros.com", "autopapo.com.br"]
+    },
+    {
+      "codigo_motor": "2.0 (Família II) - C20NE / N20XF",
+      "periodo_producao": "1987-1996",
+      "aplicacao": "Monza Classic, SL/E, GLS, Hi-Tech (versões topo de linha)",
+      "configuracao": "4 cilindros em linha, transversal, SOHC, 8 válvulas, tipo 'quadrado' (diâmetro = curso)",
+      "cilindrada_cm3": 1998,
+      "diametro_cilindro_mm": 86.0,
+      "curso_pistao_mm": 86.0,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao_carburado": "8.8:1",
+      "taxa_compressao_injetado_c20ne": "9.4:1",
+      "alimentacao_fases": {
+        "1987-1990": "Carburador de corpo duplo",
+        "1990-1996": "Injeção eletrônica monoponto/multiponto (C20NE)"
+      },
+      "combustivel": "Gasolina ou Álcool",
+      "potencia_maxima_cv_injetado": 116,
+      "potencia_maxima_rpm": 5600,
+      "torque_maximo_kgfm": 17.3,
+      "torque_maximo_rpm": 3200,
+      "altura_minima_cabecote_mm": 95,
+      "observacoes": "Mesma 'família' de bloco do 1.8, porém curso maior (86mm vs 79.5mm) via virabrequim próprio. Pistão STD com diâmetro real medido por preparadores em ~85,98mm (dentro da tolerância de fábrica). Base do lendário motor 2.0 do Monza/Kadett/Omega/Vectra/Astra, um dos mais preparados do Brasil - amplo mercado de peças de reposição (pistões, bielas, comandos) disponível.",
+      "_fontes": ["jkcarros.com.br (ficha Monza Club 2.0 EFI 1994)", "mahle-aftermarket.com catálogo técnico", "forum.monzeiros.com", "mecatronicab2.forumbrasil.net"]
+    }
+  ],
+  "_dados_uteis_para_preparacao": {
+    "comprimento_biela_motor_2.4_familia_ii_mm": 148,
+    "nota": "Motor 2.4 (posterior, S10/Vectra) não fazia parte da linha Monza original, mas compartilha bloco/arquitetura Família II e é usado como base de swap/preparação em Monzas. Incluído como referência cruzada útil para o simulador.",
+    "swap_comum_1": "Virabrequim 1.8 (curso 79.5mm) + pistões 2.0 + bielas do motor original 1.8 = ~2.1L",
+    "swap_comum_2": "Bloco 2.0 + pistões do motor 2.4 (87.5mm diâmetro) + bielas do 2.4 (148mm) = motor 'esticado', altera r/l"
+  },
+  "_pendente_proxima_rodada": [
+    "Confirmar diâmetro x curso do motor 1.6 em fonte primária (manual de fábrica)",
+    "Comprimento de biela dos motores 1.8 e 2.0 originais (não encontrado - requer catálogo de peça ou medição)",
+    "Torque do motor 1.8 e do 2.0 carburado (só achamos o dado do injetado)",
+    "Câmbio, relações de marcha, peso por versão"
+  ]
+}

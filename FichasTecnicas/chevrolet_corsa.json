@@ -1,0 +1,78 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Chevrolet",
+  "modelo": "Corsa",
+  "producao_brasil": "1994-2012 (recorte deste projeto: motores 90s)",
+  "plataforma": "GM 4200 (Opel Corsa B)",
+  "familia_motor": "GM Família I",
+  "motorizacoes": [
+    {
+      "codigo_motor": "1.0 (Família I)",
+      "periodo_producao": "1994-2012",
+      "aplicacao": "Corsa Wind, Super (todas carrocerias)",
+      "configuracao": "4 cilindros em linha, transversal, dianteiro, SOHC (comando único no cabeçote, correia dentada), 2 válvulas/cilindro",
+      "cilindrada_cm3": 999,
+      "diametro_cilindro_mm": 71.0,
+      "curso_pistao_mm": 62.9,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao_efi": "9.2:1",
+      "taxa_compressao_mpfi": "9.4:1",
+      "taxa_compressao_vhc": "12.6:1",
+      "alimentacao_por_versao": {
+        "EFI (injeção monoponto)": {"potencia_cv": 50, "rpm": 5800, "torque_kgfm": 7.7, "torque_rpm": 3200},
+        "MPFI (injeção multiponto)": {"potencia_cv": 60, "rpm": 6000, "torque_kgfm": 8.3, "torque_rpm": 3000},
+        "MPFI 16V": {"potencia_cv": 68, "rpm": 6000, "torque_kgfm": 9.2, "torque_rpm": 4000},
+        "MPFI VHC (alta taxa de compressão)": {"potencia_cv": 70, "rpm": 6400, "torque_kgfm": 8.8, "torque_rpm": 3000}
+      },
+      "combustivel": "Gasolina",
+      "observacoes": "Motor de entrada da linha Corsa, muito usado em preparação por ser leve e girador. Versão 16V e VHC vieram em atualizações posteriores (já anos 2000).",
+      "_fontes": ["corsaclube.com.br (fichas técnicas)", "olhonocarro.com.br", "scribd.com (torque e aperto motor Corsa 1.0)"]
+    },
+    {
+      "codigo_motor": "1.4 (Família I)",
+      "periodo_producao": "1994-2000",
+      "aplicacao": "Corsa GL, GLS",
+      "configuracao": "4 cilindros em linha, transversal, dianteiro, SOHC, 2 válvulas/cilindro",
+      "cilindrada_cm3": 1389,
+      "diametro_cilindro_mm": 77.6,
+      "curso_pistao_mm": 73.4,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": "9.4:1",
+      "alimentacao": "Injeção eletrônica monoponto (EFI)",
+      "combustivel": "Gasolina",
+      "potencia_maxima_cv": 60,
+      "potencia_maxima_rpm": 5200,
+      "torque_maximo_kgfm": 11.1,
+      "torque_maximo_rpm": 2800,
+      "observacoes": "Descontinuado no final dos anos 90, substituído pelo 1.0 e 1.6 na linha.",
+      "_fontes": ["corsaclube.com.br", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
+    },
+    {
+      "codigo_motor": "1.6 (Família I)",
+      "periodo_producao": "1995-2002 (aprox.)",
+      "aplicacao": "Corsa GL, GLS, Classic, Tigra",
+      "configuracao": "4 cilindros em linha, transversal, dianteiro, SOHC, 2 válvulas/cilindro (versão 8V) ou 4 válvulas/cilindro (versão 16V)",
+      "cilindrada_cm3": 1598,
+      "diametro_cilindro_mm": 79.0,
+      "curso_pistao_mm": 81.5,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": null,
+      "alimentacao_por_versao": {
+        "Monoponto (1995)": {"observacao": "primeira versão, substituída ainda em 1995"},
+        "MPFI 8V": {"potencia_cv": 92, "rpm": 5600, "torque_kgfm": 13.0, "torque_rpm": 2800},
+        "16V": {"potencia_cv": 102, "observacao": "chegou na linha 1998"}
+      },
+      "combustivel": "Gasolina",
+      "observacoes": "Câmbio: Opel F13-WR (5 marchas) inicialmente, depois F-15-CR em alguns pares motor/câmbio. Câmbio automático de 4 marchas disponível como opcional a partir da linha 1998 (motor 1.6 8V).",
+      "_fontes": ["falando-sobre-carros.blogspot.com", "olhonocarro.com.br", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Comprimento de biela e r/l de todos os motores Família I (não encontrado - mesma limitação already sinalizada para os motores GM anteriores)",
+    "Taxa de compressão exata do 1.6 8V e 16V",
+    "Torque do 1.0 16V e VHC"
+  ]
+}
