@@ -34,47 +34,29 @@ module.exports = async function handler(req, res) {
     );
     const makeId = makeRes.rows[0].id;
 
-    const modelRes = await client.query(
-      `INSERT INTO models (make_id, name)
-       VALUES ($1, $2)
-       ON CONFLICT (id) DO NOTHING
-       RETURNING id`,
+    const existingModel = await client.query(
+      "SELECT id FROM models WHERE make_id = $1 AND name = $2 LIMIT 1",
       [makeId, model]
     );
-
-    let modelId;
-    if (modelRes.rowCount === 0) {
-      const existing = await client.query(
-        "SELECT id FROM models WHERE make_id = $1 AND name = $2 LIMIT 1",
+    let modelId = existingModel.rows[0]?.id;
+    if (!modelId) {
+      const modelRes = await client.query(
+        "INSERT INTO models (make_id, name) VALUES ($1, $2) RETURNING id",
         [makeId, model]
       );
-      if (existing.rowCount === 0) {
-        throw new Error("Failed to resolve model");
-      }
-      modelId = existing.rows[0].id;
-    } else {
       modelId = modelRes.rows[0].id;
     }
 
-    const trimRes = await client.query(
-      `INSERT INTO trims (model_id, name, year)
-       VALUES ($1, $2, $3)
-       ON CONFLICT (id) DO NOTHING
-       RETURNING id`,
+    const existingTrim = await client.query(
+      "SELECT id FROM trims WHERE model_id = $1 AND name = $2 AND year = $3 LIMIT 1",
       [modelId, trim, year]
     );
-
-    let trimId;
-    if (trimRes.rowCount === 0) {
-      const existing = await client.query(
-        "SELECT id FROM trims WHERE model_id = $1 AND name = $2 AND year = $3 LIMIT 1",
+    let trimId = existingTrim.rows[0]?.id;
+    if (!trimId) {
+      const trimRes = await client.query(
+        "INSERT INTO trims (model_id, name, year) VALUES ($1, $2, $3) RETURNING id",
         [modelId, trim, year]
       );
-      if (existing.rowCount === 0) {
-        throw new Error("Failed to resolve trim");
-      }
-      trimId = existing.rows[0].id;
-    } else {
       trimId = trimRes.rows[0].id;
     }
 

@@ -170,6 +170,43 @@
             font-weight: bold;
             color: var(--primary);
         }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .spec-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+            background: #fff;
+        }
+
+        .spec-card strong {
+            display: block;
+            color: var(--secondary);
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .spec-card span {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .spec-notes {
+            white-space: pre-wrap;
+            font-size: 14px;
+            color: var(--secondary);
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 12px;
+        }
         
         .warning {
             color: var(--warning);
@@ -198,7 +235,7 @@
             margin: 0 24px 18px 24px;
             padding: 6px;
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(7, minmax(0, 1fr));
             gap: 6px;
         }
         
@@ -341,6 +378,7 @@
             <button class="tablinks" onclick="openTab(event, 'Rampa')">Rampa</button>
             <button class="tablinks" onclick="openTab(event, 'Carga')">Carga</button>
             <button class="tablinks" onclick="openTab(event, 'Arrancada')">Arrancada</button>
+            <button class="tablinks" onclick="openTab(event, 'FichaTecnica')">Ficha TÃ©cnica</button>
         </div>
         
         <div class="content">
@@ -536,6 +574,14 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="FichaTecnica" class="tabcontent">
+                    <h3 class="section-title">Ficha TÃ©cnica</h3>
+                    <div class="helper">Escolha uma marca, modelo e versÃ£o acima. Depois clique em Carregar Ficha para consultar os dados salvos.</div>
+                    <div id="fichaTecnicaConteudo">
+                        <p class="helper">Nenhuma ficha carregada.</p>
+                    </div>
+                </div>
                 
                 <div id="dadosMotor" class="hidden">
                     <h3 class="section-title">Dados do Motor</h3>
@@ -698,6 +744,7 @@
     <script>
         // Variável global para controlar a aba ativa
         let abaAtiva = 'Basico';
+        let fichaAtual = null;
         
         // Função para converter vírgula em ponto para cálculos
         function parseNumber(value) {
@@ -730,6 +777,9 @@
             
             // Atualizar a aba ativa
             abaAtiva = tabName;
+            if (abaAtiva === 'FichaTecnica') {
+                renderFichaTecnica(fichaAtual);
+            }
             
             atualizarVisibilidadeAvancado();
         }
@@ -969,7 +1019,7 @@
             const avancado = document.getElementById('avancadoCampos');
             const motor = document.getElementById('dadosMotor');
             const trans = document.getElementById('dadosTransmissao');
-            const mostrar = abaAtiva !== 'Basico';
+            const mostrar = abaAtiva !== 'Basico' && abaAtiva !== 'FichaTecnica';
             
             if (!avancado || !motor || !trans) return;
             
@@ -1122,30 +1172,44 @@
             
             document.getElementById('carregarFichaBtn').addEventListener('click', async () => {
                 if (!versaoSelect.value) return;
-                const specs = await fetch(`/api/specs?trim_id=${versaoSelect.value}`).then(r => r.json()).catch(() => null);
-                if (!specs) return;
+                const specs = await fetch(`/api/specs?trim_id=${versaoSelect.value}`)
+                    .then(r => r.ok ? r.json() : null)
+                    .catch(() => null);
+                fichaAtual = specs;
+                renderFichaTecnica(specs);
+                if (!specs) {
+                    alert('Ficha tÃ©cnica nÃ£o encontrada para esta versÃ£o.');
+                    return;
+                }
                 
                 setIf('pesoVeiculoBasico', specs.weight_kg);
                 setIf('pesoVeiculo', specs.weight_kg);
+                setIf('velocidadeMaxBasico', specs.top_speed_kmh);
+                setIf('velocidadeMax', specs.top_speed_kmh);
                 setIf('coeficienteArBasico', specs.cd_cx);
                 setIf('coeficienteAr', specs.cd_cx);
                 setIf('areaFrontalBasico', specs.frontal_area_m2);
                 setIf('areaFrontal', specs.frontal_area_m2);
                 setIf('pesoVeiculoAcel', specs.weight_kg);
                 setIf('tempo0a100', specs.accel_0_100_s);
+                setIf('tempo0a200', specs.accel_0_200_s);
                 setIf('pesoVeiculoRampa', specs.weight_kg);
                 setIf('pesoCarga', specs.tow_with_brake_kg ?? specs.tow_no_brake_kg);
                 setIf('pesoVeiculoArr', specs.weight_kg);
                 setIf('potenciaMotorArr', specs.power_cv);
                 setIf('rpmPotenciaArr', specs.power_rpm);
                 setIf('torqueMotorArr', specs.torque_kgfm);
+                setIf('shiftRpmArr', specs.power_rpm);
+                setIf('launchRpmArr', specs.torque_rpm);
                 setIf('entreEixosArr', specs.wheelbase_mm);
+                setIf('pesoFrenteArr', estimateFrontWeightPct(specs));
+                setIf('alturaCgArr', estimateCgHeightM(specs));
                 setIf('diametroPistao', specs.bore_mm);
                 setIf('cursoPistao', specs.stroke_mm);
                 setIf('tamanhoBiela', specs.rod_length_mm);
                 setIf('numCilindros', parseCylinders(specs.cylinders));
                 setIf('numValvulas', specs.valves_per_cyl);
-                setIf('diametroPneu', specs.tire_diameter_mm);
+                setIf('diametroPneu', firstDefined(specs.tire_diameter_mm, tireDiameterFromSpec(specs.front_tire), tireDiameterFromSpec(specs.rear_tire)));
                 setSelectText('tracao', mapDrivetrain(specs.drivetrain));
                 setSelectText('posicaoMotor', mapEnginePosition(specs.engine_installation, specs.engine_layout));
                 setIf('relacaoDiferencial', specs.final_drive);
@@ -1200,6 +1264,94 @@
             if (text.includes('dianteir') && text.includes('trans')) return 'Dianteiro Transversal';
             if (text.includes('dianteir')) return 'Dianteiro Transversal';
             return null;
+        }
+
+        function firstDefined(...values) {
+            return values.find(value => value !== null && value !== undefined && value !== '');
+        }
+
+        function tireDiameterFromSpec(value) {
+            if (!value) return null;
+            const match = String(value).match(/(\d{3})\s*\/\s*(\d{2})\s*[Rr]\s*(\d{2})/);
+            if (!match) return null;
+            const widthMm = Number(match[1]);
+            const aspectRatio = Number(match[2]) / 100;
+            const rimMm = Number(match[3]) * 25.4;
+            return Math.round(rimMm + (2 * widthMm * aspectRatio));
+        }
+
+        function estimateFrontWeightPct(specs) {
+            const text = [specs.engine_installation, specs.engine_layout, specs.drivetrain].filter(Boolean).join(' ').toLowerCase();
+            if (!text) return null;
+            if (text.includes('traseir')) return 42;
+            if (text.includes('central')) return 45;
+            if (text.includes('dianteir') && text.includes('long')) return 55;
+            if (text.includes('dianteir') || text.includes('fwd')) return 60;
+            return null;
+        }
+
+        function estimateCgHeightM(specs) {
+            const height = parseNumber(specs.height_mm);
+            const groundClearance = parseNumber(specs.ground_clearance_mm);
+            if (isNaN(height)) return null;
+            const estimated = groundClearance && !isNaN(groundClearance)
+                ? groundClearance + (height - groundClearance) * 0.42
+                : height * 0.45;
+            return Math.round(estimated) / 1000;
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function fichaValue(value, suffix = '') {
+            if (value === null || value === undefined || value === '') return '-';
+            return `${String(value).replace('.', ',')}${suffix}`;
+        }
+
+        function specCard(label, value, suffix = '') {
+            return `<div class="spec-card"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(fichaValue(value, suffix))}</span></div>`;
+        }
+
+        function renderFichaTecnica(specs) {
+            const target = document.getElementById('fichaTecnicaConteudo');
+            if (!target) return;
+            if (!specs) {
+                target.innerHTML = '<p class="helper">Nenhuma ficha carregada.</p>';
+                return;
+            }
+
+            const cards = [
+                ['CÃ³digo do motor', specs.engine_code],
+                ['ConfiguraÃ§Ã£o', specs.engine_layout || specs.engine_installation || specs.cylinders],
+                ['Cilindrada', specs.engine_cc, ' cmÂ³'],
+                ['DiÃ¢metro x curso', specs.bore_mm && specs.stroke_mm ? `${fichaValue(specs.bore_mm)} x ${fichaValue(specs.stroke_mm)}` : null, ' mm'],
+                ['Biela', specs.rod_length_mm, ' mm'],
+                ['VÃ¡lvulas/cilindro', specs.valves_per_cyl],
+                ['Taxa de compressÃ£o', specs.compression_ratio],
+                ['AlimentaÃ§Ã£o', specs.fuel_system],
+                ['PotÃªncia', specs.power_cv, ' cv'],
+                ['RPM potÃªncia', specs.power_rpm, ' rpm'],
+                ['Torque', specs.torque_kgfm, ' kgfm'],
+                ['RPM torque', specs.torque_rpm, ' rpm'],
+                ['Peso', specs.weight_kg, ' kg'],
+                ['Velocidade mÃ¡xima', specs.top_speed_kmh, ' km/h'],
+                ['0-100 km/h', specs.accel_0_100_s, ' s'],
+                ['TraÃ§Ã£o', specs.drivetrain],
+                ['CÃ¢mbio', specs.transmission_type],
+                ['Diferencial', specs.final_drive],
+                ['Entre-eixos', specs.wheelbase_mm, ' mm'],
+                ['Tanque', specs.fuel_tank_l, ' L']
+            ];
+
+            const html = cards.map(([label, value, suffix]) => specCard(label, value, suffix || '')).join('');
+            const notes = specs.notes ? `<div class="spec-notes">${escapeHtml(specs.notes)}</div>` : '';
+            target.innerHTML = `<div class="spec-grid">${html}</div>${notes}`;
         }
 
         function simularArrancada() {

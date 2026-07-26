@@ -7,9 +7,10 @@ function getPool() {
     if (!process.env.DATABASE_URL) {
       throw new Error("DATABASE_URL not set");
     }
+    const isLocalDb = /localhost|127\.0\.0\.1/i.test(process.env.DATABASE_URL);
     pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false
+      ssl: isLocalDb ? false : { rejectUnauthorized: false }
     });
   }
   return pool;
