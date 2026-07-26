@@ -31,7 +31,9 @@
         "infocarbr.blogspot.com"
       ],
       "tracao": "Traseira",
-      "valvulas_por_cilindro": 2
+      "valvulas_por_cilindro": 2,
+      "tanque_litros": 64,
+      "entre_eixos_mm": 2614
     },
     {
       "codigo_motor": "200 (Ford, 6 cilindros)",
@@ -40,7 +42,9 @@
       "observacoes": "Fonte não detalhou ficha técnica completa desta motorização de transição entre o 184 (Willys) e o 2.3L (CHT). Necessário aprofundar pesquisa.",
       "_fontes": [],
       "tracao": "Traseira",
-      "valvulas_por_cilindro": 2
+      "valvulas_por_cilindro": 2,
+      "tanque_litros": 64,
+      "entre_eixos_mm": 2614
     },
     {
       "codigo_motor": "2.3L 4 cilindros (CHT)",
@@ -72,7 +76,9 @@
         "Revista Quatro Rodas - teste comparativo Opala SS-4 x Maverick GT-4"
       ],
       "tracao": "Traseira",
-      "valvulas_por_cilindro": 2
+      "valvulas_por_cilindro": 2,
+      "tanque_litros": 64,
+      "entre_eixos_mm": 2614
     },
     {
       "codigo_motor": "V8 302 (opcional Super/Super Luxo)",
@@ -103,7 +109,9 @@
         "mercadolivre.com.br/blog"
       ],
       "tracao": "Traseira",
-      "valvulas_por_cilindro": 2
+      "valvulas_por_cilindro": 2,
+      "tanque_litros": 64,
+      "entre_eixos_mm": 2614
     },
     {
       "codigo_motor": "V8 302 GT",
@@ -178,7 +186,9 @@
         "Revista Quatro Rodas - ficha técnica Maverick GT V8 Quadrijet (teste comparativo Opala SS-4 x Maverick GT-4)"
       ],
       "tracao": "Traseira",
-      "valvulas_por_cilindro": 2
+      "valvulas_por_cilindro": 2,
+      "tanque_litros": 64,
+      "entre_eixos_mm": 2614
     }
   ],
   "_pendente_proxima_rodada": [
