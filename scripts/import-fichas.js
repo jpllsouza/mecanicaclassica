@@ -32,6 +32,8 @@ const POWER_RPM_KEYS = [
 
 const TORQUE_KGFM_KEYS = [
   "torque_maximo_kgfm",
+  "torque_maximo_kgfm_bruto",
+  "torque_maximo_kgfm_liquido",
   "torque_maximo_kgfm_gasolina",
   "torque_maximo_kgfm_alcool",
   "torque_maximo_kgfm_aprox",
