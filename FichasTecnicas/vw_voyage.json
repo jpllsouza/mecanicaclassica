@@ -20,7 +20,11 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 900,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Voyage, fase inicial). Lote mais raro/valorizado do Voyage hoje (1981-06/1982) por ser o único com esse motor MD 1.5 específico, antes da atualização para 1.6 em maio de 1982. Furo/curso não encontrados nesta rodada.",
-      "_fontes": ["motortudo.com (Voyage GL 1.8 1990, histórico)", "en.wikipedia.org/wiki/Volkswagen_Voyage"]
+      "_fontes": [
+        "motortudo.com (Voyage GL 1.8 1990, histórico)",
+        "en.wikipedia.org/wiki/Volkswagen_Voyage"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "MD-270 1.6 ('Torque')",
@@ -39,7 +43,10 @@
       "cambio": "4 marchas, tipo '3+E' com efeito overdrive",
       "peso_kg_aprox": 900,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Voyage). Apelidado 'Torque' - motor mais potente fabricado pela VW do Brasil até então (1983). Mesmo motor usado no VW Passat da época (ver ficha vw_passat.json).",
-      "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Volkswagen_Parati"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "AP 1.6",
@@ -47,7 +54,7 @@
       "aplicacao": "Voyage CL",
       "configuracao": "4 cilindros em linha, mesmo bloco AP documentado em vw_gol.json",
       "cilindrada_cm3": 1596,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 77.4,
       "comprimento_biela_mm": 144,
       "relacao_biela_manivela_r_l": 0.268,
@@ -55,12 +62,15 @@
       "taxa_compressao_carburado_alcool": "12.3:1",
       "alimentacao": "Carburador (Weber TLDZ/TLDE ou Brasol 2E/3E)",
       "combustivel": "Gasolina ou Álcool",
-      "potencia_maxima_cv_gasolina": 80.0,
-      "potencia_maxima_cv_alcool": 90.0,
+      "potencia_maxima_cv_gasolina": 80,
+      "potencia_maxima_cv_alcool": 90,
       "potencia_maxima_rpm": 5600,
       "peso_kg_aprox": 900,
       "observacoes": "Peso aproximado, mesma carroceria Voyage das demais motorizações desta ficha. A partir de 1990/91 este motor foi substituído pelo AE-1600 (CHT Ford, fruto da AutoLatina) na versão CL - ver observação sobre AE-1600 abaixo.",
-      "_fontes": ["lucianopreparacao.blogspot.com (Ficha técnica Motor AP - tabela completa de potências)"]
+      "_fontes": [
+        "lucianopreparacao.blogspot.com (Ficha técnica Motor AP - tabela completa de potências)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "AE-1600 (CHT Ford, 'Alta Economia')",
@@ -68,7 +78,7 @@
       "aplicacao": "Voyage CL, Parati CL",
       "configuracao": "4 cilindros em linha, comando no bloco (OHV) - motor de origem Ford CHT",
       "cilindrada_cm3": 1555,
-      "diametro_cilindro_mm": 77.0,
+      "diametro_cilindro_mm": 77,
       "curso_pistao_mm": 83.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -76,7 +86,11 @@
       "potencia_maxima_cv": 76,
       "peso_kg_aprox": 900,
       "observacoes": "Peso aproximado, mesma carroceria Voyage das demais motorizações desta ficha. Fruto do acordo AutoLatina (Ford-VW): mesmo motor CHT do Ford Escort/Del Rey/Corcel, rebatizado 'AE' (Alta Economia) para a linha VW. Furo/curso reaproveitados da ficha ford_escort.json (mesmo motor).",
-      "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati", "referência cruzada com ford_escort.json"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Volkswagen_Parati",
+        "referência cruzada com ford_escort.json"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "AP 1.8",
@@ -84,10 +98,10 @@
       "aplicacao": "Voyage GL/Super/GLS (versão de maior potência)",
       "configuracao": "4 cilindros em linha, mesmo bloco AP documentado em vw_gol.json",
       "cilindrada_cm3": 1781,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 86.4,
       "comprimento_biela_mm": 144,
-      "relacao_biela_manivela_r_l": 0.300,
+      "relacao_biela_manivela_r_l": 0.3,
       "taxa_compressao_carburado_gasolina": "8.5:1",
       "taxa_compressao_carburado_alcool": "12.3:1",
       "alimentacao": "Carburador (fase inicial) / Injeção eletrônica (fase posterior)",
@@ -108,7 +122,12 @@
       "altura_mm": 1349,
       "entre_eixos_mm": 2358,
       "observacoes": "O 1.8 do Gol GT/GTS ('S') chegou ao Voyage/Parati GLS em 1989, com potência ligeiramente maior (90/99cv) que a versão comum (88/96cv). Dados de desempenho variam um pouco entre anos-modelo testados nas fontes. Outra fonte registra 995kg para o Voyage GL 1.8 1995 (dimensões desta entrada vêm dessa mesma fonte) - peso variou entre 894kg (1990) e 995kg (1995) conforme equipamentos de série de cada ano.",
-      "_fontes": ["motortudo.com (Voyage GL 1.8 1990 e 1995)", "lucianopreparacao.blogspot.com (tabela AP)", "pt.wikipedia.org/wiki/Volkswagen_Parati"]
+      "_fontes": [
+        "motortudo.com (Voyage GL 1.8 1990 e 1995)",
+        "lucianopreparacao.blogspot.com (tabela AP)",
+        "pt.wikipedia.org/wiki/Volkswagen_Parati"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

@@ -5,7 +5,7 @@
   "producao_brasil": "1984-2013 (recorte deste projeto: motores Fiasa dos anos 80/90 e Fire inicial)",
   "_nota_importante_r_l": "Achado excelente para o simulador: em fóruns de preparação (Preparados.com.br) e no artigo técnico do Autoentusiastas, está documentado que TODOS os motores Fiasa (1.0, 1050, 1300, 1500) usam a MESMA biela de 130mm (centro a centro), mudando apenas o curso do virabrequim. Isso permite calcular r/l com confiança razoável para toda a família. Fonte de fórum de preparadores, não é manual de fábrica oficial - tratar como dado de alta confiança mas não 100% oficial.",
   "familia_motor_fiasa": {
-    "diametro_cilindro_mm_fixo": 76.0,
+    "diametro_cilindro_mm_fixo": 76,
     "comprimento_biela_mm_fixo": 130,
     "observacao": "Projeto de Aurelio Lampredi (ex-Ferrari): diâmetro fixo em 76mm (limite máximo do bloco) e biela fixa em 130mm em todas as cilindradas - só o curso do virabrequim muda. Isso significa que o r/l piora (aumenta) conforme a cilindrada cresce, o que os próprios preparadores citam como o motivo do 1.5 ser mais 'áspero' em alta rotação que o 1.3."
   },
@@ -16,7 +16,7 @@
       "aplicacao": "Uno Mille (versão de entrada)",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote (correia dentada)",
       "cilindrada_cm3": 994,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 54.8,
       "comprimento_biela_mm": 130,
       "relacao_biela_manivela_r_l": 0.211,
@@ -25,7 +25,11 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 780,
       "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno fase 1, motor 1.0 mais leve). Usa o mesmo virabrequim do antigo Fiasa 1050 do 147 (curso ligeiramente menor: 54.8mm vs 57.8mm). Curso muito curto favorece giro alto (relatos de preparadores mencionam motor girando próximo de 8.000-10.000 rpm em versões preparadas).",
-      "_fontes": ["preparados.com.br (Motores Fiasa)", "preparados.com.br (Uno mille eletronic 1.0 para 1.3)"]
+      "_fontes": [
+        "preparados.com.br (Motores Fiasa)",
+        "preparados.com.br (Uno mille eletronic 1.0 para 1.3)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fiasa 1.3 (1301cc, 8V)",
@@ -33,7 +37,7 @@
       "aplicacao": "Uno CS, versões intermediárias",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote",
       "cilindrada_cm3": 1301,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 71.5,
       "comprimento_biela_mm": 130,
       "relacao_biela_manivela_r_l": 0.275,
@@ -46,7 +50,11 @@
       "altura_mm": 1445,
       "peso_kg": 811,
       "observacoes": "Peso confirmado por fonte agregada (Fiat Uno CS 1.3, 811kg). Considerado pelos preparadores o 'melhor' motor Fiasa para preparação - bom equilíbrio entre curso/r/l e cilindrada, permitindo altas rotações com boa robustez. Mesmo curso do 147 1300. Cx/dimensões de referência: Uno CS 1.3 (Cx 0.36).",
-      "_fontes": ["preparados.com.br (Motores Fiasa)", "carrosnaweb.com.br (Uno CS 1.3 1985)"]
+      "_fontes": [
+        "preparados.com.br (Motores Fiasa)",
+        "carrosnaweb.com.br (Uno CS 1.3 1985)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fiasa 1.5 / Uno R",
@@ -54,7 +62,7 @@
       "aplicacao": "Uno R, versões topo de linha a carburador",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote",
       "cilindrada_cm3": 1498,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 82.5,
       "comprimento_biela_mm": 130,
       "relacao_biela_manivela_r_l": 0.317,
@@ -67,7 +75,11 @@
       "torque_maximo_rpm": 3500,
       "peso_kg_aprox": 810,
       "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno fase 1). Maior curso da família Fiasa - preparadores relatam motor mais 'áspero' em alta rotação por causa da biela relativamente curta (mesma de 130mm usada em todas as cilindradas). Bom para uso com turbo de baixa inércia segundo relatos de fórum, mas pistões originais não recomendados para turbo sem substituição.",
-      "_fontes": ["maxturbos.com.br (Uno R 1986)", "preparados.com.br (Preparar motor fiasa 1.3 ou 1.5)"]
+      "_fontes": [
+        "maxturbos.com.br (Uno R 1986)",
+        "preparados.com.br (Preparar motor fiasa 1.3 ou 1.5)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fiasa 1.5 MPI (injetado)",
@@ -75,7 +87,7 @@
       "aplicacao": "Uno CS 1.5, SX",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote, injeção multiponto",
       "cilindrada_cm3": 1498,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 82.5,
       "comprimento_biela_mm": 130,
       "relacao_biela_manivela_r_l": 0.317,
@@ -88,7 +100,10 @@
       "torque_maximo_rpm": 2750,
       "peso_kg_aprox": 810,
       "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno). Mesma taxa de compressão do Fiasa 1.0 8V (9.35:1), segundo comparação direta encontrada em fonte.",
-      "_fontes": ["maxturbos.com.br"]
+      "_fontes": [
+        "maxturbos.com.br"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fire 1.0 (nova família, não-Fiasa)",
@@ -110,7 +125,11 @@
       "entre_eixos_mm": 2360,
       "tanque_litros": 48,
       "observacoes": "IMPORTANTE: o motor Fire é um projeto totalmente diferente do Fiasa (não compartilha bloco, diâmetro fixo ou biela). Substituiu gradualmente o Fiasa 1.0 no Uno a partir de 1989/90. Diâmetro/curso/biela não encontrados nesta rodada de pesquisa - motor merece levantamento próprio dada sua importância (usado depois em praticamente toda a linha Fiat no Brasil até os anos 2000). Peso/dimensões de referência: Uno Mille EP 4 portas 1996 (820kg em ordem de marcha, 50cv a 6.000rpm).",
-      "_fontes": ["ultimatespecs.com (Fiat Uno II 1.0 Fire)", "jkcarros.com.br (Uno Mille EP 4 Portas 1996)"]
+      "_fontes": [
+        "ultimatespecs.com (Fiat Uno II 1.0 Fire)",
+        "jkcarros.com.br (Uno Mille EP 4 Portas 1996)"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

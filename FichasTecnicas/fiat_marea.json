@@ -11,7 +11,7 @@
       "aplicacao": "Marea SX, Weekend SX, ELX",
       "configuracao": "4 cilindros em linha, transversal, duplo comando no cabeçote (DOHC), 16 válvulas, tuchos hidráulicos, acionamento por correia dentada",
       "cilindrada_cm3": 1747,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 82.7,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -32,7 +32,12 @@
       "entre_eixos_mm": 2540,
       "tanque_litros": 63,
       "observacoes": "Motor quase 'quadrado' (82mm x 82.7mm), moderno para a época com DOHC 16V e tuchos hidráulicos. Dado consistente em múltiplas fontes/anos (2000-2003). Peso/dimensões de referência: Marea SX 1.8 16V (1.220kg), consistente entre anos-modelo 2000-2003.",
-      "_fontes": ["fichacompleta.com.br (Marea SX 1.8 16V 2000/2002)", "garagemdoalan.com.br (Marea SX 1.8 16V 2003)", "icarros.com.br (Marea SX 1.8 16V 2000/2001/2002)"]
+      "_fontes": [
+        "fichacompleta.com.br (Marea SX 1.8 16V 2000/2002)",
+        "garagemdoalan.com.br (Marea SX 1.8 16V 2003)",
+        "icarros.com.br (Marea SX 1.8 16V 2000/2001/2002)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 20V (5 cilindros, código Fivetech)",
@@ -40,7 +45,7 @@
       "aplicacao": "Marea HLX, ELX, Weekend HLX/ELX",
       "configuracao": "5 CILINDROS em linha (raro no segmento), transversal, duplo comando no cabeçote (DOHC), 20 válvulas (4 por cilindro), acionamento por correia dentada, variador de fase na admissão",
       "cilindrada_cm3": 1996,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 75.6,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -57,7 +62,12 @@
       "peso_kg": 1351,
       "porta_malas_litros": 430,
       "observacoes": "Motor 5 cilindros em linha (código 'Fivetech') - configuração incomum, dava ao Marea um som de escape característico. Mesmo furo (82mm) do 1.8 16V, mas curso menor. Foi o motor de entrada 'premium' da linha, acima do 1.8 16V.",
-      "_fontes": ["pastorecc.com.br (Marea HLX 2.0)", "olhonocarro.com.br (Marea Weekend ELX 2.0 20V 1998)", "fichacompleta.com.br (Marea HLX 2.0 20V 1998/1999)"]
+      "_fontes": [
+        "pastorecc.com.br (Marea HLX 2.0)",
+        "olhonocarro.com.br (Marea Weekend ELX 2.0 20V 1998)",
+        "fichacompleta.com.br (Marea HLX 2.0 20V 1998/1999)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 20V Turbo (5 cilindros)",
@@ -65,7 +75,7 @@
       "aplicacao": "Marea Turbo (topo de linha esportivo)",
       "configuracao": "5 cilindros em linha, transversal, DOHC 20V, turbocompressor, variador de fase na admissão",
       "cilindrada_cm3": 1997,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 75.6,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -81,7 +91,11 @@
       "coeficiente_aerodinamico_cx": 0.32,
       "peso_kg_aprox": 1380,
       "observacoes": "Peso aproximado por semelhança à versão 2.0 20V aspirada desta mesma ficha (1.351kg), acrescido de ~30kg pelo turbocompressor e reforços. Topo da linha Marea no Brasil, um dos sedãs mais potentes nacionais da época. Mesmo bloco 5 cilindros do 2.0 20V aspirado, com turbo adicionado e taxa de compressão reduzida (10:1 para 8.5:1). Dado extremamente consistente entre múltiplos anos-modelo (1999-2003) nas fontes consultadas.",
-      "_fontes": ["garagemdoalan.com.br (Marea Turbo 2.0 20V 1999/2000/2001/2003)", "amantesdecarros.com.br"]
+      "_fontes": [
+        "garagemdoalan.com.br (Marea Turbo 2.0 20V 1999/2000/2001/2003)",
+        "amantesdecarros.com.br"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

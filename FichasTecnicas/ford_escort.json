@@ -11,7 +11,7 @@
       "aplicacao": "Escort (todas as versões incluindo XR3), Del Rey, Corcel II, Belina II, Pampa",
       "configuracao": "4 cilindros em linha, transversal no Escort (longitudinal no Corcel/Del Rey/Pampa - mesmo motor em duas configurações), comando no bloco (OHV), bloco com camisas úmidas (5 mancais)",
       "cilindrada_cm3": 1555,
-      "diametro_cilindro_mm": 77.0,
+      "diametro_cilindro_mm": 77,
       "curso_pistao_mm": 83.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -23,7 +23,7 @@
       "potencia_gasolina_rpm": 5200,
       "torque_gasolina_kgfm": 12.6,
       "torque_gasolina_rpm": 2400,
-      "potencia_alcool_cv_padrao": 76.0,
+      "potencia_alcool_cv_padrao": 76,
       "potencia_alcool_rpm_padrao": 5000,
       "potencia_alcool_cv_xr3": 85.5,
       "potencia_alcool_rpm_xr3": 5600,
@@ -37,7 +37,12 @@
       "entre_eixos_mm": 2395,
       "tanque_litros": 55,
       "observacoes": "Motor projetado no Brasil (liderado pelo engenheiro Luc de Ferran) a partir do maior bloco Cléon-Fonte disponível, substituindo o CVH europeu por ser mais fácil de adaptar ao álcool. Renomeado 'AE' (Alta Economia) durante a AutoLatina (1987-1996), quando também equipou o VW Gol/Voyage/Parati/Saveiro/Logus/Pointer. Versões para o Escort XR3 tinham as maiores potências a álcool da linha. Peso/dimensões de referência: Escort XR3 CHT 1.6 álcool 1988 (960kg, fonte registra 73cv SAE nessa configuração específica - divergência com os 85.5cv de outra fonte para a mesma versão, possivelmente ano/medição diferentes). Cx de 0.385 citado como o menor do mercado nacional na época de lançamento (1983), pela carroceria em cunha com grade tipo veneziana.",
-      "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine", "jkcarros.com.br (Escort XR3 CHT 1988)", "autossegredos.com.br (Ford Escort XR3 comemora 35 anos)"]
+      "_fontes": [
+        "en.wikipedia.org/wiki/Ford_CHT_engine",
+        "jkcarros.com.br (Escort XR3 CHT 1988)",
+        "autossegredos.com.br (Ford Escort XR3 comemora 35 anos)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "CHT 1.35",
@@ -54,7 +59,10 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 930,
       "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha (mesma carroceria Escort, motor mais leve). Versão de cilindrada reduzida da família CHT (mesmo curso do 1.6, diâmetro menor).",
-      "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine"]
+      "_fontes": [
+        "en.wikipedia.org/wiki/Ford_CHT_engine"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "CHT 1.0 (Escort Hobby)",
@@ -68,7 +76,10 @@
       "relacao_biela_manivela_r_l": null,
       "peso_kg_aprox": 900,
       "observacoes": "Peso aproximado, versão de entrada mais leve (motor 1.0 menor), mesma carroceria Escort. Lançado em março de 1992 em resposta à mudança na legislação tributária que favorecia carros 1.0. Motor com curso bem mais curto que os outros CHT (bloco/curso específico, não apenas variação de diâmetro).",
-      "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine"]
+      "_fontes": [
+        "en.wikipedia.org/wiki/Ford_CHT_engine"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "AP 1.6 (pós-Autolatina)",
@@ -76,7 +87,7 @@
       "aplicacao": "Escort GL/GLX 1.6i",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote (OHC) - motor de origem Volkswagen adotado após fim da AutoLatina",
       "cilindrada_cm3": 1598,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 77.4,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -85,7 +96,11 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 960,
       "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha (mesma carroceria Escort). Motor 'AP' (nome popular do motor EA-827 de origem VW/Audi) substitui o CHT no Escort em meados dos anos 90, resultado da parceria AutoLatina entre Ford e VW. Mesmo motor usado no VW Gol/Santana/Voyage da época.",
-      "_fontes": ["scribd.com (tabela compressão Kitest)", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso motores AP)"]
+      "_fontes": [
+        "scribd.com (tabela compressão Kitest)",
+        "mecatronicab2.forumbrasil.net (tabela diâmetro x curso motores AP)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "AP 1.8",
@@ -93,7 +108,7 @@
       "aplicacao": "Escort GL/GLX/XR3 1.8i",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote (OHC)",
       "cilindrada_cm3": 1781,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 86.4,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -102,7 +117,10 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 990,
       "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha, acrescido pelo motor maior. Mesmo motor AP 1.8 usado no VW Gol GTI/Santana da época.",
-      "_fontes": ["mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
+      "_fontes": [
+        "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "1.6i (Zetec, geração posterior, referência)",
@@ -110,7 +128,7 @@
       "aplicacao": "Escort (última geração antes do fim da produção)",
       "configuracao": "4 cilindros em linha, transversal, comando no cabeçote (OHC)",
       "cilindrada_cm3": 1598,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 75.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -121,7 +139,10 @@
       "potencia_maxima_rpm": 5500,
       "peso_kg_aprox": 990,
       "observacoes": "Peso aproximado, mesma carroceria Escort/Zetec (última geração). Já fora do recorte estrito dos anos 90 clássicos, mas relevante para simulador cobrir a última fase do Escort no Brasil antes de sair de linha em 2003 (produção continuou, mas fora do escopo deste levantamento).",
-      "_fontes": ["autolivraria.com.br (Best Cars Web Site)"]
+      "_fontes": [
+        "autolivraria.com.br (Best Cars Web Site)"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

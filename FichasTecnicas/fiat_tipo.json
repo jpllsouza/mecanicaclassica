@@ -25,19 +25,27 @@
       "largura_mm": 1700,
       "altura_mm": 1445,
       "observacoes": "Mesmo motor 1.6 usado no Tempra (irmão de plataforma) - furo/curso provavelmente idênticos ao 1.6 SPI do Tempra (não confirmado, ambos ficam com esse campo em aberto até validação cruzada). Peso/dimensões de referência: Tipo 1.6 i.e. nacional 1994 (~1.030kg, 82cv a 5.750rpm).",
-      "_fontes": ["ultimatespecs.com (Fiat Tipo 1.6 DGT)", "carrosnaweb.com.br (Tipo 1.6 i.e. 1993 e 1.6 mpi 1996)", "icarros.com.br / fichacompleta.com.br (Tipo 1.6IE 1994)"]
+      "_fontes": [
+        "ultimatespecs.com (Fiat Tipo 1.6 DGT)",
+        "carrosnaweb.com.br (Tipo 1.6 i.e. 1993 e 1.6 mpi 1996)",
+        "icarros.com.br / fichacompleta.com.br (Tipo 1.6IE 1994)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 8V / 16V (referência europeia)",
       "periodo_producao": "Não confirmado se chegou ao Brasil - presente na linha italiana",
       "aplicacao": "Tipo (mercado europeu - aplicação no Brasil não confirmada)",
       "cilindrada_cm3": 1995,
-      "diametro_cilindro_mm": 84.0,
-      "curso_pistao_mm": 90.0,
+      "diametro_cilindro_mm": 84,
+      "curso_pistao_mm": 90,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "observacoes": "Mesmo bloco 2.0 8V/16V usado no Tempra (bore/stroke 84x90mm confirmado para essa família de motor Fiat). NÃO CONFIRMADO se essa motorização foi oferecida no Tipo vendido no Brasil - a linha nacional parece ter sido predominantemente 1.6. Incluído apenas como referência técnica.",
-      "_fontes": ["ultimatespecs.com (linha completa do Tipo europeu, incluindo versões 2.0 e Turbo DSX não confirmadas no Brasil)"]
+      "_fontes": [
+        "ultimatespecs.com (linha completa do Tipo europeu, incluindo versões 2.0 e Turbo DSX não confirmadas no Brasil)"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

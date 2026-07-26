@@ -23,7 +23,11 @@
       "velocidade_maxima_kmh_aprox": 175,
       "peso_kg_aprox": 1035,
       "observacoes": "Furo/curso não confirmados com fonte específica para a versão nacional (evitado o chute, já que o 1.6 Tempra pode não compartilhar bloco do 2.0 8V/16V). Dados de desempenho aproximados vêm de fonte de mercado europeu, podem diferir levemente da calibração brasileira. Peso aproximado de referência (agregador ultimatespecs), mais leve que as versões 2.0 pela diferença de motor.",
-      "_fontes": ["ultimatespecs.com (Fiat Tempra 1.6)", "clubedotempra.com.br"]
+      "_fontes": [
+        "ultimatespecs.com (Fiat Tempra 1.6)",
+        "clubedotempra.com.br"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 8V (i.e. SPI/MPI)",
@@ -31,8 +35,8 @@
       "aplicacao": "Tempra SX, versões intermediárias",
       "configuracao": "4 cilindros em linha, transversal, comando único no cabeçote (SOHC), 8 válvulas",
       "cilindrada_cm3": 1995,
-      "diametro_cilindro_mm": 84.0,
-      "curso_pistao_mm": 90.0,
+      "diametro_cilindro_mm": 84,
+      "curso_pistao_mm": 90,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "taxa_compressao": "9.5:1",
@@ -45,7 +49,12 @@
       "aceleracao_0_100_s": 13.1,
       "peso_kg": 1180,
       "observacoes": "Furo/curso (84x90mm) confirmados por documento técnico de oficina (medidas de bloco/virabrequim) - fonte de alta confiabilidade. Diâmetro do munhão do virabrequim: 50.79-50.80mm. Diâmetro do alojamento de bronzina da biela: 53.89-53.90mm. Peso confirmado em agregador técnico (ultimatespecs): 1.180kg.",
-      "_fontes": ["scribd.com (Ficha Técnica Motor Tempra - documento de oficina APAREM)", "garagemdoalan.com.br (Tempra 2.0 i.e. 8V 1995)", "clubedotempra.com.br"]
+      "_fontes": [
+        "scribd.com (Ficha Técnica Motor Tempra - documento de oficina APAREM)",
+        "garagemdoalan.com.br (Tempra 2.0 i.e. 8V 1995)",
+        "clubedotempra.com.br"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 16V (i.e. MPI)",
@@ -53,8 +62,8 @@
       "aplicacao": "Tempra Ouro 16V",
       "configuracao": "4 cilindros em linha, transversal, duplo comando no cabeçote (DOHC), 16 válvulas",
       "cilindrada_cm3": 1995,
-      "diametro_cilindro_mm": 84.0,
-      "curso_pistao_mm": 90.0,
+      "diametro_cilindro_mm": 84,
+      "curso_pistao_mm": 90,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "taxa_compressao_gasolina": "8.7:1",
@@ -76,7 +85,12 @@
       "capacidade_oleo_litros": 4.8,
       "peso_kg_aprox": 1230,
       "observacoes": "IMPORTANTE: segundo o Clube do Tempra, a potência declarada de 105cv foi subdeclarada de propósito pela Fiat para pagar menos IPI - testes da época mediram cerca de 135cv reais. Furo/curso e diversas cotas de tolerância confirmadas por documento técnico de oficina (referência de alta confiabilidade para simulador). Motor com dois eixos de comando contra-rotantes (mencionados na documentação técnica) para balanceamento.",
-      "_fontes": ["scribd.com (Ficha Técnica Motor Tempra 2.0 16V - documento técnico APAREM)", "clubedotempra.com.br (Versões)", "clubedotempra.com.br (multifiat, medidas técnicas)"]
+      "_fontes": [
+        "scribd.com (Ficha Técnica Motor Tempra 2.0 16V - documento técnico APAREM)",
+        "clubedotempra.com.br (Versões)",
+        "clubedotempra.com.br (multifiat, medidas técnicas)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "2.0 Turbo",
@@ -84,8 +98,8 @@
       "aplicacao": "Tempra Turbo (2 portas), Turbo Stile (4 portas, a partir de 1996)",
       "configuracao": "4 cilindros em linha, transversal, DOHC 16V, turbocompressor",
       "cilindrada_cm3": 1995,
-      "diametro_cilindro_mm": 84.0,
-      "curso_pistao_mm": 90.0,
+      "diametro_cilindro_mm": 84,
+      "curso_pistao_mm": 90,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "taxa_compressao": "8.0:1",
@@ -99,7 +113,11 @@
       "aceleracao_0_100_s": 8.2,
       "peso_kg_aprox": 1260,
       "observacoes": "Peso aproximado por semelhança à versão 2.0 16V aspirada desta mesma ficha (1.230kg), acrescido de ~30kg pelo turbocompressor. Segundo carro turbo de produção em série no Brasil (o primeiro foi o Uno Turbo, também 1994). Mesmo bloco 2.0 16V com turbo adicionado e taxa de compressão reduzida (8.0:1) para suportar a pressão de sobrealimentação.",
-      "_fontes": ["clubedotempra.com.br (Versões)", "en.wikipedia.org/wiki/Fiat_Tempra"]
+      "_fontes": [
+        "clubedotempra.com.br (Versões)",
+        "en.wikipedia.org/wiki/Fiat_Tempra"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [

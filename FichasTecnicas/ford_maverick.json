@@ -26,14 +26,21 @@
       "cambio": "Manual 4 marchas (alavanca na coluna) ou automático 3 marchas",
       "peso_kg_aprox": 1300,
       "observacoes": "Peso aproximado, mesma carroceria Maverick da versão V8 desta ficha (1.390kg), motor 6 cilindros é mais leve que o V8. Motor de origem Willys/Aero Willys (projeto americano Kaiser), adaptado com redesenho do coletor de exaustão para caber no capô do Maverick - problema recorrente de queima de junta do cabeçote no cilindro mais distante, mitigado com galeria de arrefecimento extra.",
-      "_fontes": ["xpecialdesign.com.br", "infocarbr.blogspot.com"]
+      "_fontes": [
+        "xpecialdesign.com.br",
+        "infocarbr.blogspot.com"
+      ],
+      "tracao": "Traseira",
+      "valvulas_por_cilindro": 2
     },
     {
       "codigo_motor": "200 (Ford, 6 cilindros)",
       "apelido": "Substituto do 184",
       "periodo_producao": "1974-1975 (transição, dados a confirmar)",
       "observacoes": "Fonte não detalhou ficha técnica completa desta motorização de transição entre o 184 (Willys) e o 2.3L (CHT). Necessário aprofundar pesquisa.",
-      "_fontes": []
+      "_fontes": [],
+      "tracao": "Traseira",
+      "valvulas_por_cilindro": 2
     },
     {
       "codigo_motor": "2.3L 4 cilindros (CHT)",
@@ -59,7 +66,12 @@
       "aceleracao_0_100_s": 15.3,
       "peso_kg_aprox": 1250,
       "observacoes": "Peso aproximado, motor 4 cilindros mais leve que as versões 6 e 8 cilindros desta mesma ficha, mesma carroceria Maverick. Motor mais moderno e leve que o 6 cilindros Willys, melhorou a imagem do carro. Este motor é ancestral do futuro motor CHT usado no Corcel/Del Rey.",
-      "_fontes": ["infocarbr.blogspot.com", "autoentusiastasclassic.com.br (O Ford Maverick)"]
+      "_fontes": [
+        "infocarbr.blogspot.com",
+        "autoentusiastasclassic.com.br (O Ford Maverick)"
+      ],
+      "tracao": "Traseira",
+      "valvulas_por_cilindro": 2
     },
     {
       "codigo_motor": "V8 302 ('Canadense')",
@@ -92,7 +104,13 @@
       "entre_eixos_mm": 2614,
       "tanque_litros": 64,
       "observacoes": "Bloco de qualidade inferior (problemas de 'core shift' na fundição) segundo relatos de entusiastas/preparadores. Versão preparada de fábrica com carburador Quadrijet Holley existiu: taxa de compressão elevada de 7.3:1 para 8.5:1, comando 282°, ganho de ~40cv sobre o original. Peso/dimensões: Maverick GT V8 1974, 1.390kg em ordem de marcha.",
-      "_fontes": ["thesanches.wordpress.com", "autoentusiastasclassic.com.br", "mercadolivre.com.br/blog"]
+      "_fontes": [
+        "thesanches.wordpress.com",
+        "autoentusiastasclassic.com.br",
+        "mercadolivre.com.br/blog"
+      ],
+      "tracao": "Traseira",
+      "valvulas_por_cilindro": 2
     }
   ],
   "_pendente_proxima_rodada": [

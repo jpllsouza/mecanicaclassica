@@ -12,7 +12,7 @@
       "aplicacao": "Fiat 147 (versão de entrada), depois Fiat Uno/Mille",
       "configuracao": "4 cilindros em linha, transversal, comando de válvulas no cabeçote (correia dentada) acionando tuchos tipo copo invertido com pastilhas de ajuste",
       "cilindrada_cm3": 1049,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 57.8,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -24,7 +24,11 @@
       "velocidade_maxima_kmh": 136,
       "peso_kg_aprox": 800,
       "observacoes": "Peso aproximado por semelhança à versão 1300 desta mesma ficha (mesma carroceria 147, motor mais leve). Motor projetado por Aurelio Lampredi, ex-engenheiro da Ferrari - o projeto original da ASA (Autocostruzioni) era derivado de um pequeno esportivo que seria uma 'Ferrarina', mas o projeto do carro foi vendido para a Fiat (motor de 1032cc/96.5cv de origem, bem diferente da versão econômica usada no 147). Curso muito curto (57.8mm) para a época, favorecendo giro livre.",
-      "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa: uma história recheada de técnica)", "garagemdoalan.com.br (147 L 1050 1978)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (Motor Fiasa: uma história recheada de técnica)",
+        "garagemdoalan.com.br (147 L 1050 1978)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fiasa 1300",
@@ -32,7 +36,7 @@
       "aplicacao": "Fiat 147 (GLS, Spazio, versões principais)",
       "configuracao": "4 cilindros em linha, transversal, mesmo bloco do 1050 com virabrequim de curso maior",
       "cilindrada_cm3": 1297,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 71.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -58,7 +62,13 @@
       "entre_eixos_mm": 2225,
       "tanque_litros": 40,
       "observacoes": "Fiat privilegiou torque e elasticidade em vez de potência de pico (potência máxima em rotação relativamente baixa para a época). Motor histórico: o 147 a álcool de 1979 foi o primeiro carro a etanol produzido em série no mundo. Peso/dimensões de referência: Fiat 147 L 1300 gasolina 1980 (825kg em ordem de marcha).",
-      "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa)", "autossegredos.com.br", "vrum.com.br (147 1979 a álcool)", "jkcarros.com.br (Fiat 147 L 1300 gasolina 1980)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (Motor Fiasa)",
+        "autossegredos.com.br",
+        "vrum.com.br (147 1979 a álcool)",
+        "jkcarros.com.br (Fiat 147 L 1300 gasolina 1980)"
+      ],
+      "tracao": "Dianteira"
     },
     {
       "codigo_motor": "Fiasa 1300 Rallye",
@@ -66,7 +76,7 @@
       "aplicacao": "Fiat 147 Rallye",
       "configuracao": "Mesmo bloco do 1300 comum, com preparação de fábrica",
       "cilindrada_cm3": 1297,
-      "diametro_cilindro_mm": 76.0,
+      "diametro_cilindro_mm": 76,
       "curso_pistao_mm": 71.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
@@ -79,7 +89,10 @@
       "torque_especifico_kgfm_litro": 7.9,
       "peso_kg_aprox": 825,
       "observacoes": "Peso aproximado por semelhança direta ao 1300 comum desta mesma ficha (mesmo bloco/carroceria, só muda a preparação). Versão esportiva de fábrica do 147, com ganho de potência sobre o 1300 comum através de calibração/preparação (detalhes específicos do que mudou não encontrados na fonte).",
-      "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (Motor Fiasa)"
+      ],
+      "tracao": "Dianteira"
     }
   ],
   "_pendente_proxima_rodada": [
