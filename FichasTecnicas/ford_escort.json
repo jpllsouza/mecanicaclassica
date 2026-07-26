@@ -29,8 +29,15 @@
       "potencia_alcool_rpm_xr3": 5600,
       "torque_alcool_kgfm_xr3": 12.9,
       "torque_alcool_rpm_xr3": 4000,
-      "observacoes": "Motor projetado no Brasil (liderado pelo engenheiro Luc de Ferran) a partir do maior bloco Cléon-Fonte disponível, substituindo o CVH europeu por ser mais fácil de adaptar ao álcool. Renomeado 'AE' (Alta Economia) durante a AutoLatina (1987-1996), quando também equipou o VW Gol/Voyage/Parati/Saveiro/Logus/Pointer. Versões para o Escort XR3 tinham as maiores potências a álcool da linha.",
-      "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine", "jkcarros.com.br (Escort XR3 CHT 1988)"]
+      "coeficiente_aerodinamico_cx": 0.385,
+      "peso_kg_aprox": 960,
+      "comprimento_mm": 3985,
+      "largura_mm": 1620,
+      "altura_mm": 1360,
+      "entre_eixos_mm": 2395,
+      "tanque_litros": 55,
+      "observacoes": "Motor projetado no Brasil (liderado pelo engenheiro Luc de Ferran) a partir do maior bloco Cléon-Fonte disponível, substituindo o CVH europeu por ser mais fácil de adaptar ao álcool. Renomeado 'AE' (Alta Economia) durante a AutoLatina (1987-1996), quando também equipou o VW Gol/Voyage/Parati/Saveiro/Logus/Pointer. Versões para o Escort XR3 tinham as maiores potências a álcool da linha. Peso/dimensões de referência: Escort XR3 CHT 1.6 álcool 1988 (960kg, fonte registra 73cv SAE nessa configuração específica - divergência com os 85.5cv de outra fonte para a mesma versão, possivelmente ano/medição diferentes). Cx de 0.385 citado como o menor do mercado nacional na época de lançamento (1983), pela carroceria em cunha com grade tipo veneziana.",
+      "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine", "jkcarros.com.br (Escort XR3 CHT 1988)", "autossegredos.com.br (Ford Escort XR3 comemora 35 anos)"]
     },
     {
       "codigo_motor": "CHT 1.35",
@@ -45,7 +52,8 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Versão de cilindrada reduzida da família CHT (mesmo curso do 1.6, diâmetro menor).",
+      "peso_kg_aprox": 930,
+      "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha (mesma carroceria Escort, motor mais leve). Versão de cilindrada reduzida da família CHT (mesmo curso do 1.6, diâmetro menor).",
       "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine"]
     },
     {
@@ -58,7 +66,8 @@
       "curso_pistao_mm": 64.2,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
-      "observacoes": "Lançado em março de 1992 em resposta à mudança na legislação tributária que favorecia carros 1.0. Motor com curso bem mais curto que os outros CHT (bloco/curso específico, não apenas variação de diâmetro).",
+      "peso_kg_aprox": 900,
+      "observacoes": "Peso aproximado, versão de entrada mais leve (motor 1.0 menor), mesma carroceria Escort. Lançado em março de 1992 em resposta à mudança na legislação tributária que favorecia carros 1.0. Motor com curso bem mais curto que os outros CHT (bloco/curso específico, não apenas variação de diâmetro).",
       "_fontes": ["en.wikipedia.org/wiki/Ford_CHT_engine"]
     },
     {
@@ -74,7 +83,8 @@
       "taxa_compressao": null,
       "alimentacao": "Injeção eletrônica (EFI/monoponto conforme versão)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Motor 'AP' (nome popular do motor EA-827 de origem VW/Audi) substitui o CHT no Escort em meados dos anos 90, resultado da parceria AutoLatina entre Ford e VW. Mesmo motor usado no VW Gol/Santana/Voyage da época.",
+      "peso_kg_aprox": 960,
+      "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha (mesma carroceria Escort). Motor 'AP' (nome popular do motor EA-827 de origem VW/Audi) substitui o CHT no Escort em meados dos anos 90, resultado da parceria AutoLatina entre Ford e VW. Mesmo motor usado no VW Gol/Santana/Voyage da época.",
       "_fontes": ["scribd.com (tabela compressão Kitest)", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso motores AP)"]
     },
     {
@@ -90,7 +100,8 @@
       "taxa_compressao": null,
       "alimentacao": "Injeção eletrônica",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Mesmo motor AP 1.8 usado no VW Gol GTI/Santana da época.",
+      "peso_kg_aprox": 990,
+      "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 desta mesma ficha, acrescido pelo motor maior. Mesmo motor AP 1.8 usado no VW Gol GTI/Santana da época.",
       "_fontes": ["mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
     },
     {
@@ -108,7 +119,8 @@
       "combustivel": "Gasolina",
       "potencia_maxima_cv": 95,
       "potencia_maxima_rpm": 5500,
-      "observacoes": "Já fora do recorte estrito dos anos 90 clássicos, mas relevante para simulador cobrir a última fase do Escort no Brasil antes de sair de linha em 2003 (produção continuou, mas fora do escopo deste levantamento).",
+      "peso_kg_aprox": 990,
+      "observacoes": "Peso aproximado, mesma carroceria Escort/Zetec (última geração). Já fora do recorte estrito dos anos 90 clássicos, mas relevante para simulador cobrir a última fase do Escort no Brasil antes de sair de linha em 2003 (produção continuou, mas fora do escopo deste levantamento).",
       "_fontes": ["autolivraria.com.br (Best Cars Web Site)"]
     }
   ],

@@ -1,0 +1,5 @@
+{"make":"Chevrolet","model":"Opala","year":"1971","trim":"SS","status":"empty","market":"BR","source_type":"official_br","source_url":"https://www.chevrolet.com.br/","confidence_score":0.13,"match_score":3,"missing_fields":["power_cv","torque_kgfm","weight_kg","top_speed_kmh","accel_0_100_s","bore_mm","stroke_mm","tire_diameter_mm","gear_ratios","final_drive"],"specs":{}}
+{"make":"Chevrolet","model":"Opala","year":"1971","trim":"SS4","status":"not_found"}
+{"make":"Ford","model":"Maverick","year":"1974","trim":"V8","status":"not_found"}
+{"make":"Ford","model":"Maverick","year":"1974","trim":"4 cilindros","status":"not_found"}
+{"make":"Volkswagen","model":"Santana","year":"1984","trim":"","status":"not_found"}

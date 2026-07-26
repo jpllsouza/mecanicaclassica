@@ -26,8 +26,12 @@
         "MPFI VHC (alta taxa de compressão)": {"potencia_cv": 70, "rpm": 6400, "torque_kgfm": 8.8, "torque_rpm": 3000}
       },
       "combustivel": "Gasolina",
-      "observacoes": "Motor de entrada da linha Corsa, muito usado em preparação por ser leve e girador. Versão 16V e VHC vieram em atualizações posteriores (já anos 2000).",
-      "_fontes": ["corsaclube.com.br (fichas técnicas)", "olhonocarro.com.br", "scribd.com (torque e aperto motor Corsa 1.0)"]
+      "peso_kg": 845,
+      "coeficiente_aerodinamico_cx": 0.34,
+      "entre_eixos_mm": 2443,
+      "tanque_litros": 46,
+      "observacoes": "Motor de entrada da linha Corsa, muito usado em preparação por ser leve e girador. Versão 16V e VHC vieram em atualizações posteriores (já anos 2000). Peso/Cx de referência: Corsa Wind 1.0 EFI 1995 (845kg, 50cv - corresponde à variante EFI já listada nesta entrada). Cx (0.34) é propriedade da carroceria, citado de forma consistente em múltiplas fontes agregadoras para o Corsa hatch 1994-2000 (aplica-se também às demais motorizações 1.4/1.6 da mesma carroceria).",
+      "_fontes": ["corsaclube.com.br (fichas técnicas)", "olhonocarro.com.br", "scribd.com (torque e aperto motor Corsa 1.0)", "fichacompleta.com.br (Corsa Wind 1.0 1995)"]
     },
     {
       "codigo_motor": "1.4 (Família I)",
@@ -46,7 +50,9 @@
       "potencia_maxima_rpm": 5200,
       "torque_maximo_kgfm": 11.1,
       "torque_maximo_rpm": 2800,
-      "observacoes": "Descontinuado no final dos anos 90, substituído pelo 1.0 e 1.6 na linha.",
+      "peso_kg_aprox": 900,
+      "coeficiente_aerodinamico_cx": 0.34,
+      "observacoes": "Peso aproximado entre o 1.0 (845kg) e o 1.6 (990kg) desta mesma ficha (mesma carroceria Corsa). Cx é propriedade de carroceria, igual às demais motorizações. Descontinuado no final dos anos 90, substituído pelo 1.0 e 1.6 na linha.",
       "_fontes": ["corsaclube.com.br", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
     },
     {
@@ -66,8 +72,13 @@
         "16V": {"potencia_cv": 102, "observacao": "chegou na linha 1998"}
       },
       "combustivel": "Gasolina",
-      "observacoes": "Câmbio: Opel F13-WR (5 marchas) inicialmente, depois F-15-CR em alguns pares motor/câmbio. Câmbio automático de 4 marchas disponível como opcional a partir da linha 1998 (motor 1.6 8V).",
-      "_fontes": ["falando-sobre-carros.blogspot.com", "olhonocarro.com.br", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)"]
+      "peso_kg": 990,
+      "coeficiente_aerodinamico_cx": 0.34,
+      "comprimento_mm": 3729,
+      "largura_mm": 1608,
+      "altura_mm": 1380,
+      "observacoes": "Câmbio: Opel F13-WR (5 marchas) inicialmente, depois F-15-CR em alguns pares motor/câmbio. Câmbio automático de 4 marchas disponível como opcional a partir da linha 1998 (motor 1.6 8V). Peso/dimensões de referência: Corsa Wind 1.6 MPFI 2 portas 2002 (990kg) - ano-modelo ligeiramente posterior ao recorte principal do arquivo mas mesma plataforma/carroceria da linha 1994-2002. Cx (0.34) é propriedade de carroceria, documentado especificamente para a versão 1.0 (ver observação naquela entrada) e aplicado aqui por ser a mesma carroceria.",
+      "_fontes": ["falando-sobre-carros.blogspot.com", "olhonocarro.com.br (Corsa Wind 1.6 MPFi 2p 2002)", "mecatronicab2.forumbrasil.net (tabela diâmetro x curso)", "fichacompleta.com.br (Corsa Wind 1.0 1995, Cx)"]
     }
   ],
   "_pendente_proxima_rodada": [

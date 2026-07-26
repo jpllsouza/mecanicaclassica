@@ -22,7 +22,8 @@
       "potencia_maxima_cv": "aprox. 50 (fase inicial)",
       "aceleracao_0_100_s": 19.4,
       "velocidade_maxima_kmh": 136,
-      "observacoes": "Motor projetado por Aurelio Lampredi, ex-engenheiro da Ferrari - o projeto original da ASA (Autocostruzioni) era derivado de um pequeno esportivo que seria uma 'Ferrarina', mas o projeto do carro foi vendido para a Fiat (motor de 1032cc/96.5cv de origem, bem diferente da versão econômica usada no 147). Curso muito curto (57.8mm) para a época, favorecendo giro livre.",
+      "peso_kg_aprox": 800,
+      "observacoes": "Peso aproximado por semelhança à versão 1300 desta mesma ficha (mesma carroceria 147, motor mais leve). Motor projetado por Aurelio Lampredi, ex-engenheiro da Ferrari - o projeto original da ASA (Autocostruzioni) era derivado de um pequeno esportivo que seria uma 'Ferrarina', mas o projeto do carro foi vendido para a Fiat (motor de 1032cc/96.5cv de origem, bem diferente da versão econômica usada no 147). Curso muito curto (57.8mm) para a época, favorecendo giro livre.",
       "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa: uma história recheada de técnica)", "garagemdoalan.com.br (147 L 1050 1978)"]
     },
     {
@@ -50,8 +51,14 @@
       "cambio_relacoes": "1ª 4.091 / 2ª 2.235 / 3ª 1.454 / 4ª 0.959 / ré 3.714",
       "aceleracao_0_100_s_gasolina": 18,
       "velocidade_maxima_kmh_gasolina": 138,
-      "observacoes": "Fiat privilegiou torque e elasticidade em vez de potência de pico (potência máxima em rotação relativamente baixa para a época). Motor histórico: o 147 a álcool de 1979 foi o primeiro carro a etanol produzido em série no mundo.",
-      "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa)", "autossegredos.com.br", "vrum.com.br (147 1979 a álcool)"]
+      "peso_kg": 825,
+      "comprimento_mm": 3690,
+      "largura_mm": 1532,
+      "altura_mm": 1340,
+      "entre_eixos_mm": 2225,
+      "tanque_litros": 40,
+      "observacoes": "Fiat privilegiou torque e elasticidade em vez de potência de pico (potência máxima em rotação relativamente baixa para a época). Motor histórico: o 147 a álcool de 1979 foi o primeiro carro a etanol produzido em série no mundo. Peso/dimensões de referência: Fiat 147 L 1300 gasolina 1980 (825kg em ordem de marcha).",
+      "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa)", "autossegredos.com.br", "vrum.com.br (147 1979 a álcool)", "jkcarros.com.br (Fiat 147 L 1300 gasolina 1980)"]
     },
     {
       "codigo_motor": "Fiasa 1300 Rallye",
@@ -70,7 +77,8 @@
       "torque_maximo_kgfm": 10.3,
       "potencia_especifica_cv_litro": 49.3,
       "torque_especifico_kgfm_litro": 7.9,
-      "observacoes": "Versão esportiva de fábrica do 147, com ganho de potência sobre o 1300 comum através de calibração/preparação (detalhes específicos do que mudou não encontrados na fonte).",
+      "peso_kg_aprox": 825,
+      "observacoes": "Peso aproximado por semelhança direta ao 1300 comum desta mesma ficha (mesmo bloco/carroceria, só muda a preparação). Versão esportiva de fábrica do 147, com ganho de potência sobre o 1300 comum através de calibração/preparação (detalhes específicos do que mudou não encontrados na fonte).",
       "_fontes": ["autoentusiastasclassic.com.br (Motor Fiasa)"]
     }
   ],

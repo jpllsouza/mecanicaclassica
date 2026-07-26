@@ -20,8 +20,12 @@
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv_aprox": 84,
       "velocidade_maxima_kmh_aprox": 171,
-      "observacoes": "Mesmo motor 1.6 usado no Tempra (irmão de plataforma) - furo/curso provavelmente idênticos ao 1.6 SPI do Tempra (não confirmado, ambos ficam com esse campo em aberto até validação cruzada). Peso aproximado 1050kg na versão europeia testada.",
-      "_fontes": ["ultimatespecs.com (Fiat Tipo 1.6 DGT)", "carrosnaweb.com.br (Tipo 1.6 i.e. 1993 e 1.6 mpi 1996)"]
+      "peso_kg_aprox": 1030,
+      "comprimento_mm": 3958,
+      "largura_mm": 1700,
+      "altura_mm": 1445,
+      "observacoes": "Mesmo motor 1.6 usado no Tempra (irmão de plataforma) - furo/curso provavelmente idênticos ao 1.6 SPI do Tempra (não confirmado, ambos ficam com esse campo em aberto até validação cruzada). Peso/dimensões de referência: Tipo 1.6 i.e. nacional 1994 (~1.030kg, 82cv a 5.750rpm).",
+      "_fontes": ["ultimatespecs.com (Fiat Tipo 1.6 DGT)", "carrosnaweb.com.br (Tipo 1.6 i.e. 1993 e 1.6 mpi 1996)", "icarros.com.br / fichacompleta.com.br (Tipo 1.6IE 1994)"]
     },
     {
       "codigo_motor": "2.0 8V / 16V (referência europeia)",

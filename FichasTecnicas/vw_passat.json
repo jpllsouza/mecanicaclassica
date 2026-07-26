@@ -24,7 +24,8 @@
       "potencia_maxima_rpm": 5600,
       "torque_maximo_kgfm": 11.8,
       "torque_maximo_rpm": 3200,
-      "observacoes": "Motor de entrada da linha, usado mesmo nas versões esportivas (TS, LSE) quando equipadas a álcool, já que os carburadores alemães do 1.6 não eram compatíveis com esse combustível na época. NÃO recebia oficialmente a denominação 'MD' (nomenclatura que só surgiu com o MD-270 em 1982) - denominação popular incorreta segundo fonte especializada.",
+      "peso_kg_aprox": 930,
+      "observacoes": "Peso aproximado por semelhança à versão TS 1.6 desta mesma ficha (950kg), motor 1.5 é ligeiramente mais leve. Motor de entrada da linha, usado mesmo nas versões esportivas (TS, LSE) quando equipadas a álcool, já que os carburadores alemães do 1.6 não eram compatíveis com esse combustível na época. NÃO recebia oficialmente a denominação 'MD' (nomenclatura que só surgiu com o MD-270 em 1982) - denominação popular incorreta segundo fonte especializada.",
       "_fontes": ["hpdopassat.com.br (Motores 1.5 BR e 1.6 BS)", "jkcarros.com.br (Passat LS 1.5 1980)", "flatout.com.br (Passat TS e GTS)"]
     },
     {
@@ -44,8 +45,14 @@
       "potencia_maxima_rpm": 5600,
       "torque_maximo_kgfm": "13.2-13.3",
       "torque_maximo_rpm": "3200-3600",
-      "observacoes": "Motor de estreia do Passat TS, ícone esportivo nacional da época - tinha desempenho superior mesmo a concorrentes de 6/8 cilindros. Câmbio manual de 4 marchas com 2ª e 4ª mais longas que o padrão. Este motor deu origem à receita de preparação de fábrica do Passat GTS.",
-      "_fontes": ["flatout.com.br (Passat TS e GTS: preparação de fábrica)", "hpdopassat.com.br", "mecawiki.fandom.com (Volkswagen EA-827)"]
+      "peso_kg_aprox": 950,
+      "comprimento_mm": 4210,
+      "largura_mm": 1600,
+      "altura_mm": 1360,
+      "entre_eixos_mm": 2470,
+      "tanque_litros": 60,
+      "observacoes": "Motor de estreia do Passat TS, ícone esportivo nacional da época - tinha desempenho superior mesmo a concorrentes de 6/8 cilindros. Câmbio manual de 4 marchas com 2ª e 4ª mais longas que o padrão. Este motor deu origem à receita de preparação de fábrica do Passat GTS. Peso/dimensões de referência: Passat TS 1.6 1980 (950kg) - outra fonte (1982) registra 902kg, divergência típica entre anos-modelo.",
+      "_fontes": ["flatout.com.br (Passat TS e GTS: preparação de fábrica)", "hpdopassat.com.br", "mecawiki.fandom.com (Volkswagen EA-827)", "jkcarros.com.br (Passat TS 1.6 preto 1980)"]
     },
     {
       "codigo_motor": "MD-270 1.6 ('Motor Torque')",
@@ -64,7 +71,8 @@
       "potencia_maxima_cv_gasolina": 72,
       "potencia_maxima_cv_alcool": 82,
       "potencia_maxima_rpm": 5200,
-      "observacoes": "Primeira denominação oficial 'MD' da VW do Brasil (motores anteriores 1.5/1.6 não eram MD, apesar do uso popular incorreto do termo). Também equipou o Gol/Voyage/Parati como motor 'Torque' (ver vw_gol.json e vw_voyage.json). Em 1984, a versão GTS Pointer passou a usar o motor 1.8, e a série especial Plus foi lançada, mas o MD-270 seguiu em uso nas demais versões até a chegada da linha AP em 1986.",
+      "peso_kg_aprox": 950,
+      "observacoes": "Peso aproximado, mesma carroceria Passat da versão TS 1.6 desta ficha. Primeira denominação oficial 'MD' da VW do Brasil (motores anteriores 1.5/1.6 não eram MD, apesar do uso popular incorreto do termo). Também equipou o Gol/Voyage/Parati como motor 'Torque' (ver vw_gol.json e vw_voyage.json). Em 1984, a versão GTS Pointer passou a usar o motor 1.8, e a série especial Plus foi lançada, mas o MD-270 seguiu em uso nas demais versões até a chegada da linha AP em 1986.",
       "_fontes": ["hpdopassat.com.br (Motor 1.6 MD-270)", "flatout.com.br"]
     },
     {
@@ -84,7 +92,8 @@
       "potencia_maxima_rpm": 5200,
       "torque_maximo_kgfm_carburado": 14.7,
       "torque_maximo_rpm": 3400,
-      "observacoes": "Motor AP 1.8 chegou ao Passat na mesma época em que equipou o Gol GT e o Santana (1984) - início da padronização da linha AP em toda a família VW do Brasil, substituindo definitivamente o MD-270 até 1986.",
+      "peso_kg_aprox": 990,
+      "observacoes": "Peso de referência: Passat GTS Pointer 1.8, varia entre 970-1050kg conforme ano/fonte (1986-1989) - usado valor médio ~990kg. Motor AP 1.8 chegou ao Passat na mesma época em que equipou o Gol GT e o Santana (1984) - início da padronização da linha AP em toda a família VW do Brasil, substituindo definitivamente o MD-270 até 1986.",
       "_fontes": ["mecawiki.fandom.com (Volkswagen EA-827)", "hpdopassat.com.br (Motores 1.8 do Passat)"]
     }
   ],

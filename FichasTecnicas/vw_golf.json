@@ -17,7 +17,8 @@
       "taxa_compressao": null,
       "alimentacao": "Injeção eletrônica monoponto (FIC ECC-IV, 1995-96) / multiponto Magneti Marelli (1997+)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Motor AP compartilhado com Gol/Santana/Escort da época (AutoLatina) - ver ficha vw_gol.json para tabela completa de potências do AP por versão.",
+      "peso_kg_aprox": 1050,
+      "observacoes": "Motor AP compartilhado com Gol/Santana/Escort da época (AutoLatina) - ver ficha vw_gol.json para tabela completa de potências do AP por versão. Peso aproximado por semelhança ao Santana AP 1.8 (ver vw_santana.json) - Golf nacional era essencialmente um Santana de 2 volumes na mesma plataforma A2.",
       "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_AP"]
     },
     {
@@ -34,7 +35,8 @@
       "alimentacao": "Injeção eletrônica (Bosch LE Jetronic multiponto analógica, depois FIC ECC-IV)",
       "combustivel": "Gasolina",
       "potencia_maxima_cv": 120,
-      "observacoes": "Movido apenas a gasolina, produção inicialmente limitada a 2 mil unidades - ficou 'febre' de vendas. Mesmo motor do Gol GTI e Santana Executivo (1990).",
+      "peso_kg_aprox": 1080,
+      "observacoes": "Movido apenas a gasolina, produção inicialmente limitada a 2 mil unidades - ficou 'febre' de vendas. Mesmo motor do Gol GTI e Santana Executivo (1990). Peso aproximado por semelhança ao Gol GTi 2.0 1989 (mesmo motor/bloco AP 2.0 8V, 1.020kg confirmado - ver vw_gol.json) - não há fonte direta de peso para o Golf GTi nacional.",
       "_fontes": ["autopapo.com.br (Motor AP: 7 fatos)", "carrosnaweb.com.br (Golf GTi 2.0 1994)"]
     },
     {
@@ -67,7 +69,8 @@
       "taxa_compressao": "10.5:1",
       "alimentacao": "Injeção eletrônica multiponto",
       "combustivel": "Gasolina",
-      "observacoes": "Versão nacional do AP com bloco alto e biela de 159mm (idêntica ao EA-837 Cross-Flow importado) - mesma tecnologia usada no Gol GTI 16V e Parati GTI. Cabeçote de mesma arquitetura dos lendários Audi Quattro S1 do grupo Quattro de rali.",
+      "peso_kg_aprox": 1020,
+      "observacoes": "Peso aproximado por semelhança ao Gol GTI 16V (mesma tecnologia de bloco alto, ver vw_gol.json). Versão nacional do AP com bloco alto e biela de 159mm (idêntica ao EA-837 Cross-Flow importado) - mesma tecnologia usada no Gol GTI 16V e Parati GTI. Cabeçote de mesma arquitetura dos lendários Audi Quattro S1 do grupo Quattro de rali.",
       "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_AP"]
     },
     {

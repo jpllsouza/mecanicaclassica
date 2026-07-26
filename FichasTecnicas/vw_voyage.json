@@ -18,7 +18,8 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Lote mais raro/valorizado do Voyage hoje (1981-06/1982) por ser o único com esse motor MD 1.5 específico, antes da atualização para 1.6 em maio de 1982. Furo/curso não encontrados nesta rodada.",
+      "peso_kg_aprox": 900,
+      "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Voyage, fase inicial). Lote mais raro/valorizado do Voyage hoje (1981-06/1982) por ser o único com esse motor MD 1.5 específico, antes da atualização para 1.6 em maio de 1982. Furo/curso não encontrados nesta rodada.",
       "_fontes": ["motortudo.com (Voyage GL 1.8 1990, histórico)", "en.wikipedia.org/wiki/Volkswagen_Voyage"]
     },
     {
@@ -36,7 +37,8 @@
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv": 81,
       "cambio": "4 marchas, tipo '3+E' com efeito overdrive",
-      "observacoes": "Apelidado 'Torque' - motor mais potente fabricado pela VW do Brasil até então (1983). Mesmo motor usado no VW Passat da época (ver ficha vw_passat.json).",
+      "peso_kg_aprox": 900,
+      "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Voyage). Apelidado 'Torque' - motor mais potente fabricado pela VW do Brasil até então (1983). Mesmo motor usado no VW Passat da época (ver ficha vw_passat.json).",
       "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati"]
     },
     {
@@ -56,7 +58,8 @@
       "potencia_maxima_cv_gasolina": 80.0,
       "potencia_maxima_cv_alcool": 90.0,
       "potencia_maxima_rpm": 5600,
-      "observacoes": "A partir de 1990/91 este motor foi substituído pelo AE-1600 (CHT Ford, fruto da AutoLatina) na versão CL - ver observação sobre AE-1600 abaixo.",
+      "peso_kg_aprox": 900,
+      "observacoes": "Peso aproximado, mesma carroceria Voyage das demais motorizações desta ficha. A partir de 1990/91 este motor foi substituído pelo AE-1600 (CHT Ford, fruto da AutoLatina) na versão CL - ver observação sobre AE-1600 abaixo.",
       "_fontes": ["lucianopreparacao.blogspot.com (Ficha técnica Motor AP - tabela completa de potências)"]
     },
     {
@@ -71,7 +74,8 @@
       "relacao_biela_manivela_r_l": null,
       "combustivel": "Álcool (principal aplicação citada)",
       "potencia_maxima_cv": 76,
-      "observacoes": "Fruto do acordo AutoLatina (Ford-VW): mesmo motor CHT do Ford Escort/Del Rey/Corcel, rebatizado 'AE' (Alta Economia) para a linha VW. Furo/curso reaproveitados da ficha ford_escort.json (mesmo motor).",
+      "peso_kg_aprox": 900,
+      "observacoes": "Peso aproximado, mesma carroceria Voyage das demais motorizações desta ficha. Fruto do acordo AutoLatina (Ford-VW): mesmo motor CHT do Ford Escort/Del Rey/Corcel, rebatizado 'AE' (Alta Economia) para a linha VW. Furo/curso reaproveitados da ficha ford_escort.json (mesmo motor).",
       "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati", "referência cruzada com ford_escort.json"]
     },
     {
@@ -99,7 +103,11 @@
       "velocidade_maxima_kmh_1995": 160,
       "aceleracao_0_100_s_1990": 10.8,
       "peso_kg_1990": 894,
-      "observacoes": "O 1.8 do Gol GT/GTS ('S') chegou ao Voyage/Parati GLS em 1989, com potência ligeiramente maior (90/99cv) que a versão comum (88/96cv). Dados de desempenho variam um pouco entre anos-modelo testados nas fontes.",
+      "comprimento_mm": 4072,
+      "largura_mm": 1601,
+      "altura_mm": 1349,
+      "entre_eixos_mm": 2358,
+      "observacoes": "O 1.8 do Gol GT/GTS ('S') chegou ao Voyage/Parati GLS em 1989, com potência ligeiramente maior (90/99cv) que a versão comum (88/96cv). Dados de desempenho variam um pouco entre anos-modelo testados nas fontes. Outra fonte registra 995kg para o Voyage GL 1.8 1995 (dimensões desta entrada vêm dessa mesma fonte) - peso variou entre 894kg (1990) e 995kg (1995) conforme equipamentos de série de cada ano.",
       "_fontes": ["motortudo.com (Voyage GL 1.8 1990 e 1995)", "lucianopreparacao.blogspot.com (tabela AP)", "pt.wikipedia.org/wiki/Volkswagen_Parati"]
     }
   ],

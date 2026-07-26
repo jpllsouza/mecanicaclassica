@@ -54,8 +54,15 @@
       "torque_maximo_kgfm": 18.9,
       "torque_maximo_rpm": 2600,
       "diametro_pino_pistao_mm": "23.54-23.55",
-      "observacoes": "Pistões mais leves e bielas mais longas que o 153 (redução de curso, aumento de diâmetro). Identificação por cor do motor: azul = 151 gasolina (carb. simples), verde = 151-S (carb. duplo), amarelo = álcool.",
-      "_fontes": ["autoentusiastas.com.br", "jkcarros.com.br (ficha 1979)", "opaleirosdoparana.forumeiros.com", "6canecos.com.br manual de montagem"]
+      "peso_kg_aprox": 1150,
+      "comprimento_mm": 4765,
+      "largura_mm": 1770,
+      "altura_mm": 1385,
+      "entre_eixos_mm": 2667,
+      "tanque_litros": 65,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Pistões mais leves e bielas mais longas que o 153 (redução de curso, aumento de diâmetro). Identificação por cor do motor: azul = 151 gasolina (carb. simples), verde = 151-S (carb. duplo), amarelo = álcool. Peso/dimensões de referência: Opala Coupé 2.5 Comodoro 1981 (1.150kg em ordem de marcha) - varia por carroceria (sedan/coupé/Caravan). Cx aproximado de 0.45 citado por fórum especializado (opaleirosdoparana) referenciando reportagem antiga da revista Quatro Rodas sobre o desenho de linhas retas do Opala - não é medição oficial de túnel de vento documentada, e outra fonte online (não confiável) cita 0.40; usar com cautela.",
+      "_fontes": ["autoentusiastas.com.br", "jkcarros.com.br (ficha 1979)", "opaleirosdoparana.forumeiros.com", "6canecos.com.br manual de montagem", "jkcarros.com.br (Opala Coupé 2.5 Comodoro monocromático 1981)"]
     },
     {
       "codigo_motor": "151-S",
@@ -75,7 +82,9 @@
       "potencia_maxima_rpm": 4600,
       "torque_maximo_kgfm": 18.9,
       "torque_maximo_rpm": 2600,
-      "observacoes": "Mesmo bloco/comando do 151 comum; diferença é carburação dupla e coletor de admissão. Alguns relatos de comando de válvulas diferenciado não são consenso entre especialistas.",
+      "peso_kg_aprox": 1150,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Peso/Cx aproximados por semelhança direta ao motor 151 comum desta mesma ficha (mesmo bloco/carroceria, só muda a carburação). Mesmo bloco/comando do 151 comum; diferença é carburação dupla e coletor de admissão. Alguns relatos de comando de válvulas diferenciado não são consenso entre especialistas.",
       "_fontes": ["opaleirosdoparana.forumeiros.com", "jkcarros.com.br"]
     },
     {
@@ -118,8 +127,15 @@
       "potencia_maxima_cv_liquido_250s": 153,
       "potencia_maxima_rpm": 4000,
       "numero_mancais_principais": 7,
-      "observacoes": "Virabrequim de maior curso que o 3800, criado para aumentar deslocamento. Recebeu pistões mais leves e bielas mais longas ao longo da produção. Versão 250-S (1974+) com comando mecânico, taxa 9.2:1, homologada para a Divisão 1 da CBA.",
-      "_fontes": ["autoentusiastas.com.br (opalaclube.no.comunidades.net)", "manual do mecânico GM151/GM250"]
+      "peso_kg_aprox": 1360,
+      "comprimento_mm": 4724,
+      "largura_mm": 1767,
+      "altura_mm": 1386,
+      "entre_eixos_mm": 2743,
+      "tanque_litros": 66,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Virabrequim de maior curso que o 3800, criado para aumentar deslocamento. Recebeu pistões mais leves e bielas mais longas ao longo da produção. Versão 250-S (1974+) com comando mecânico, taxa 9.2:1, homologada para a Divisão 1 da CBA. Peso/dimensões de referência: Opala Diplomata Sedan 4.1 álcool 1985 (1.360kg) - carroceria sedan 4 portas, a mais pesada da linha; Caravan (perua) e Coupé pesam menos. Cx aproximado, ver observação na entrada do motor 151.",
+      "_fontes": ["autoentusiastas.com.br (opalaclube.no.comunidades.net)", "manual do mecânico GM151/GM250", "jkcarros.com.br (Opala Diplomata Sedan 4.1 álcool 1985)"]
     },
     {
       "codigo_motor": "250-S / 4100-S",
@@ -138,13 +154,22 @@
       "potencia_maxima_cv_liquido": 153,
       "potencia_maxima_cv_bruto_alcool": 140,
       "torque_maximo_kgfm": 26.2,
-      "observacoes": "Comando de válvulas com maior duração de abertura (lobe center 109°, levante 6.5mm). Criado para competir com o Ford Maverick Quadrijet.",
-      "_fontes": ["autoentusiastas.com.br (opalaclube.no.comunidades.net)"]
+      "peso_kg_aprox": 1295,
+      "comprimento_mm": 4710,
+      "largura_mm": 1765,
+      "altura_mm": 1365,
+      "entre_eixos_mm": 2743,
+      "tanque_litros": 66,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Comando de válvulas com maior duração de abertura (lobe center 109°, levante 6.5mm). Criado para competir com o Ford Maverick Quadrijet. Peso/dimensões de referência: Opala SS6 (coupé) 1980 (1.295kg em ordem de marcha, potência líquida 171cv citada por essa fonte - acima dos 153cv registrados em outras fontes para o 250-S, possível divergência de ano/preparação). Cx aproximado, ver observação na entrada do motor 151.",
+      "_fontes": ["autoentusiastas.com.br (opalaclube.no.comunidades.net)", "jkcarros.com.br (Opala SS6 1980)"]
     }
   ],
   "_pendente_proxima_rodada": [
     "Confirmar comprimento de biela via catálogos de peças de reposição (Scat, Metal Leve, Cofap) para os 6 motores acima",
     "Dados de desempenho por versão/ano (0-100km/h, Vmax) - parcialmente encontrados, precisam validação cruzada",
-    "Câmbio (relações de marcha), diferencial (relação de redução), peso em ordem de marcha por versão"
+    "Câmbio (relações de marcha), diferencial (relação de redução) - peso em ordem de marcha já preenchido (aproximado) para 151, 250 e 250-S com fonte jkcarros",
+    "Peso da carroceria original 1968-1973 (motores 153 e 230/3800, antes do facelift de 1974) - não encontrado; não propagado o peso do 151/250 (pós-1974) porque a carroceria pré-facelift tinha dimensões diferentes",
+    "Cx do Opala é aproximação (0.45) via fórum citando reportagem antiga da Quatro Rodas - buscar medição oficial de túnel de vento se existir"
   ]
 }

@@ -29,8 +29,15 @@
       "torque_maximo_kgfm_alcool": 10.4,
       "torque_maximo_rpm": 3000,
       "altura_compressao_pistao_mm": 33.23,
-      "observacoes": "Primeiro motor nacional com correia dentada acionando o comando de válvulas. Motor foi 'castrado' de fábrica (baixa taxa/potência) por estratégia de economia de combustível da época. Dados de r/l e comprimento de biela confirmados por fonte técnica GM (comentário de leitor com acesso a informação técnica interna, corroborado por ex-engenheiro de desenvolvimento do motor).",
-      "_fontes": ["autoentusiastasclassic.com.br (artigo + comentários técnicos)", "site.retroauto.com.br", "chevetteiroscuritiba.com.br"]
+      "peso_kg": 875,
+      "comprimento_mm": 3978,
+      "largura_mm": 1575,
+      "altura_mm": 1344,
+      "entre_eixos_mm": 2390,
+      "tanque_litros": 45,
+      "coeficiente_aerodinamico_cx_aprox": 0.43,
+      "observacoes": "Cx aproximado de 0.43 citado em fonte jornalística especializada (não medição de túnel de vento documentada). Primeiro motor nacional com correia dentada acionando o comando de válvulas. Motor foi 'castrado' de fábrica (baixa taxa/potência) por estratégia de economia de combustível da época. Dados de r/l e comprimento de biela confirmados por fonte técnica GM (comentário de leitor com acesso a informação técnica interna, corroborado por ex-engenheiro de desenvolvimento do motor). Peso/dimensões de referência: Chevette SL 1.4 sedan 2 portas 1979 (875kg em ordem de marcha) - pode variar para hatch/perua Marajó/pickup Chevy 500.",
+      "_fontes": ["autoentusiastasclassic.com.br (artigo + comentários técnicos)", "site.retroauto.com.br", "chevetteiroscuritiba.com.br", "jkcarros.com.br (Chevette SL 1.4 1979)"]
     },
     {
       "codigo_motor": "1.6",
@@ -52,7 +59,9 @@
       "torque_maximo_kgfm": 10.8,
       "torque_maximo_rpm": 3600,
       "pistoes_tipo": "Flat (planos) nas versões a álcool pré-1988",
-      "observacoes": "Mesmo comprimento de biela do 1.4 (122mm) - apenas o curso do virabrequim muda. Curioso: mesmo com curso maior, r/l do 1.6 (0.310) é menor que o do Corsa 1.6 (Família I), devido ao curso proporcionalmente pequeno do motor Chevette.",
+      "peso_kg_aprox": 890,
+      "coeficiente_aerodinamico_cx_aprox": 0.43,
+      "observacoes": "Peso/Cx aproximados por semelhança à versão 1.4 desta mesma ficha (mesma carroceria Chevette, motor 1.6 ligeiramente mais pesado). Mesmo comprimento de biela do 1.4 (122mm) - apenas o curso do virabrequim muda. Curioso: mesmo com curso maior, r/l do 1.6 (0.310) é menor que o do Corsa 1.6 (Família I), devido ao curso proporcionalmente pequeno do motor Chevette.",
       "_fontes": ["autoentusiastasclassic.com.br", "site.retroauto.com.br"]
     },
     {
@@ -74,7 +83,9 @@
       "torque_maximo_kgfm": 12.6,
       "torque_maximo_rpm": 3200,
       "altura_compressao_pistao_mm": 33.23,
-      "observacoes": "Revisão completa do 1.6: pistões e anéis 'light weight & low friction', dutos de lubrificação redimensionados (resolvia falta de óleo no mancal mais distante, ponto fraco do motor em competição), pistões com domo (diferente do flat do 1.6 anterior) para elevar taxa de compressão mantendo mesma altura de compressão.",
+      "peso_kg_aprox": 890,
+      "coeficiente_aerodinamico_cx_aprox": 0.43,
+      "observacoes": "Peso/Cx aproximados por semelhança à versão 1.4 desta mesma ficha (mesma carroceria Chevette). Revisão completa do 1.6: pistões e anéis 'light weight & low friction', dutos de lubrificação redimensionados (resolvia falta de óleo no mancal mais distante, ponto fraco do motor em competição), pistões com domo (diferente do flat do 1.6 anterior) para elevar taxa de compressão mantendo mesma altura de compressão.",
       "_fontes": ["autoentusiastasclassic.com.br (comentário técnico de ex-engenheiro GM)", "fichacompleta.com.br (Chevette SL 1.6 1989)"]
     },
     {

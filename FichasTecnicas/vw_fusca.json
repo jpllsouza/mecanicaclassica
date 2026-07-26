@@ -25,7 +25,13 @@
       "potencia_maxima_cv_din": 30,
       "diferencial_relacao": "4.375:1",
       "cambio_relacoes": "1ª 3.80 / 2ª 2.06 / 3ª 1.32 / 4ª 0.89 / ré 3.88",
-      "observacoes": "Motor de estreia do Fusca no Brasil, com curso menor que os motores posteriores (único da família com 64mm de curso).",
+      "peso_kg_aprox": 800,
+      "comprimento_mm": 4070,
+      "largura_mm": 1545,
+      "altura_mm": 1500,
+      "entre_eixos_mm": 2400,
+      "tanque_litros": 40,
+      "observacoes": "Motor de estreia do Fusca no Brasil, com curso menor que os motores posteriores (único da família com 64mm de curso). Peso aproximado por semelhança ao Fusca 1300 1968 (820kg) - a versão 1200 é ligeiramente mais leve pelo motor menor, mas sem fonte específica encontrada.",
       "_fontes": ["vw85.blogspot.com", "fusca4ever.com.br (Tabela de potência de motores originais VW)", "volksclubedoceara.blogspot.com"]
     },
     {
@@ -51,8 +57,14 @@
       "diferencial_relacao": "4.375:1",
       "velocidade_maxima_kmh": 120,
       "cambio_relacoes": "1ª 3.80 / 2ª 2.06 / 3ª 1.32 / 4ª 0.89 / ré 3.88",
-      "observacoes": "Motor mais duradouro da linha Fusca (16 anos de produção). Múltiplos prefixos de motor (BF/BJ para gasolina padrão, BK e BM/BY para variantes).",
-      "_fontes": ["fusca4ever.com.br", "totalfusca.blogspot.com (Motor VW 1300 - Ficha completa)", "sbfuscaclube.blogspot.com"]
+      "peso_kg": 820,
+      "comprimento_mm": 4070,
+      "largura_mm": 1545,
+      "altura_mm": 1500,
+      "entre_eixos_mm": 2400,
+      "tanque_litros": 40,
+      "observacoes": "Motor mais duradouro da linha Fusca (16 anos de produção). Múltiplos prefixos de motor (BF/BJ para gasolina padrão, BK e BM/BY para variantes). Peso/dimensões de referência: Fusca 1300 1968 (820kg).",
+      "_fontes": ["fusca4ever.com.br", "totalfusca.blogspot.com (Motor VW 1300 - Ficha completa)", "sbfuscaclube.blogspot.com", "jkcarros.com.br (VW Fusca 1300 1968)"]
     },
     {
       "codigo_motor": "1500 (prefixo BH)",
@@ -74,8 +86,14 @@
       "torque_maximo_rpm": 2600,
       "diferencial_relacao": "4.125:1",
       "velocidade_maxima_kmh": 126,
-      "observacoes": "Conhecido como 'Fuscão'. Usa aro de roda de 15' com 20 furos (compartilhado com o 1300). Carburação simples com afogador manual e filtro de ar a óleo (diferença marcante frente ao 1600, que tinha filtro a seco e afogador automático).",
-      "_fontes": ["autoentusiastas.com.br (Diferenças entre Fusca 1600 e 1500)", "totalfusca.blogspot.com", "volksclubedoceara.blogspot.com"]
+      "peso_kg_aprox": 820,
+      "comprimento_mm": 4079,
+      "largura_mm": 1545,
+      "altura_mm": 1500,
+      "entre_eixos_mm": 2400,
+      "tanque_litros": 40,
+      "observacoes": "Conhecido como 'Fuscão'. Usa aro de roda de 15' com 20 furos (compartilhado com o 1300). Carburação simples com afogador manual e filtro de ar a óleo (diferença marcante frente ao 1600, que tinha filtro a seco e afogador automático). Peso de referência: Fusca 1500 1972 (peso vazio aproximadamente 820kg).",
+      "_fontes": ["autoentusiastas.com.br (Diferenças entre Fusca 1600 e 1500)", "totalfusca.blogspot.com", "volksclubedoceara.blogspot.com", "jkcarros.com.br (VW Fusca 1500 1972)"]
     },
     {
       "codigo_motor": "1600 (prefixos BA, BB, BD, BG, BN, BV, BZ, UA, UF, UFA, UG, BP, BX, UJ, UJA, UK)",
@@ -107,6 +125,7 @@
       "diferencial_relacao": "4.125:1",
       "velocidade_maxima_kmh": 138,
       "cambio_relacoes": "1ª 3.80 / 2ª 2.06 / 3ª 1.32 / 4ª 0.89 / ré 3.88",
+      "peso_kg_aprox": 840,
       "observacoes": "Motor com maior variedade de prefixos/versões de potência da linha Fusca - a versão UA com taxa 8.5:1 (até 1981) era a mais potente de fábrica (78cv SAE). Filtro de ar a seco e afogador automático (diferente do 1500). Usa aro 14' com 6 furos de ventilação (estreou no VW Brasília 1973).",
       "_fontes": ["fusca4ever.com.br (Tabela de potência)", "vw85.blogspot.com", "autoentusiastas.com.br", "blogdojovino.blogspot.com"]
     },
@@ -126,7 +145,8 @@
       "potencia_maxima_cv_sae": 75,
       "potencia_maxima_rpm": 5000,
       "potencia_maxima_cv_din": 65,
-      "observacoes": "Maior motor boxer de produção da VW do Brasil, usado no esportivo SP2 (não no Fusca de série). Incluído como referência já que compartilha toda a arquitetura/biela da família.",
+      "peso_kg": 890,
+      "observacoes": "Maior motor boxer de produção da VW do Brasil, usado no esportivo SP2 (não no Fusca de série). Incluído como referência já que compartilha toda a arquitetura/biela da família. Peso confirmado (890kg) refere-se ao veículo SP2, não ao Fusca (ver vw_sp2.json) - motor nunca equipou o Fusca de série.",
       "_fontes": ["fusca4ever.com.br", "blogdojovino.blogspot.com"]
     }
   ],

@@ -25,7 +25,8 @@
       "torque_maximo_kgfm_gasolina": 14.3,
       "torque_maximo_kgfm_alcool": 15.1,
       "torque_maximo_rpm": 3000,
-      "observacoes": "Mesmo bloco/diâmetro/curso do motor 1.8 do Monza e, depois, do Astra. Compressão de 11.7:1 na versão álcool é notavelmente alta para motor carburado da época.",
+      "peso_kg_aprox": 1080,
+      "observacoes": "Mesmo bloco/diâmetro/curso do motor 1.8 do Monza e, depois, do Astra. Compressão de 11.7:1 na versão álcool é notavelmente alta para motor carburado da época. Peso aproximado por semelhança à versão GSi 2.0 desta mesma ficha (mesma carroceria Kadett E, motor 1.8 ligeiramente mais leve).",
       "_fontes": ["car.blog.br", "carrosegaragem.com.br"]
     },
     {
@@ -45,7 +46,8 @@
       "potencia_maxima_rpm": 5800,
       "torque_maximo_kgfm": 14.6,
       "torque_maximo_rpm": 3600,
-      "observacoes": "Aposentadoria do carburador em 1992 trouxe leve ganho de potência e melhora de dirigibilidade.",
+      "peso_kg_aprox": 1080,
+      "observacoes": "Aposentadoria do carburador em 1992 trouxe leve ganho de potência e melhora de dirigibilidade. Peso aproximado por semelhança à versão GSi 2.0 desta mesma ficha (mesma carroceria Kadett E).",
       "_fontes": ["carrosegaragem.com.br"]
     },
     {
@@ -65,7 +67,9 @@
       "potencia_maxima_rpm": 5600,
       "torque_maximo_kgfm": 16.2,
       "torque_maximo_rpm": 3500,
-      "observacoes": "Versão esportiva de estreia, exclusiva a álcool. Ganhou opção a gasolina em 1990.",
+      "coeficiente_aerodinamico_cx": 0.30,
+      "peso_kg_aprox": 1100,
+      "observacoes": "Peso aproximado por semelhança à versão GSi 2.0 desta mesma ficha (mesmo motor/carroceria). Versão esportiva de estreia, exclusiva a álcool. Ganhou opção a gasolina em 1990. Cx de 0.30 era o menor do mercado nacional na época, resultado de spoiler dianteiro integrado ao para-choque, grade em favo de mel e retrovisores aerodinâmicos.",
       "_fontes": ["fichacompleta.com.br (Kadett GS 2.0 1990)", "issuu.com (Revista Cultura do Automóvel)"]
     },
     {
@@ -83,8 +87,10 @@
       "combustivel": "Gasolina",
       "potencia_maxima_cv": 121,
       "torque_maximo_kgfm": 17.6,
-      "observacoes": "Versão esportiva topo de linha, também oferecida em carroceria conversível (produção terceirizada à Bertone, na Itália). Base popular de preparação por potência elevada para a época.",
-      "_fontes": ["encontracarros.com.br"]
+      "peso_kg_aprox": 1100,
+      "coeficiente_aerodinamico_cx": 0.30,
+      "observacoes": "Versão esportiva topo de linha, também oferecida em carroceria conversível (produção terceirizada à Bertone, na Itália). Base popular de preparação por potência elevada para a época. Peso aproximado de referência (Kadett GSi 2.0, ~1.100kg) - fonte não especifica ano exato entre 1992-1995, mas o valor é consistente entre múltiplas fontes de mercado (carrosnaweb, guiacarros, fichacompleta).",
+      "_fontes": ["encontracarros.com.br", "carrosnaweb.com.br / fichacompleta.com.br (Kadett GSi 2.0, consolidado ~1100kg)"]
     },
     {
       "codigo_motor": "2.0 (MPFI/EFI - fase final)",
@@ -100,7 +106,8 @@
       "alimentacao": "Injeção eletrônica (MPFI/EFI conforme versão)",
       "combustivel": "Gasolina",
       "potencia_maxima_cv": 116,
-      "observacoes": "Nos últimos dois anos de produção (1997-1998), por conta de legislação de emissões, o Kadett passou a ser oferecido exclusivamente com este motor 2.0 injetado (110-116 cv conforme fonte/ano).",
+      "peso_kg_aprox": 1100,
+      "observacoes": "Nos últimos dois anos de produção (1997-1998), por conta de legislação de emissões, o Kadett passou a ser oferecido exclusivamente com este motor 2.0 injetado (110-116 cv conforme fonte/ano). Peso aproximado por semelhança à versão GSi 2.0 desta mesma ficha (mesmo motor/carroceria).",
       "_fontes": ["en.wikipedia.org/wiki/Chevrolet_Kadett", "magodoscarros.com (Kadett GLS 2.0 MPFI 1998)"]
     }
   ],

@@ -23,7 +23,8 @@
       "taxa_compressao": "9.35:1 (referência de versão posterior similar - ver observação)",
       "alimentacao": "Carburador de corpo simples",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Usa o mesmo virabrequim do antigo Fiasa 1050 do 147 (curso ligeiramente menor: 54.8mm vs 57.8mm). Curso muito curto favorece giro alto (relatos de preparadores mencionam motor girando próximo de 8.000-10.000 rpm em versões preparadas).",
+      "peso_kg_aprox": 780,
+      "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno fase 1, motor 1.0 mais leve). Usa o mesmo virabrequim do antigo Fiasa 1050 do 147 (curso ligeiramente menor: 54.8mm vs 57.8mm). Curso muito curto favorece giro alto (relatos de preparadores mencionam motor girando próximo de 8.000-10.000 rpm em versões preparadas).",
       "_fontes": ["preparados.com.br (Motores Fiasa)", "preparados.com.br (Uno mille eletronic 1.0 para 1.3)"]
     },
     {
@@ -39,7 +40,12 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador (monoponto em versões posteriores)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Considerado pelos preparadores o 'melhor' motor Fiasa para preparação - bom equilíbrio entre curso/r/l e cilindrada, permitindo altas rotações com boa robustez. Mesmo curso do 147 1300.",
+      "coeficiente_aerodinamico_cx": 0.36,
+      "comprimento_mm": 3644,
+      "largura_mm": 1548,
+      "altura_mm": 1445,
+      "peso_kg": 811,
+      "observacoes": "Peso confirmado por fonte agregada (Fiat Uno CS 1.3, 811kg). Considerado pelos preparadores o 'melhor' motor Fiasa para preparação - bom equilíbrio entre curso/r/l e cilindrada, permitindo altas rotações com boa robustez. Mesmo curso do 147 1300. Cx/dimensões de referência: Uno CS 1.3 (Cx 0.36).",
       "_fontes": ["preparados.com.br (Motores Fiasa)", "carrosnaweb.com.br (Uno CS 1.3 1985)"]
     },
     {
@@ -59,7 +65,8 @@
       "potencia_maxima_rpm": 6000,
       "torque_maximo_kgfm": 12.9,
       "torque_maximo_rpm": 3500,
-      "observacoes": "Maior curso da família Fiasa - preparadores relatam motor mais 'áspero' em alta rotação por causa da biela relativamente curta (mesma de 130mm usada em todas as cilindradas). Bom para uso com turbo de baixa inércia segundo relatos de fórum, mas pistões originais não recomendados para turbo sem substituição.",
+      "peso_kg_aprox": 810,
+      "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno fase 1). Maior curso da família Fiasa - preparadores relatam motor mais 'áspero' em alta rotação por causa da biela relativamente curta (mesma de 130mm usada em todas as cilindradas). Bom para uso com turbo de baixa inércia segundo relatos de fórum, mas pistões originais não recomendados para turbo sem substituição.",
       "_fontes": ["maxturbos.com.br (Uno R 1986)", "preparados.com.br (Preparar motor fiasa 1.3 ou 1.5)"]
     },
     {
@@ -79,7 +86,8 @@
       "potencia_maxima_rpm": 5000,
       "torque_maximo_kgfm": 12.1,
       "torque_maximo_rpm": 2750,
-      "observacoes": "Mesma taxa de compressão do Fiasa 1.0 8V (9.35:1), segundo comparação direta encontrada em fonte.",
+      "peso_kg_aprox": 810,
+      "observacoes": "Peso aproximado por semelhança à versão CS 1.3 desta mesma ficha (mesma carroceria Uno). Mesma taxa de compressão do Fiasa 1.0 8V (9.35:1), segundo comparação direta encontrada em fonte.",
       "_fontes": ["maxturbos.com.br"]
     },
     {
@@ -95,8 +103,14 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador (fase inicial) / Injeção eletrônica (fase posterior)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "IMPORTANTE: o motor Fire é um projeto totalmente diferente do Fiasa (não compartilha bloco, diâmetro fixo ou biela). Substituiu gradualmente o Fiasa 1.0 no Uno a partir de 1989/90. Diâmetro/curso/biela não encontrados nesta rodada de pesquisa - motor merece levantamento próprio dada sua importância (usado depois em praticamente toda a linha Fiat no Brasil até os anos 2000).",
-      "_fontes": ["ultimatespecs.com (Fiat Uno II 1.0 Fire)"]
+      "peso_kg": 820,
+      "comprimento_mm": 3690,
+      "largura_mm": 1545,
+      "altura_mm": 1420,
+      "entre_eixos_mm": 2360,
+      "tanque_litros": 48,
+      "observacoes": "IMPORTANTE: o motor Fire é um projeto totalmente diferente do Fiasa (não compartilha bloco, diâmetro fixo ou biela). Substituiu gradualmente o Fiasa 1.0 no Uno a partir de 1989/90. Diâmetro/curso/biela não encontrados nesta rodada de pesquisa - motor merece levantamento próprio dada sua importância (usado depois em praticamente toda a linha Fiat no Brasil até os anos 2000). Peso/dimensões de referência: Uno Mille EP 4 portas 1996 (820kg em ordem de marcha, 50cv a 6.000rpm).",
+      "_fontes": ["ultimatespecs.com (Fiat Uno II 1.0 Fire)", "jkcarros.com.br (Uno Mille EP 4 Portas 1996)"]
     }
   ],
   "_pendente_proxima_rodada": [

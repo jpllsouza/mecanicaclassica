@@ -21,7 +21,9 @@
       "combustivel": "Gasolina ou Álcool (versões separadas)",
       "potencia_maxima_cv_gasolina": 72,
       "potencia_maxima_cv_alcool": 73,
-      "observacoes": "Diâmetro/curso não confirmados em fonte técnica primária - divergência entre fontes secundárias, não preenchido para evitar erro. Considerado o motor 'fraco' de estreia do Monza, criticado pela imprensa da época; motivou o lançamento do 1.8 já em 1983.",
+      "coeficiente_aerodinamico_cx": 0.39,
+      "peso_kg_aprox": 950,
+      "observacoes": "Peso aproximado por semelhança à versão 1.8 desta mesma ficha (mesma carroceria Monza, motor mais leve). Diâmetro/curso não confirmados em fonte técnica primária - divergência entre fontes secundárias, não preenchido para evitar erro. Considerado o motor 'fraco' de estreia do Monza, criticado pela imprensa da época; motivou o lançamento do 1.8 já em 1983.",
       "_fontes": ["autopapo.com.br", "reparacaoautomotiva.com.br", "en.wikipedia.org/wiki/Chevrolet_Monza"]
     },
     {
@@ -39,8 +41,15 @@
       "alimentacao": "Carburador (Alfa 1 de corpo simples nas versões a álcool; corpo duplo em versões esportivas)",
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv": 86,
-      "observacoes": "IMPORTANTE PARA PREPARAÇÃO: motoristas/preparadores relatam duas gerações de biela para os motores 1.8/2.0 - 'biela longa' até 1986 e 'biela curta' a partir de 1987 (mesmo diâmetro/curso, mudança na r/l). Comprimento exato não encontrado em fonte documentada - recomenda-se medição física para uso em simulador. Virabrequim do 1.8 tem curso de 79,5mm (referência usada em preparações de aumento de cilindrada).",
-      "_fontes": ["mecatronicab2.forumbrasil.net (tabela diâmetro x curso)", "forum.monzeiros.com", "autopapo.com.br"]
+      "coeficiente_aerodinamico_cx": 0.39,
+      "peso_kg": 985,
+      "comprimento_mm": 4360,
+      "largura_mm": 1660,
+      "altura_mm": 1360,
+      "entre_eixos_mm": 2525,
+      "tanque_litros": 61,
+      "observacoes": "IMPORTANTE PARA PREPARAÇÃO: motoristas/preparadores relatam duas gerações de biela para os motores 1.8/2.0 - 'biela longa' até 1986 e 'biela curta' a partir de 1987 (mesmo diâmetro/curso, mudança na r/l). Comprimento exato não encontrado em fonte documentada - recomenda-se medição física para uso em simulador. Virabrequim do 1.8 tem curso de 79,5mm (referência usada em preparações de aumento de cilindrada). Peso/dimensões de referência: Monza Sedan 2 portas SL/E 1.8 álcool 1984 (985kg em ordem de marcha).",
+      "_fontes": ["mecatronicab2.forumbrasil.net (tabela diâmetro x curso)", "forum.monzeiros.com", "autopapo.com.br", "jkcarros.com.br (Monza Sedan 2 portas SL/E 1.8 álcool 1984)"]
     },
     {
       "codigo_motor": "2.0 (Família II) - C20NE / N20XF",
@@ -64,7 +73,9 @@
       "torque_maximo_kgfm": 17.3,
       "torque_maximo_rpm": 3200,
       "altura_minima_cabecote_mm": 95,
-      "observacoes": "Mesma 'família' de bloco do 1.8, porém curso maior (86mm vs 79.5mm) via virabrequim próprio. Pistão STD com diâmetro real medido por preparadores em ~85,98mm (dentro da tolerância de fábrica). Base do lendário motor 2.0 do Monza/Kadett/Omega/Vectra/Astra, um dos mais preparados do Brasil - amplo mercado de peças de reposição (pistões, bielas, comandos) disponível.",
+      "coeficiente_aerodinamico_cx": 0.39,
+      "peso_kg_aprox": 1010,
+      "observacoes": "Peso aproximado por semelhança à versão 1.8 desta mesma ficha (985kg), motor 2.0 é ligeiramente mais pesado. Cx de 0.39 para a carroceria original (1982-1991); a reestilização 'Monza Tubarão' de 1991 melhorou o Cx para 0.34 (frente/traseira redesenhadas). Mesma 'família' de bloco do 1.8, porém curso maior (86mm vs 79.5mm) via virabrequim próprio. Pistão STD com diâmetro real medido por preparadores em ~85,98mm (dentro da tolerância de fábrica). Base do lendário motor 2.0 do Monza/Kadett/Omega/Vectra/Astra, um dos mais preparados do Brasil - amplo mercado de peças de reposição (pistões, bielas, comandos) disponível.",
       "_fontes": ["jkcarros.com.br (ficha Monza Club 2.0 EFI 1994)", "mahle-aftermarket.com catálogo técnico", "forum.monzeiros.com", "mecatronicab2.forumbrasil.net"]
     }
   ],

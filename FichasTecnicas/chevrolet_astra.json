@@ -24,7 +24,8 @@
       "potencia_maxima_rpm": "5200-5600 (varia por fonte)",
       "torque_maximo_kgfm": "15.4-16.3 (varia por fonte/ano)",
       "torque_maximo_rpm": "3200-3600",
-      "observacoes": "Mesmo motor 1.8 Família II usado no Kadett e Monza (bloco/curso idênticos). Pequenas variações de potência/torque entre fontes provavelmente refletem diferentes anos-modelo ou métodos de medição (SAE líquido vs bruto).",
+      "peso_kg_aprox": 1150,
+      "observacoes": "Mesmo motor 1.8 Família II usado no Kadett e Monza (bloco/curso idênticos). Pequenas variações de potência/torque entre fontes provavelmente refletem diferentes anos-modelo ou métodos de medição (SAE líquido vs bruto). Peso aproximado por semelhança à versão 2.0 8V/16V desta mesma ficha (mesma carroceria Astra G, 1998-2002; motor 1.8 é ligeiramente mais leve).",
       "_fontes": ["garagemdoalan.com.br", "blog.checkcarro.com.br", "fichacompleta.com.br", "encontracarros.com.br"]
     },
     {
@@ -44,7 +45,8 @@
       "potencia_maxima_rpm": null,
       "torque_maximo_kgfm": 17.3,
       "torque_maximo_rpm": 4000,
-      "observacoes": "Motor derivado do 2.0 do Vectra, com adaptações para o Astra. Mesmo furo/curso do 2.0 do Monza/Kadett (família toda compartilha bloco).",
+      "peso_kg_aprox": 1188,
+      "observacoes": "Motor derivado do 2.0 do Vectra, com adaptações para o Astra. Mesmo furo/curso do 2.0 do Monza/Kadett (família toda compartilha bloco). Peso aproximado por referência agregada ao Astra 2.0 8V 1999 (~1.188kg, mesma carroceria da versão 16V desta ficha).",
       "_fontes": ["car.blog.br", "encontracarros.com.br"]
     },
     {
@@ -63,8 +65,14 @@
       "potencia_maxima_cv": 128,
       "torque_maximo_kgfm": 19.2,
       "torque_maximo_rpm": 4000,
-      "observacoes": "Cabeçote de 16 válvulas (DOHC) sobre o mesmo bloco 2.0 do 8V - topo de linha do Astra na época, usado como base de preparação por muitos entusiastas do Família II.",
-      "_fontes": ["encontracarros.com.br"]
+      "peso_kg_aprox": 1170,
+      "comprimento_mm": 4252,
+      "largura_mm": 1709,
+      "altura_mm": 1425,
+      "entre_eixos_mm": 2614,
+      "velocidade_maxima_kmh": 203,
+      "observacoes": "Cabeçote de 16 válvulas (DOHC) sobre o mesmo bloco 2.0 do 8V - topo de linha do Astra na época, usado como base de preparação por muitos entusiastas do Família II. Peso/dimensões de referência: Astra Sedan GLS 2.0 16V 1999 (~1.170kg) - a versão 8V pesa cerca de 1.188kg segundo a mesma fonte agregada.",
+      "_fontes": ["encontracarros.com.br", "icarros.com.br / carrosnaweb.com.br / fichacompleta.com.br (Astra Sedan GLS 2.0 16V/8V 1999)"]
     }
   ],
   "_pendente_proxima_rodada": [

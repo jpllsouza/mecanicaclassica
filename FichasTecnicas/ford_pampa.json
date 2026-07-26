@@ -1,0 +1,57 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Ford",
+  "modelo": "Pampa",
+  "producao_brasil": "1982-1997",
+  "_nota": "Picape derivada da plataforma Corcel II. Motor CHT compartilhado com Corcel/Belina/Del Rey/Escort (ver ford_escort.json e ford_corcel.json para furo/curso detalhados).",
+  "motorizacoes": [
+    {
+      "codigo_motor": "1.6 (pré-CHT, lançamento)",
+      "periodo_producao": "1982-1983",
+      "aplicacao": "Pampa (lançamento, concorrente do Fiat Fiorino, VW Saveiro, Chevy 500)",
+      "configuracao": "4 cilindros em linha, comando no bloco (OHV)",
+      "cilindrada_cm3": 1600,
+      "diametro_cilindro_mm": null,
+      "curso_pistao_mm": null,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "combustivel": "Gasolina ou Álcool",
+      "peso_kg_aprox": 1080,
+      "observacoes": "Peso aproximado por semelhança à versão CHT 1.6 4x4 desta mesma ficha (1.111kg) - versão de lançamento sem 4x4 tende a ser um pouco mais leve. Motor da fase de lançamento, antes da chegada do CHT em 1984 - furo/curso não confirmados nesta rodada (provavelmente mesmo pré-CHT documentado no ford_corcel.json).",
+      "_fontes": ["fichacompleta.com.br (Pampa L 1.6 1994, contexto histórico)"]
+    },
+    {
+      "codigo_motor": "CHT 1.6",
+      "periodo_producao": "1984-1997",
+      "aplicacao": "Pampa (todas as versões, incluindo 4x4)",
+      "configuracao": "4 cilindros em linha, comando no bloco (OHV) - mesmo motor CHT documentado em ford_escort.json",
+      "cilindrada_cm3": 1555,
+      "diametro_cilindro_mm": 77.0,
+      "curso_pistao_mm": 83.5,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "taxa_compressao": null,
+      "alimentacao": "Carburador",
+      "combustivel": "Gasolina ou Álcool",
+      "potencia_maxima_cv_alcool": 75,
+      "potencia_maxima_cv_gasolina": 73,
+      "velocidade_maxima_kmh_alcool": 145,
+      "velocidade_maxima_kmh_gasolina": 140,
+      "peso_kg": 1111,
+      "coeficiente_aerodinamico_cx": 0.52,
+      "comprimento_mm": 4420,
+      "largura_mm": 1674,
+      "altura_mm": 1370,
+      "entre_eixos_mm": 2578,
+      "tanque_litros": 102,
+      "observacoes": "Chegada do motor CHT em 1984 trouxe mais potência e economia sobre o motor de lançamento. Versão 4x4 (lançada junto à Belina 4x4) usava câmbio de 4 marchas e banco corrido, com tanque extra de 40 litros na versão a álcool. Toda a linha (incluindo básicas L e GL, de 1986) usava esse mesmo motor CHT. Peso/Cx/dimensões de referência: Pampa L 1.6 4x4 1993 (1.111kg, Cx 0.52 - carroceria de picape, arrasto alto típico do segmento).",
+      "_fontes": ["fichacompleta.com.br (Pampa L 1.6 1994)", "jkcarros.com.br (Pampa L 4x4 1993, com Cx)"]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Furo/curso do motor de lançamento pré-CHT (1982-1983)",
+    "Confirmar se a Pampa recebeu o motor AP 1.8 em algum momento (como aconteceu no Del Rey/Belina) - não encontrado nesta rodada, parece ter permanecido só com CHT até o fim",
+    "Comprimento de biela do CHT (mesma limitação de outros arquivos Ford)",
+    "Peso/Cx do motor de lançamento pré-CHT (1982-83) e das versões cabine simples sem 4x4 - só a versão 4x4 1993 tem peso/Cx confirmados nesta rodada"
+  ]
+}

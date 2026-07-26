@@ -23,11 +23,13 @@
       "torque_maximo_kgfm_aprox": 15.5,
       "potencia_maxima_cv_mi_declarada": 96.9,
       "potencia_maxima_cv_mi_real_estimada": 107,
+      "coeficiente_aerodinamico_cx": 0.40,
       "velocidade_maxima_kmh": 177,
       "aceleracao_0_100_s": 12,
       "consumo_estrada_km_l": 11.4,
-      "observacoes": "Segundo uma fonte, a potência declarada de fábrica (96.9cv) era inferior à real medida em teste prático (107cv) - possível subdeclaração para fins fiscais, padrão observado em outros modelos Fiat/VW/GM da época.",
-      "_fontes": ["maxturbos.com.br (Quantos cv tem o motor 2.0 do Santana)", "olhonocarro.com.br (Santana 2000 1.8 MI)"]
+      "peso_kg_aprox": 1050,
+      "observacoes": "Peso aproximado por semelhança ao AP 2.0 8V desta mesma ficha (1.095kg, motor 1.8 é ligeiramente mais leve). Segundo uma fonte, a potência declarada de fábrica (96.9cv) era inferior à real medida em teste prático (107cv) - possível subdeclaração para fins fiscais, padrão observado em outros modelos Fiat/VW/GM da época. Cx de 0.40 refere-se à carroceria original (1984-1991) - a reestilização de 1991 melhorou o Cx para 0.37 (valor já presente na entrada do motor 2.0 8V desta ficha).",
+      "_fontes": ["maxturbos.com.br (Quantos cv tem o motor 2.0 do Santana)", "olhonocarro.com.br (Santana 2000 1.8 MI)", "autolivraria.com.br (história VW Santana/Quantum)"]
     },
     {
       "codigo_motor": "AP 2.0 8V",

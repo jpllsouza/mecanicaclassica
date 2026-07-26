@@ -24,7 +24,8 @@
       "torque_maximo_rpm": 2000,
       "diferencial_relacao": "3.31:1",
       "cambio": "Manual 4 marchas (alavanca na coluna) ou automático 3 marchas",
-      "observacoes": "Motor de origem Willys/Aero Willys (projeto americano Kaiser), adaptado com redesenho do coletor de exaustão para caber no capô do Maverick - problema recorrente de queima de junta do cabeçote no cilindro mais distante, mitigado com galeria de arrefecimento extra.",
+      "peso_kg_aprox": 1300,
+      "observacoes": "Peso aproximado, mesma carroceria Maverick da versão V8 desta ficha (1.390kg), motor 6 cilindros é mais leve que o V8. Motor de origem Willys/Aero Willys (projeto americano Kaiser), adaptado com redesenho do coletor de exaustão para caber no capô do Maverick - problema recorrente de queima de junta do cabeçote no cilindro mais distante, mitigado com galeria de arrefecimento extra.",
       "_fontes": ["xpecialdesign.com.br", "infocarbr.blogspot.com"]
     },
     {
@@ -56,7 +57,8 @@
       "cambio": "Manual 4 marchas (alavanca no assoalho); relações 3.596/2.378/1.531/1.00, ré 4.229",
       "velocidade_maxima_kmh": 155,
       "aceleracao_0_100_s": 15.3,
-      "observacoes": "Motor mais moderno e leve que o 6 cilindros Willys, melhorou a imagem do carro. Este motor é ancestral do futuro motor CHT usado no Corcel/Del Rey.",
+      "peso_kg_aprox": 1250,
+      "observacoes": "Peso aproximado, motor 4 cilindros mais leve que as versões 6 e 8 cilindros desta mesma ficha, mesma carroceria Maverick. Motor mais moderno e leve que o 6 cilindros Willys, melhorou a imagem do carro. Este motor é ancestral do futuro motor CHT usado no Corcel/Del Rey.",
       "_fontes": ["infocarbr.blogspot.com", "autoentusiastasclassic.com.br (O Ford Maverick)"]
     },
     {
@@ -83,7 +85,13 @@
       "cambio": "Manual 4 marchas (assoalho) - único disponível para o GT",
       "aceleracao_0_100_s": "~10",
       "velocidade_maxima_kmh": 190,
-      "observacoes": "Bloco de qualidade inferior (problemas de 'core shift' na fundição) segundo relatos de entusiastas/preparadores. Versão preparada de fábrica com carburador Quadrijet Holley existiu: taxa de compressão elevada de 7.3:1 para 8.5:1, comando 282°, ganho de ~40cv sobre o original.",
+      "peso_kg": 1390,
+      "comprimento_mm": 4508,
+      "largura_mm": 1798,
+      "altura_mm": 1328,
+      "entre_eixos_mm": 2614,
+      "tanque_litros": 64,
+      "observacoes": "Bloco de qualidade inferior (problemas de 'core shift' na fundição) segundo relatos de entusiastas/preparadores. Versão preparada de fábrica com carburador Quadrijet Holley existiu: taxa de compressão elevada de 7.3:1 para 8.5:1, comando 282°, ganho de ~40cv sobre o original. Peso/dimensões: Maverick GT V8 1974, 1.390kg em ordem de marcha.",
       "_fontes": ["thesanches.wordpress.com", "autoentusiastasclassic.com.br", "mercadolivre.com.br/blog"]
     }
   ],

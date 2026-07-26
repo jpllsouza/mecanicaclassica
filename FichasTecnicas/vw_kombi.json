@@ -1,0 +1,101 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Volkswagen",
+  "modelo": "Kombi",
+  "producao_brasil": "1957-2013 (recorte deste projeto: motores a ar até meados dos 90; motor AP a água a partir de 1991)",
+  "_nota": "Mesma família de motor boxer a ar do Fusca (ver vw_fusca.json - furo/curso/biela idênticos por cilindrada, comprimento de biela fixo 137.06mm). A Kombi teve prefixos de motor próprios (BG, BZ, BX, UG, UK etc.) mas com as MESMAS especificações internas de furo/curso do Fusca equivalente.",
+  "motorizacoes": [
+    {
+      "codigo_motor": "1500 (prefixo BH-Kombi)",
+      "periodo_producao": "1967-1975",
+      "aplicacao": "Kombi (motor de estreia dessa cilindrada, junto ao Karmann-Ghia)",
+      "configuracao": "4 cilindros boxer, refrigerado a ar, traseiro",
+      "cilindrada_cm3": 1493,
+      "diametro_cilindro_mm": 83.0,
+      "curso_pistao_mm": 69.0,
+      "comprimento_biela_mm": 137.06,
+      "relacao_biela_manivela_r_l": 0.2517,
+      "taxa_compressao": "6.8:1",
+      "alimentacao": "Carburador simples",
+      "combustivel": "Gasolina",
+      "potencia_maxima_cv_din": 44,
+      "potencia_maxima_cv_sae": 52,
+      "potencia_maxima_rpm": 4600,
+      "peso_kg_aprox": 1160,
+      "comprimento_mm": 4280,
+      "largura_mm": 1750,
+      "altura_mm": 1940,
+      "entre_eixos_mm": 2400,
+      "tanque_litros": 46,
+      "observacoes": "Motor 1500 surgiu primeiro na Kombi e no Karmann-Ghia (1967), antes de chegar ao Fusca. Mesmo bloco/biela documentados na ficha do Fusca. Peso/dimensões de referência: Kombi 1500 1974 (peso vazio aproximadamente 1.160kg).",
+      "_fontes": ["autoentusiastas.com.br (A flexibilidade do motor VW arrefecido a ar)", "fusca4ever.com.br (Tabela de potência)"]
+    },
+    {
+      "codigo_motor": "1600 gasolina (prefixos BG, BZ, UG - específicos Kombi)",
+      "periodo_producao": "1969-1991 (aprox., antes da chegada do motor a água)",
+      "aplicacao": "Kombi, Kombi Expresso",
+      "configuracao": "4 cilindros boxer, refrigerado a ar, traseiro",
+      "cilindrada_cm3": 1584,
+      "diametro_cilindro_mm": 85.5,
+      "curso_pistao_mm": 69.0,
+      "comprimento_biela_mm": 137.06,
+      "relacao_biela_manivela_r_l": 0.2517,
+      "taxa_compressao": "7.2:1 (padrão)",
+      "alimentacao": "Carburador simples (BG, BZ) ou conforme variante",
+      "combustivel": "Gasolina",
+      "potencia_variantes": {
+        "BG": {"cv_sae": 65, "cv_din": 54, "rpm": 4600},
+        "BZ": {"cv_sae": 58, "cv_din": 48, "rpm": 4400},
+        "UG": {"cv_din": 56, "rpm": 4500}
+      },
+      "peso_kg_aprox": 1370,
+      "observacoes": "Prefixos exclusivos da Kombi, mas com dimensões de furo/curso idênticas ao 1600 do Fusca/Brasília. Motor traseiro em compartimento próprio, mais robusto para suportar o maior peso e uso comercial do veículo.",
+      "_fontes": ["fusca4ever.com.br (Tabela de potência)", "blogdojovino.blogspot.com", "restaurameufusca.blogspot.com (prefixos: BG - 1600 GAS KOMBI, BZ - 1600 GAS KOMBI, UG - 1600 GAS KOMBI)"]
+    },
+    {
+      "codigo_motor": "1600 álcool (prefixos BX, UK - específicos Kombi)",
+      "periodo_producao": "1980-1991 (aprox.)",
+      "aplicacao": "Kombi, Kombi Expresso (versão a álcool)",
+      "configuracao": "4 cilindros boxer, refrigerado a ar, traseiro",
+      "cilindrada_cm3": 1584,
+      "diametro_cilindro_mm": 85.5,
+      "curso_pistao_mm": 69.0,
+      "comprimento_biela_mm": 137.06,
+      "relacao_biela_manivela_r_l": 0.2517,
+      "taxa_compressao": null,
+      "alimentacao": "Carburação dupla",
+      "combustivel": "Álcool",
+      "potencia_variantes": {
+        "BX": {"cv_sae": 68, "cv_din": 57, "rpm": 4800},
+        "UK": {"cv_din": 62, "rpm": 4500}
+      },
+      "peso_kg_aprox": 1370,
+      "observacoes": "Peso aproximado por semelhança à versão a gasolina desta mesma ficha (mesma carroceria/motor 1600). Versões a álcool específicas da Kombi, com dupla carburação (padrão de todos os motores boxer a álcool da época).",
+      "_fontes": ["fusca4ever.com.br", "restaurameufusca.blogspot.com (prefixos: BX - 1600 ALC KOMBI, UK - 1600 ALC KOMBI)"]
+    },
+    {
+      "codigo_motor": "AP 1.6/1.8 (motor a água, dianteiro)",
+      "periodo_producao": "1991/1997 em diante (fase de transição para motor a água)",
+      "aplicacao": "Kombi Carat e linhas posteriores (motor a água, dianteiro)",
+      "configuracao": "4 cilindros em linha, dianteiro, mesmo bloco AP documentado em vw_gol.json",
+      "cilindrada_cm3_1_6": 1596,
+      "cilindrada_cm3_1_8": 1781,
+      "diametro_cilindro_mm": "81.0 (ambas)",
+      "curso_pistao_mm_1_6": 77.4,
+      "curso_pistao_mm_1_8": 86.4,
+      "comprimento_biela_mm": 144,
+      "relacao_biela_manivela_r_l_1_6": 0.268,
+      "relacao_biela_manivela_r_l_1_8": 0.300,
+      "peso_kg_aprox": 1370,
+      "observacoes": "Peso aproximado por semelhança às versões a ar desta mesma ficha (mesma carroceria Kombi). A partir dos anos 90 a Kombi migrou gradualmente do motor traseiro a ar para motor dianteiro a água (família AP), acompanhando a mesma transição do restante da linha VW. Mudança completa e definitiva (fim do motor a ar) ocorreu oficialmente em 2005 no Brasil (fora do recorte deste levantamento) - mas a variante Carat com motor AP já existia nos anos 90.",
+      "_fontes": ["referência cruzada com vw_gol.json (mesmo motor AP)", "carrosnaweb.com.br (Kombi Standard 1.6 1995/2005)"]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Confirmar taxa de compressão exata das versões a álcool (BX, UK)",
+    "Ano exato de introdução do motor AP dianteiro na Kombi (parece ter sido gradual)",
+    "Detalhes da versão UF/UFA/UJ/UJA (prefixos que aparecem em tabelas mas com aplicação ambígua entre Fusca/Kombi)",
+    "Peso exato por carroceria (furgão/pick-up/lotação/Kombi Carat) - não encontrado com fonte confiável",
+    "Coeficiente aerodinâmico (Cx) - não encontrado para nenhuma versão"
+  ]
+}

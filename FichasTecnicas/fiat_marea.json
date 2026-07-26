@@ -25,8 +25,14 @@
       "cambio": "Manual C510, 5 marchas",
       "velocidade_maxima_kmh": "aprox. 200 (não confirmado com precisão)",
       "aceleracao_0_100_s": 9.8,
-      "observacoes": "Motor quase 'quadrado' (82mm x 82.7mm), moderno para a época com DOHC 16V e tuchos hidráulicos. Dado consistente em múltiplas fontes/anos (2000-2003).",
-      "_fontes": ["fichacompleta.com.br (Marea SX 1.8 16V 2000/2002)", "garagemdoalan.com.br (Marea SX 1.8 16V 2003)"]
+      "peso_kg": 1220,
+      "comprimento_mm": 4393,
+      "largura_mm": 1741,
+      "altura_mm": 1450,
+      "entre_eixos_mm": 2540,
+      "tanque_litros": 63,
+      "observacoes": "Motor quase 'quadrado' (82mm x 82.7mm), moderno para a época com DOHC 16V e tuchos hidráulicos. Dado consistente em múltiplas fontes/anos (2000-2003). Peso/dimensões de referência: Marea SX 1.8 16V (1.220kg), consistente entre anos-modelo 2000-2003.",
+      "_fontes": ["fichacompleta.com.br (Marea SX 1.8 16V 2000/2002)", "garagemdoalan.com.br (Marea SX 1.8 16V 2003)", "icarros.com.br (Marea SX 1.8 16V 2000/2001/2002)"]
     },
     {
       "codigo_motor": "2.0 20V (5 cilindros, código Fivetech)",
@@ -73,7 +79,8 @@
       "cambio": "Manual 5 marchas",
       "aceleracao_0_100_s": 7.9,
       "coeficiente_aerodinamico_cx": 0.32,
-      "observacoes": "Topo da linha Marea no Brasil, um dos sedãs mais potentes nacionais da época. Mesmo bloco 5 cilindros do 2.0 20V aspirado, com turbo adicionado e taxa de compressão reduzida (10:1 para 8.5:1). Dado extremamente consistente entre múltiplos anos-modelo (1999-2003) nas fontes consultadas.",
+      "peso_kg_aprox": 1380,
+      "observacoes": "Peso aproximado por semelhança à versão 2.0 20V aspirada desta mesma ficha (1.351kg), acrescido de ~30kg pelo turbocompressor e reforços. Topo da linha Marea no Brasil, um dos sedãs mais potentes nacionais da época. Mesmo bloco 5 cilindros do 2.0 20V aspirado, com turbo adicionado e taxa de compressão reduzida (10:1 para 8.5:1). Dado extremamente consistente entre múltiplos anos-modelo (1999-2003) nas fontes consultadas.",
       "_fontes": ["garagemdoalan.com.br (Marea Turbo 2.0 20V 1999/2000/2001/2003)", "amantesdecarros.com.br"]
     }
   ],

@@ -18,7 +18,9 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Mesmo motor boxer a ar do Fusca (ver ficha VW Fusca para dados completos de furo/curso/biela) - o Gol nasceu usando essa mecânica antes de migrar para os motores a água EA827 (AP).",
+      "peso_kg_aprox": 850,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Mesmo motor boxer a ar do Fusca (ver ficha VW Fusca para dados completos de furo/curso/biela) - o Gol nasceu usando essa mecânica antes de migrar para os motores a água EA827 (AP). Cx aproximado de 0.45 citado para a carroceria original do 'Gol quadrado' (1980-1994) - antes da revisão aerodinâmica testada em túnel de vento de Wolfsburgo que trouxe o Cx para 0.34 na geração seguinte (G2, 1994+).",
       "_fontes": ["referência cruzada com ficha VW Fusca (mesmo motor)"]
     },
     {
@@ -34,7 +36,9 @@
       "taxa_compressao": null,
       "alimentacao": "Carburador",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Mesmo motor CHT 1.0 usado no Ford Escort Hobby (fruto da AutoLatina, parceria Ford-VW). Furo/curso reaproveitados da ficha do Ford Escort/CHT (ver arquivo ford_escort.json).",
+      "peso_kg_aprox": 830,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Peso/Cx aproximados pela carroceria 'Gol quadrado' da época (motor 1.0, o mais leve da linha). Mesmo motor CHT 1.0 usado no Ford Escort Hobby (fruto da AutoLatina, parceria Ford-VW). Furo/curso reaproveitados da ficha do Ford Escort/CHT (ver arquivo ford_escort.json).",
       "_fontes": ["pecamentor.com.br (Gol 97: Detalhes, Motores e Consumo)", "en.wikipedia.org/wiki/Ford_CHT_engine (referência cruzada)"]
     },
     {
@@ -58,7 +62,9 @@
         "TotalFlex_MagnetiMarelli": {"potencia_cv_gasolina": 97, "potencia_cv_alcool": 99, "rpm": 5500, "torque_kgfm_gasolina": 14.1, "torque_kgfm_alcool": 14.4, "torque_rpm": 3000}
       },
       "combustivel": "Gasolina, Álcool, ou Flex (a partir de 2003, primeiro carro flex do Brasil)",
-      "observacoes": "Motor AP: evolução do EA-827 alemão/Audi, nacionalizado a partir de 1985. Primeiro motor nacional com injeção eletrônica (Gol GTi 1989, Bosch LE Jetronic multiponto analógica). Os primeiros AP 1.6/1.8 usavam biela do antigo motor MD (136mm), causando aspereza - corrigido com a biela de 144mm padronizada em 1985. Base do lançamento do sistema Total Flex em 2003 (primeiro carro flex do mundo), embora com taxa de compressão baixa (10:1) para uso eficiente com álcool puro.",
+      "peso_kg_aprox": 950,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Peso aproximado por semelhança ao Gol GTi 2.0 1989 desta mesma ficha (motor 1.6 é mais leve, versões básicas do quadrado ficavam na faixa de 900-1000kg); Cx aproximado da carroceria 'Gol quadrado' (ver observação do motor a ar). Motor AP: evolução do EA-827 alemão/Audi, nacionalizado a partir de 1985. Primeiro motor nacional com injeção eletrônica (Gol GTi 1989, Bosch LE Jetronic multiponto analógica). Os primeiros AP 1.6/1.8 usavam biela do antigo motor MD (136mm), causando aspereza - corrigido com a biela de 144mm padronizada em 1985. Base do lançamento do sistema Total Flex em 2003 (primeiro carro flex do mundo), embora com taxa de compressão baixa (10:1) para uso eficiente com álcool puro.",
       "_fontes": ["mecawiki.fandom.com/pt-br/wiki/Volkswagen_EA-827", "golquadrado.com.br (fórum, r/l e biela)", "lucianopreparacao.blogspot.com (Ficha técnica Motor AP)", "matheusdragster.no.comunidades.net"]
     },
     {
@@ -75,7 +81,9 @@
       "taxa_compressao_carburado_gasolina": null,
       "alimentacao": "Carburador Weber TLDZ/TLDE - Brosol 2E/3E (versões carburadas); EFI/MI (versões injetadas)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Motor mais usado em preparação da linha AP, junto ao 2.0. Versão 'S' (mais brava da linha) usa comando de válvulas 049G de 264° (compartilhado com Golf alemão), presente no Gol GT/GTS.",
+      "peso_kg_aprox": 990,
+      "coeficiente_aerodinamico_cx_aprox": 0.45,
+      "observacoes": "Peso/Cx aproximados por semelhança à carroceria 'Gol quadrado' (ver motor a ar desta ficha) e ao GTi 2.0 1989 (1.020kg). Motor mais usado em preparação da linha AP, junto ao 2.0. Versão 'S' (mais brava da linha) usa comando de válvulas 049G de 264° (compartilhado com Golf alemão), presente no Gol GT/GTS.",
       "_fontes": ["golquadrado.com.br", "lucianopreparacao.blogspot.com", "mecawiki.fandom.com"]
     },
     {
@@ -91,7 +99,13 @@
       "taxa_compressao": "10.5:1 (referência para versão 16V - 8V pode diferir)",
       "alimentacao": "Injeção eletrônica (EFI/MI conforme versão)",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "Lançado em 1988 usando a mesma biela de 144mm do resto da linha (contra 159mm do motor alemão equivalente), o que segundo entusiastas gera aspereza em alta rotação - problema nunca corrigido pela VW do Brasil. Bloco não intercambiável com o 1.6/1.8 (distribuidor específico também).",
+      "peso_kg": 1020,
+      "comprimento_mm": 3860,
+      "largura_mm": 1610,
+      "altura_mm": 1360,
+      "entre_eixos_mm": 2365,
+      "tanque_litros": 55,
+      "observacoes": "Peso/dimensões de referência: Gol GTi 2.0 1989 (1.020kg em ordem de marcha, 120cv DIN). Lançado em 1988 usando a mesma biela de 144mm do resto da linha (contra 159mm do motor alemão equivalente), o que segundo entusiastas gera aspereza em alta rotação - problema nunca corrigido pela VW do Brasil. Bloco não intercambiável com o 1.6/1.8 (distribuidor específico também).",
       "_fontes": ["golquadrado.com.br (fórum técnico)", "lucianopreparacao.blogspot.com"]
     },
     {
@@ -107,7 +121,8 @@
       "taxa_compressao": "10.5:1 (gasolina)",
       "alimentacao": "Injeção eletrônica multiponto",
       "combustivel": "Gasolina ou Álcool",
-      "observacoes": "IMPORTANTE: mesmo furo/curso do 2.0 8V, mas biela mais longa (159mm vs 144mm) - diferença real de r/l entre as duas versões de 2.0, não apenas o cabeçote 16V. Cabeçote de fluxo cruzado (admissão de um lado, escape do outro) ao contrário do fluxo convencional do 8V.",
+      "peso_kg_aprox": 1020,
+      "observacoes": "IMPORTANTE: mesmo furo/curso do 2.0 8V, mas biela mais longa (159mm vs 144mm) - diferença real de r/l entre as duas versões de 2.0, não apenas o cabeçote 16V. Cabeçote de fluxo cruzado (admissão de um lado, escape do outro) ao contrário do fluxo convencional do 8V. Peso aproximado por semelhança ao GTi 2.0 8V 1989 desta mesma ficha (mesmo bloco/carroceria).",
       "_fontes": ["golquadrado.com.br", "lucianopreparacao.blogspot.com"]
     },
     {
@@ -125,13 +140,16 @@
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv": 62.5,
       "torque_maximo_kgfm": 9.1,
-      "observacoes": "Projeto EA111 original de 1972, chegou ao Brasil só 25 anos depois (1997). Marcou o início do fim da AutoLatina - motor bem mais moderno que o antigo AE-1000/CHT. Gerou depois versões 1.0 16V e até 1.0 16V Turbo de 112cv (fora do recorte principal deste levantamento, mas relevante citar a evolução).",
+      "peso_kg_aprox": 880,
+      "coeficiente_aerodinamico_cx": 0.34,
+      "observacoes": "Projeto EA111 original de 1972, chegou ao Brasil só 25 anos depois (1997). Marcou o início do fim da AutoLatina - motor bem mais moderno que o antigo AE-1000/CHT. Gerou depois versões 1.0 16V e até 1.0 16V Turbo de 112cv (fora do recorte principal deste levantamento, mas relevante citar a evolução). Cx de 0.34 refere-se à carroceria do Gol de 2ª geração (G2, lançado 1994), testada em túnel de vento de Wolfsburgo - 25% melhor que o Cx 0.45 do Gol quadrado anterior.",
       "_fontes": ["pecamentor.com.br (Gol 97: Detalhes, Motores e Consumo)"]
     }
   ],
   "_pendente_proxima_rodada": [
     "Furo/curso do motor EA111 1.0 8V/16V (não encontrado nesta rodada)",
     "Taxa de compressão exata do AP 1.8 e 2.0 8V em todas as variantes (carburado vs injetado)",
-    "Confirmar layout do motor no Gol quadrado a ar (longitudinal na dianteira, motor originalmente traseiro adaptado)"
+    "Confirmar layout do motor no Gol quadrado a ar (longitudinal na dianteira, motor originalmente traseiro adaptado)",
+    "Peso do Gol 1.6 a ar, AE-1000, AP 1.6/1.8 8V comuns e EA111 1.0 - só o AP 2.0 8V (GTi 1989) tem peso confirmado nesta rodada"
   ]
 }

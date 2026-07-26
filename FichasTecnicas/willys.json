@@ -1,0 +1,89 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Willys-Overland do Brasil",
+  "modelo": "Aero Willys / Rural Willys / Jeep Willys / Itamaraty",
+  "producao_brasil": "1958-1983 (recorte deste projeto: motores 6 cilindros clássicos, 1958-1977; Willys-Overland foi comprada pela Ford em 1967)",
+  "_nota": "Marca posteriormente incorporada pela Ford do Brasil (1967) - motor 6cc BF-161 foi a base do futuro motor do Ford Maverick nacional (ver ford_maverick.json).",
+  "motorizacoes": [
+    {
+      "codigo_motor": "BF-161 (motor 6 cilindros, carburação simples)",
+      "periodo_producao": "1958-1975",
+      "aplicacao": "Rural Willys, Jeep Willys, Pick-up Willys, Aero Willys (1960-1962)",
+      "configuracao": "6 cilindros em linha, tipo F-head (válvulas de admissão no cabeçote, escape no bloco), comando de válvulas lateral acionado por engrenagens, medidas em sistema americano (polegadas)",
+      "cilindrada_cm3": 2638,
+      "cilindrada_pol3": 161,
+      "diametro_cilindro_mm": null,
+      "curso_pistao_mm": null,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "alimentacao": "1 carburador",
+      "combustivel": "Gasolina",
+      "potencia_maxima_hp": 90,
+      "potencia_maxima_rpm": 4400,
+      "torque_maximo_kgfm": 18.67,
+      "torque_maximo_rpm": 2000,
+      "peso_kg_aprox": 1446,
+      "observacoes": "Peso aproximado por semelhança ao motor 2600 desta mesma ficha (mesmo tipo de carroceria Rural/Jeep/Aero Willys). PRIMEIRO motor a gasolina fabricado no Brasil (07/03/1958, fábrica de motores em São Bernardo do Campo, bloco fundido em Taubaté). Baseado no motor americano Willys 'Hurricane' (685), por sua vez evolução dos motores 4 cilindros Willys dos anos 30/40. Um dos menores motores de 6 cilindros já fabricados - cilindrada equivalente a alguns 4 cilindros da época.",
+      "_fontes": ["ruralwillys.tripod.com (motores Willys)", "angelfire.com/wi/willysbr (Motores Willys)"]
+    },
+    {
+      "codigo_motor": "2600 (motor 6 cilindros, carburação dupla)",
+      "periodo_producao": "1963-1971",
+      "aplicacao": "Aero Willys 2600, Itamaraty (1966)",
+      "configuracao": "6 cilindros em linha, tipo F-head - mesmo bloco/diâmetro/taxa de compressão do BF-161, com cabeçote especial para 2 carburadores e coletor de escape tipo 3x2",
+      "cilindrada_cm3": 2641,
+      "diametro_cilindro_mm": null,
+      "curso_pistao_mm": null,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "alimentacao": "2 carburadores",
+      "combustivel": "Gasolina",
+      "potencia_maxima_hp": 110,
+      "peso_kg": 1446,
+      "observacoes": "Diferença do BF-161 é só carburação/cabeçote - mesmo bloco e taxa de compressão.",
+      "_fontes": ["ruralwillys.tripod.com", "ultimatespecs.com (Aero-Willys 2600 1966)"]
+    },
+    {
+      "codigo_motor": "3000",
+      "periodo_producao": "1967-1975 (opcional na Rural a partir de 1967; motor principal do Itamaraty)",
+      "aplicacao": "Itamaraty, Rural série especial 1970, Pick-up militar F-85, opcional na Rural a partir de 1967",
+      "configuracao": "6 cilindros em linha, tipo F-head - virtualmente idêntico ao BF-161/2600 mas com curso de pistão maior (3.5 para 4.0 polegadas) - virabrequim e bielas DIFERENTES do BF-161/2600 por causa do curso maior",
+      "cilindrada_cm3": 3014,
+      "diametro_cilindro_mm": "idêntico ao BF-161/2600 (valor exato não encontrado)",
+      "curso_pistao_pol": 4.0,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "alimentacao_variantes": {
+        "carburacao_dupla_Itamaraty": {"potencia_hp": 140, "potencia_rpm": 4400, "torque_kgfm": 22.3, "torque_rpm": 2000},
+        "carburacao_simples_Rural_Jeep_70_75": {"potencia_hp": 110}
+      },
+      "combustivel": "Gasolina",
+      "peso_kg_aprox": 1450,
+      "observacoes": "Peso aproximado por semelhança ao motor 2600 desta mesma ficha (mesmo tipo de carroceria Rural/Itamaraty). Motor relativamente raro. Adaptado pela Ford na década de 70 para equipar o Maverick nacional (refrigeração de cabeçote melhorada, filtro de óleo de fluxo total tipo cartucho) - ver ford_maverick.json, motor 184.",
+      "_fontes": ["ruralwillys.tripod.com (motores Willys)", "angelfire.com/wi/willysbr"]
+    },
+    {
+      "codigo_motor": "OHC 2300 (motor 4 cilindros, fase Ford)",
+      "periodo_producao": "1976-1983",
+      "aplicacao": "Rural (1976-77), Jeep (1976-83), Pick-up (1976-83) - já sob controle da Ford",
+      "configuracao": "4 cilindros em linha, comando no cabeçote (OHC) - substituiu os antigos motores 6 cilindros Willys/F-head",
+      "cilindrada_cm3": 2300,
+      "diametro_cilindro_mm": 96.4,
+      "curso_pistao_mm": 79.4,
+      "comprimento_biela_mm": null,
+      "relacao_biela_manivela_r_l": null,
+      "combustivel": "Gasolina",
+      "potencia_maxima_cv": 90,
+      "peso_kg_aprox": 1350,
+      "observacoes": "Peso aproximado, um pouco mais leve que os motores 6 cilindros anteriores por ser um bloco 4 cilindros menor. Mesmo motor 2.3L usado no Ford Maverick nacional (ver ford_maverick.json) - substituiu definitivamente os antigos motores de origem Willys nos utilitários da linha, já sob gestão total da Ford (empresa comprada em 1967, mas motores Willys continuaram em uso até 1975).",
+      "_fontes": ["angelfire.com/wi/willysbr (Motores Willys)", "referência cruzada ford_maverick.json"]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Diâmetro/curso exato em mm de todos os motores 6 cilindros Willys (fontes só dão em polegadas/cilindrada, não furo/curso mm)",
+    "Comprimento de biela de qualquer um dos motores (não encontrado - documentação técnica antiga escassa online)",
+    "Confirmar aplicação exata por ano de cada motor no Jeep CJ-5/CJ-6 nacional",
+    "Peso exato confirmado por fonte para BF-161 (Jeep/Rural), 3000 (Itamaraty) e OHC 2300 - não encontrado",
+    "Coeficiente aerodinâmico (Cx) - não encontrado para nenhum modelo Willys"
+  ]
+}

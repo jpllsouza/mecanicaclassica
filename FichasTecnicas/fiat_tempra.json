@@ -21,7 +21,8 @@
       "potencia_maxima_cv_aprox": 86,
       "aceleracao_0_100_s_aprox": 11.8,
       "velocidade_maxima_kmh_aprox": 175,
-      "observacoes": "Furo/curso não confirmados com fonte específica para a versão nacional (evitado o chute, já que o 1.6 Tempra pode não compartilhar bloco do 2.0 8V/16V). Dados de desempenho aproximados vêm de fonte de mercado europeu, podem diferir levemente da calibração brasileira.",
+      "peso_kg_aprox": 1035,
+      "observacoes": "Furo/curso não confirmados com fonte específica para a versão nacional (evitado o chute, já que o 1.6 Tempra pode não compartilhar bloco do 2.0 8V/16V). Dados de desempenho aproximados vêm de fonte de mercado europeu, podem diferir levemente da calibração brasileira. Peso aproximado de referência (agregador ultimatespecs), mais leve que as versões 2.0 pela diferença de motor.",
       "_fontes": ["ultimatespecs.com (Fiat Tempra 1.6)", "clubedotempra.com.br"]
     },
     {
@@ -42,7 +43,8 @@
       "torque_maximo_kgfm": 16.5,
       "torque_maximo_rpm": 3000,
       "aceleracao_0_100_s": 13.1,
-      "observacoes": "Furo/curso (84x90mm) confirmados por documento técnico de oficina (medidas de bloco/virabrequim) - fonte de alta confiabilidade. Diâmetro do munhão do virabrequim: 50.79-50.80mm. Diâmetro do alojamento de bronzina da biela: 53.89-53.90mm.",
+      "peso_kg": 1180,
+      "observacoes": "Furo/curso (84x90mm) confirmados por documento técnico de oficina (medidas de bloco/virabrequim) - fonte de alta confiabilidade. Diâmetro do munhão do virabrequim: 50.79-50.80mm. Diâmetro do alojamento de bronzina da biela: 53.89-53.90mm. Peso confirmado em agregador técnico (ultimatespecs): 1.180kg.",
       "_fontes": ["scribd.com (Ficha Técnica Motor Tempra - documento de oficina APAREM)", "garagemdoalan.com.br (Tempra 2.0 i.e. 8V 1995)", "clubedotempra.com.br"]
     },
     {
@@ -72,6 +74,7 @@
       "diametro_alojamento_bucha_pino_biela_mm": "24.98-25.02",
       "volume_camara_combustao_cc": 42,
       "capacidade_oleo_litros": 4.8,
+      "peso_kg_aprox": 1230,
       "observacoes": "IMPORTANTE: segundo o Clube do Tempra, a potência declarada de 105cv foi subdeclarada de propósito pela Fiat para pagar menos IPI - testes da época mediram cerca de 135cv reais. Furo/curso e diversas cotas de tolerância confirmadas por documento técnico de oficina (referência de alta confiabilidade para simulador). Motor com dois eixos de comando contra-rotantes (mencionados na documentação técnica) para balanceamento.",
       "_fontes": ["scribd.com (Ficha Técnica Motor Tempra 2.0 16V - documento técnico APAREM)", "clubedotempra.com.br (Versões)", "clubedotempra.com.br (multifiat, medidas técnicas)"]
     },
@@ -94,13 +97,15 @@
       "torque_maximo_rpm": 3000,
       "velocidade_maxima_kmh": 220,
       "aceleracao_0_100_s": 8.2,
-      "observacoes": "Segundo carro turbo de produção em série no Brasil (o primeiro foi o Uno Turbo, também 1994). Mesmo bloco 2.0 16V com turbo adicionado e taxa de compressão reduzida (8.0:1) para suportar a pressão de sobrealimentação.",
+      "peso_kg_aprox": 1260,
+      "observacoes": "Peso aproximado por semelhança à versão 2.0 16V aspirada desta mesma ficha (1.230kg), acrescido de ~30kg pelo turbocompressor. Segundo carro turbo de produção em série no Brasil (o primeiro foi o Uno Turbo, também 1994). Mesmo bloco 2.0 16V com turbo adicionado e taxa de compressão reduzida (8.0:1) para suportar a pressão de sobrealimentação.",
       "_fontes": ["clubedotempra.com.br (Versões)", "en.wikipedia.org/wiki/Fiat_Tempra"]
     }
   ],
   "_pendente_proxima_rodada": [
     "Furo/curso do motor 1.6 SPI (não confirmado)",
     "Comprimento de biela de todos os motores (documento de oficina encontrado tem cotas de folga/alojamento mas não o comprimento centro a centro explícito no trecho capturado - vale a pena buscar o PDF completo)",
-    "Pressão do turbo e detalhes do turbocompressor usado na versão Turbo"
+    "Pressão do turbo e detalhes do turbocompressor usado na versão Turbo",
+    "Coeficiente aerodinâmico (Cx) - buscas retornam 0.32 com frequência, mas a página fonte direta (ultimatespecs) não confirma valor (campo aparece vazio); não incluído até confirmação em fonte primária"
   ]
 }

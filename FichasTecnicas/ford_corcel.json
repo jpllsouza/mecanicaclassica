@@ -7,6 +7,7 @@
   "motorizacoes": [
     {
       "codigo_motor": "1.3 Cléon-Fonte",
+      "_targets": [{ "modelo": "Corcel" }],
       "periodo_producao": "1968-1976 (gradualmente substituído pelo 1.4)",
       "aplicacao": "Corcel I (versões básicas)",
       "configuracao": "4 cilindros em linha, longitudinal, comando de válvulas no bloco (OHV), acionado por corrente",
@@ -19,11 +20,13 @@
       "alimentacao": "Carburador de corpo simples",
       "combustivel": "Gasolina",
       "potencia_maxima_cv_sae_bruto": 68,
-      "observacoes": "Motor idêntico ao usado no Renault 12 francês, com taxa de compressão reduzida para a gasolina brasileira da época. Diâmetro/curso não confirmados (fonte em inglês não detalhou; risco de confundir com o 1.4).",
+      "peso_kg_aprox": 940,
+      "observacoes": "Peso aproximado por semelhança às versões 1.4 desta mesma ficha (mesma carroceria Corcel I). Motor idêntico ao usado no Renault 12 francês, com taxa de compressão reduzida para a gasolina brasileira da época. Diâmetro/curso não confirmados (fonte em inglês não detalhou; risco de confundir com o 1.4).",
       "_fontes": ["en.wikipedia.org/wiki/Ford_Corcel"]
     },
     {
       "codigo_motor": "1.4 Cléon-Fonte / Sierra",
+      "_targets": [{ "modelo": "Corcel" }, { "modelo": "Corcel II" }],
       "periodo_producao": "1973-1983 (indo até o Corcel II)",
       "aplicacao": "Corcel I e II (versões padrão), Belina",
       "configuracao": "4 cilindros em linha, longitudinal, comando de válvulas único no bloco, acionado por corrente, tuchos mecânicos",
@@ -40,11 +43,13 @@
       "potencia_maxima_rpm": 5400,
       "torque_maximo_kgfm": 11.6,
       "torque_maximo_rpm": 3600,
-      "observacoes": "IMPORTANTE: diâmetro do cilindro varia entre fontes consultadas (72mm, 73mm, 75.3mm conforme a fonte) - possivelmente refletindo diferentes anos/versões do motor ou imprecisão das fontes secundárias. Recomenda-se validação cruzada antes de usar no simulador. Curso de 77mm é consistente entre todas as fontes.",
+      "peso_kg_aprox": 960,
+      "observacoes": "Peso de referência: Corcel 2 LDO 1.4 1978 (~960kg). IMPORTANTE: diâmetro do cilindro varia entre fontes consultadas (72mm, 73mm, 75.3mm conforme a fonte) - possivelmente refletindo diferentes anos/versões do motor ou imprecisão das fontes secundárias. Recomenda-se validação cruzada antes de usar no simulador. Curso de 77mm é consistente entre todas as fontes.",
       "_fontes": ["jkcarros.com.br (fichas 1974 e 1976)", "fichacompleta.com.br/garagemdoalan.com.br (múltiplos anos)"]
     },
     {
       "codigo_motor": "1.4 XP (GT)",
+      "_targets": [{ "modelo": "Corcel" }, { "modelo": "Corcel II" }],
       "periodo_producao": "1973-1979",
       "aplicacao": "Corcel GT",
       "configuracao": "4 cilindros em linha, longitudinal, comando no bloco, mesmo bloco do 1.4 padrão",
@@ -61,11 +66,13 @@
       "potencia_maxima_rpm": 5400,
       "torque_maximo_kgfm": "11.6-11.8",
       "torque_maximo_rpm": "3500-3600",
-      "observacoes": "Versão esportiva do 1.4, com carburador duplo. Base do Corcel GT, primeiro 'esportivo' popular da Ford no Brasil.",
+      "peso_kg_aprox": 950,
+      "observacoes": "Versão esportiva do 1.4, com carburador duplo. Base do Corcel GT, primeiro 'esportivo' popular da Ford no Brasil. Peso de referência: Corcel GT 1.4 1976 (~950kg).",
       "_fontes": ["jkcarros.com.br (Corcel GT 1974)", "garagemdoalan.com.br (Corcel GT 1975)", "en.wikipedia.org"]
     },
     {
       "codigo_motor": "1.6 (pré-CHT)",
+      "_targets": [{ "modelo": "Corcel II" }],
       "periodo_producao": "1979-1983",
       "aplicacao": "Corcel II (todas versões, incluindo GT)",
       "configuracao": "4 cilindros em linha, longitudinal, comando no bloco",
@@ -82,11 +89,18 @@
       "velocidade_maxima_kmh": 145,
       "aceleracao_0_100_s": 17,
       "cambio": "5 marchas (pioneiro no segmento médio nacional)",
-      "observacoes": "Versão a álcool (1980) foi muito elogiada pela imprensa da época como um dos melhores motores a álcool do mercado, com boa partida a frio e baixa vibração.",
-      "_fontes": ["conexaoautomotivabr.com", "autopapo.com.br", "media.ford.com (release oficial Ford 50 anos)"]
+      "peso_kg": 975,
+      "comprimento_mm": 4370,
+      "largura_mm": 1632,
+      "altura_mm": 1345,
+      "entre_eixos_mm": 2445,
+      "tanque_litros": 55,
+      "observacoes": "Versão a álcool (1980) foi muito elogiada pela imprensa da época como um dos melhores motores a álcool do mercado, com boa partida a frio e baixa vibração. Peso/dimensões de referência: Corcel II L 1981 (975kg em ordem de marcha, 90cv a 5.600rpm - coincide com a potência já registrada nesta entrada).",
+      "_fontes": ["conexaoautomotivabr.com", "autopapo.com.br", "media.ford.com (release oficial Ford 50 anos)", "jkcarros.com.br (Ford Corcel II L 1981)"]
     },
     {
       "codigo_motor": "1.6 CHT",
+      "_targets": [{ "modelo": "Corcel II" }, { "modelo": "Corcel" }],
       "periodo_producao": "1983/1984-1986",
       "aplicacao": "Corcel II (fase final), Belina, Del Rey, Pampa",
       "configuracao": "4 cilindros em linha, longitudinal (mesmo motor usado transversalmente no Escort - raro caso de motor usado nas duas configurações)",
@@ -99,11 +113,13 @@
       "alimentacao": "Carburador",
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv_alcool": 73,
-      "observacoes": "CHT = 'Compound High Turbulence', câmara de combustão de alta turbulência. Evolução do motor Cléon-Fonte original. Motor compartilhado com o Escort (transversal) e Del Rey/Pampa (longitudinal).",
+      "peso_kg_aprox": 975,
+      "observacoes": "Peso aproximado, mesma carroceria Corcel II das demais motorizações desta ficha. CHT = 'Compound High Turbulence', câmara de combustão de alta turbulência. Evolução do motor Cléon-Fonte original. Motor compartilhado com o Escort (transversal) e Del Rey/Pampa (longitudinal).",
       "_fontes": ["comprecar.com.br", "autoentusiastas.com.br (Ford Corcel 50 anos)", "maxturbos.com.br"]
     },
     {
       "codigo_motor": "1.3 CHT",
+      "_targets": [{ "modelo": "Corcel II" }, { "modelo": "Corcel" }],
       "periodo_producao": "1983-1986",
       "aplicacao": "Corcel II (versão de entrada, fase final)",
       "cilindrada_cm3": 1300,
@@ -114,7 +130,8 @@
       "potencia_maxima_cv_liquido": 62,
       "velocidade_maxima_kmh": 143,
       "aceleracao_0_100_s": 20,
-      "observacoes": "Versão de entrada relançada com tecnologia CHT ao lado do 1.6, oferecendo opção mais econômica na fase final do Corcel.",
+      "peso_kg_aprox": 950,
+      "observacoes": "Peso aproximado, mesma carroceria Corcel II das demais motorizações desta ficha. Versão de entrada relançada com tecnologia CHT ao lado do 1.6, oferecendo opção mais econômica na fase final do Corcel.",
       "_fontes": ["comprecar.com.br"]
     }
   ],
