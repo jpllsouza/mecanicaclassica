@@ -149,12 +149,15 @@ function mapSpecs(data, motor) {
     cylinders: cleanText(motor.configuracao),
     lifters: cleanText(motor.tuchos),
     engine_cc: toInt(pick(motor, ["cilindrada_cm3"])),
+    displacement_unit_cc: toNumber(pick(motor, ["cilindrada_unitaria_cm3"])),
     valves_per_cyl: toInt(pick(motor, ["valvulas_por_cilindro"])),
     compression_ratio: cleanText(pick(motor, COMPRESSION_KEYS)),
     engine_code: cleanText(motor.codigo_motor),
+    weight_power_ratio_kg_cv: toNumber(pick(motor, ["peso_potencia_kg_cv"])),
+    weight_torque_ratio_kg_kgfm: toNumber(pick(motor, ["peso_torque_kg_kgfm"])),
     aspiration: cleanText(motor.aspiracao),
     fuel_system: cleanText(motor.alimentacao),
-    valve_train: cleanText(motor.configuracao),
+    valve_train: cleanText(motor.comando_valvulas) || cleanText(motor.configuracao),
     timing_drive: cleanText(motor.acionamento_comando),
     rod_length_mm: toNumber(pick(motor, ["comprimento_biela_mm"])),
     bore_mm: toNumber(pick(motor, ["diametro_cilindro_mm"])),
@@ -165,19 +168,47 @@ function mapSpecs(data, motor) {
     torque_kgfm: torqueKgfm,
     torque_rpm: toInt(pick(motor, TORQUE_RPM_KEYS)),
     torque_nm: torqueKgfm === null ? null : torqueKgfm * KGFM_TO_NM,
+    torque_specific_kgfm_l: toNumber(pick(motor, ["torque_especifico_kgfm_l"])),
+    power_specific_cv_l: toNumber(pick(motor, ["potencia_especifica_cv_l"])),
     weight_kg: toInt(pick(motor, ["peso_kg", "peso_kg_1990", "peso_kg_aprox", "peso_veiculo_seco_kg"])),
     cd_cx: toNumber(pick(motor, ["coeficiente_aerodinamico_cx"])),
+    frontal_area_m2: toNumber(pick(motor, ["area_frontal_m2"])),
+    frontal_area_corrected_m2: toNumber(pick(motor, ["area_frontal_corrigida_m2"])),
     length_mm: toInt(pick(motor, ["comprimento_mm"])),
     width_mm: toInt(pick(motor, ["largura_mm"])),
     height_mm: toInt(pick(motor, ["altura_mm"])),
     wheelbase_mm: toInt(pick(motor, ["entre_eixos_mm", "distancia_entre_eixos_mm"])),
+    front_track_mm: toInt(pick(motor, ["bitola_dianteira_mm"])),
+    rear_track_mm: toInt(pick(motor, ["bitola_traseira_mm"])),
+    trunk_l: toInt(pick(motor, ["porta_malas_l", "porta_malas_litros"])),
     fuel_tank_l: toInt(pick(motor, ["tanque_litros"])),
+    payload_kg: toInt(pick(motor, ["carga_util_kg"])),
+    tow_no_brake_kg: toInt(pick(motor, ["reboque_sem_freio_kg"])),
+    tow_with_brake_kg: toInt(pick(motor, ["reboque_com_freio_kg"])),
+    ground_clearance_mm: toInt(pick(motor, ["altura_minima_solo_mm"])),
     drivetrain: cleanText(motor.tracao),
     transmission_type: cleanText(motor.cambio),
+    clutch: cleanText(motor.embreagem),
     gear_ratios: cleanText(motor.relacoes_marcha),
     final_drive: toNumber(pick(motor, ["diferencial_relacao"])),
+    front_suspension: cleanText(motor.suspensao_dianteira),
+    rear_suspension: cleanText(motor.suspensao_traseira),
+    front_spring: cleanText(motor.mola_dianteira),
+    rear_spring: cleanText(motor.mola_traseira),
+    front_brakes: cleanText(motor.freios_dianteiros),
+    rear_brakes: cleanText(motor.freios_traseiros),
+    steering_assist: cleanText(motor.direcao_assistencia),
+    turning_diameter_m: toNumber(pick(motor, ["diametro_giro_m"])),
+    front_tire: cleanText(motor.pneu_dianteiro),
+    rear_tire: cleanText(motor.pneu_traseiro),
+    spare_tire: cleanText(motor.estepe),
+    sidewall_height_mm: toInt(pick(motor, ["altura_flanco_mm"])),
     top_speed_kmh: toInt(pick(motor, TOPSPEED_KEYS)),
     accel_0_100_s: toNumber(pick(motor, ACCEL_KEYS)),
+    city_km_l: toNumber(pick(motor, ["consumo_urbano_km_l"])),
+    highway_km_l: toNumber(pick(motor, ["consumo_rodoviario_km_l"])),
+    city_range_km: toInt(pick(motor, ["autonomia_urbana_km"])),
+    highway_range_km: toInt(pick(motor, ["autonomia_rodoviaria_km"])),
     notes: joinNotes(data, motor)
   };
 }
@@ -223,95 +254,21 @@ async function upsertTrim(client, modelId, name, year) {
 }
 
 async function upsertSpecs(client, trimId, specs) {
-  // ON CONFLICT uses COALESCE(EXCLUDED.x, specs.x) so a re-import with a gap
-  // in the source JSON never blanks out a value the DB already has (e.g. one
-  // manually backfilled from raw_data) — it only ever fills missing fields.
+  // Built dynamically from mapSpecs()'s keys so every field it produces reaches
+  // the DB (a fixed column list silently drops anything added later). ON CONFLICT
+  // uses COALESCE(EXCLUDED.x, specs.x) so a re-import with a gap in the source
+  // JSON never blanks out a value the DB already has - it only fills gaps.
+  const cols = Object.keys(specs);
+  const values = [trimId, ...cols.map((c) => specs[c])];
+  const placeholders = cols.map((_, i) => `$${i + 2}`).join(",");
+  const updateSet = cols.map((c) => `${c} = COALESCE(EXCLUDED.${c}, specs.${c})`).join(",\n       ");
+
   await client.query(
-    `INSERT INTO specs (
-       trim_id, engine_installation, engine_layout, cylinders, lifters, engine_cc, valves_per_cyl,
-       compression_ratio, engine_code, aspiration, fuel_system, valve_train, timing_drive, rod_length_mm,
-       bore_mm, stroke_mm, power_cv, power_rpm, power_hp, torque_kgfm, torque_rpm, torque_nm,
-       weight_kg, cd_cx, length_mm, width_mm, height_mm, wheelbase_mm, fuel_tank_l, drivetrain,
-       transmission_type, gear_ratios, final_drive, top_speed_kmh, accel_0_100_s, notes
-     )
-     VALUES (
-       $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,
-       $21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35,$36
-     )
+    `INSERT INTO specs (trim_id, ${cols.join(", ")})
+     VALUES ($1, ${placeholders})
      ON CONFLICT (trim_id) DO UPDATE SET
-       engine_installation = COALESCE(EXCLUDED.engine_installation, specs.engine_installation),
-       engine_layout = COALESCE(EXCLUDED.engine_layout, specs.engine_layout),
-       cylinders = COALESCE(EXCLUDED.cylinders, specs.cylinders),
-       lifters = COALESCE(EXCLUDED.lifters, specs.lifters),
-       engine_cc = COALESCE(EXCLUDED.engine_cc, specs.engine_cc),
-       valves_per_cyl = COALESCE(EXCLUDED.valves_per_cyl, specs.valves_per_cyl),
-       compression_ratio = COALESCE(EXCLUDED.compression_ratio, specs.compression_ratio),
-       engine_code = COALESCE(EXCLUDED.engine_code, specs.engine_code),
-       aspiration = COALESCE(EXCLUDED.aspiration, specs.aspiration),
-       fuel_system = COALESCE(EXCLUDED.fuel_system, specs.fuel_system),
-       valve_train = COALESCE(EXCLUDED.valve_train, specs.valve_train),
-       timing_drive = COALESCE(EXCLUDED.timing_drive, specs.timing_drive),
-       rod_length_mm = COALESCE(EXCLUDED.rod_length_mm, specs.rod_length_mm),
-       bore_mm = COALESCE(EXCLUDED.bore_mm, specs.bore_mm),
-       stroke_mm = COALESCE(EXCLUDED.stroke_mm, specs.stroke_mm),
-       power_cv = COALESCE(EXCLUDED.power_cv, specs.power_cv),
-       power_rpm = COALESCE(EXCLUDED.power_rpm, specs.power_rpm),
-       power_hp = COALESCE(EXCLUDED.power_hp, specs.power_hp),
-       torque_kgfm = COALESCE(EXCLUDED.torque_kgfm, specs.torque_kgfm),
-       torque_rpm = COALESCE(EXCLUDED.torque_rpm, specs.torque_rpm),
-       torque_nm = COALESCE(EXCLUDED.torque_nm, specs.torque_nm),
-       weight_kg = COALESCE(EXCLUDED.weight_kg, specs.weight_kg),
-       cd_cx = COALESCE(EXCLUDED.cd_cx, specs.cd_cx),
-       length_mm = COALESCE(EXCLUDED.length_mm, specs.length_mm),
-       width_mm = COALESCE(EXCLUDED.width_mm, specs.width_mm),
-       height_mm = COALESCE(EXCLUDED.height_mm, specs.height_mm),
-       wheelbase_mm = COALESCE(EXCLUDED.wheelbase_mm, specs.wheelbase_mm),
-       fuel_tank_l = COALESCE(EXCLUDED.fuel_tank_l, specs.fuel_tank_l),
-       drivetrain = COALESCE(EXCLUDED.drivetrain, specs.drivetrain),
-       transmission_type = COALESCE(EXCLUDED.transmission_type, specs.transmission_type),
-       gear_ratios = COALESCE(EXCLUDED.gear_ratios, specs.gear_ratios),
-       final_drive = COALESCE(EXCLUDED.final_drive, specs.final_drive),
-       top_speed_kmh = COALESCE(EXCLUDED.top_speed_kmh, specs.top_speed_kmh),
-       accel_0_100_s = COALESCE(EXCLUDED.accel_0_100_s, specs.accel_0_100_s),
-       notes = COALESCE(EXCLUDED.notes, specs.notes)`,
-    [
-      trimId,
-      specs.engine_installation,
-      specs.engine_layout,
-      specs.cylinders,
-      specs.lifters,
-      specs.engine_cc,
-      specs.valves_per_cyl,
-      specs.compression_ratio,
-      specs.engine_code,
-      specs.aspiration,
-      specs.fuel_system,
-      specs.valve_train,
-      specs.timing_drive,
-      specs.rod_length_mm,
-      specs.bore_mm,
-      specs.stroke_mm,
-      specs.power_cv,
-      specs.power_rpm,
-      specs.power_hp,
-      specs.torque_kgfm,
-      specs.torque_rpm,
-      specs.torque_nm,
-      specs.weight_kg,
-      specs.cd_cx,
-      specs.length_mm,
-      specs.width_mm,
-      specs.height_mm,
-      specs.wheelbase_mm,
-      specs.fuel_tank_l,
-      specs.drivetrain,
-      specs.transmission_type,
-      specs.gear_ratios,
-      specs.final_drive,
-      specs.top_speed_kmh,
-      specs.accel_0_100_s,
-      specs.notes
-    ]
+       ${updateSet}`,
+    values
   );
 }
 
