@@ -11,7 +11,12 @@ module.exports = async function handler(req, res) {
   }
 
   const result = await db.query(
-    "SELECT id, name, start_year, end_year FROM models WHERE make_id = $1 ORDER BY name ASC",
+    `SELECT DISTINCT mo.id, mo.name, mo.start_year, mo.end_year
+     FROM models mo
+     JOIN trims t ON t.model_id = mo.id
+     JOIN specs s ON s.trim_id = t.id
+     WHERE mo.make_id = $1
+     ORDER BY mo.name ASC`,
     [makeId]
   );
 

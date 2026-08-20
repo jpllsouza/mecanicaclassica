@@ -1248,6 +1248,10 @@
                 versaoSelect.innerHTML = '<option value="">Selecione</option>';
                 if (!marcaSelect.value) return;
                 const models = await fetch(`/api/models?make_id=${marcaSelect.value}`).then(r => r.json()).catch(() => []);
+                if (!models.length) {
+                    modeloSelect.innerHTML = '<option value="">Nenhum modelo com ficha técnica</option>';
+                    return;
+                }
                 models.forEach(m => {
                     const opt = document.createElement('option');
                     opt.value = m.id;
@@ -1260,6 +1264,10 @@
                 versaoSelect.innerHTML = '<option value="">Selecione</option>';
                 if (!modeloSelect.value) return;
                 const trims = await fetch(`/api/trims?model_id=${modeloSelect.value}`).then(r => r.json()).catch(() => []);
+                if (!trims.length) {
+                    versaoSelect.innerHTML = '<option value="">Nenhuma versão com ficha técnica</option>';
+                    return;
+                }
                 trims.forEach(t => {
                     const opt = document.createElement('option');
                     opt.value = t.id;
@@ -1269,7 +1277,10 @@
             });
             
             document.getElementById('carregarFichaBtn').addEventListener('click', async () => {
-                if (!versaoSelect.value) return;
+                if (!versaoSelect.value) {
+                    alert('Selecione uma versão com ficha técnica disponível.');
+                    return;
+                }
                 const specs = await fetch(`/api/specs?trim_id=${versaoSelect.value}`)
                     .then(r => r.ok ? r.json() : null)
                     .catch(() => null);

@@ -11,7 +11,11 @@ module.exports = async function handler(req, res) {
   }
 
   const result = await db.query(
-    "SELECT id, name, year FROM trims WHERE model_id = $1 ORDER BY year ASC, name ASC",
+    `SELECT t.id, t.name, t.year
+     FROM trims t
+     JOIN specs s ON s.trim_id = t.id
+     WHERE t.model_id = $1
+     ORDER BY t.year ASC, t.name ASC`,
     [modelId]
   );
 
