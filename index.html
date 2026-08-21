@@ -240,6 +240,21 @@
             margin-top: 12px;
         }
 
+        .spec-section-title {
+            margin-top: 22px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+            color: var(--primary-light);
+            font-family: "Oswald", "Inter", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 13px;
+        }
+
+        .spec-section-title:first-child {
+            margin-top: 0;
+        }
+
         .ficha-empty {
             display: flex;
             flex-direction: column;
@@ -459,7 +474,7 @@
         </div>
         
         <div class="tab">
-            <button class="tablinks active" onclick="openTab(event, 'FichaTecnica')">Pesquisar Ficha</button>
+            <button class="tablinks active" onclick="openTab(event, 'FichaTecnica')">Fichas Técnicas</button>
             <button class="tablinks" onclick="openTab(event, 'Basico')">Básico</button>
             <button class="tablinks" onclick="openTab(event, 'Velocidade')">Velocidade Máxima</button>
             <button class="tablinks" onclick="openTab(event, 'Aceleracao')">Aceleração</button>
@@ -491,7 +506,7 @@
                 </div>
 
                 <div id="FichaTecnica" class="tabcontent active">
-                    <h3 class="section-title">Pesquisar Ficha Técnica</h3>
+                    <h3 class="section-title">Fichas Técnicas</h3>
                     <div class="helper">Escolha marca, modelo e versão acima e clique em Carregar Ficha para consultar os dados salvos — sem precisar mexer na calculadora.</div>
                     <div id="fichaTecnicaConteudo">
                         <div class="ficha-empty">
@@ -1435,32 +1450,96 @@
                 return;
             }
 
-            const cards = [
-                ['Código do motor', specs.engine_code],
-                ['Configuração', specs.engine_layout || specs.engine_installation || specs.cylinders],
-                ['Cilindrada', specs.engine_cc, ' cm³'],
-                ['Diâmetro x curso', specs.bore_mm && specs.stroke_mm ? `${fichaValue(specs.bore_mm)} x ${fichaValue(specs.stroke_mm)}` : null, ' mm'],
-                ['Biela', specs.rod_length_mm, ' mm'],
-                ['Válvulas/cilindro', specs.valves_per_cyl],
-                ['Taxa de compressão', specs.compression_ratio],
-                ['Alimentação', specs.fuel_system],
-                ['Potência', specs.power_cv, ' cv'],
-                ['RPM potência', specs.power_rpm, ' rpm'],
-                ['Torque', specs.torque_kgfm, ' kgfm'],
-                ['RPM torque', specs.torque_rpm, ' rpm'],
-                ['Peso', specs.weight_kg, ' kg'],
-                ['Velocidade máxima', specs.top_speed_kmh, ' km/h'],
-                ['0-100 km/h', specs.accel_0_100_s, ' s'],
-                ['Tração', specs.drivetrain],
-                ['Câmbio', specs.transmission_type],
-                ['Diferencial', specs.final_drive],
-                ['Entre-eixos', specs.wheelbase_mm, ' mm'],
-                ['Tanque', specs.fuel_tank_l, ' L']
+            const sections = [
+                ['Motor', [
+                    ['Código do motor', specs.engine_code],
+                    ['Configuração', specs.engine_layout || specs.engine_installation || specs.cylinders],
+                    ['Aspiração', specs.aspiration],
+                    ['Comando de válvulas', specs.valve_train],
+                    ['Acionamento do comando', specs.timing_drive],
+                    ['Cilindrada', specs.engine_cc, ' cm³'],
+                    ['Cilindrada unitária', specs.displacement_unit_cc, ' cm³'],
+                    ['Diâmetro x curso', specs.bore_mm && specs.stroke_mm ? `${fichaValue(specs.bore_mm)} x ${fichaValue(specs.stroke_mm)}` : null, ' mm'],
+                    ['Biela', specs.rod_length_mm, ' mm'],
+                    ['Relação biela/manivela', specs.rod_ratio],
+                    ['Válvulas/cilindro', specs.valves_per_cyl],
+                    ['Taxa de compressão', specs.compression_ratio],
+                    ['Alimentação', specs.fuel_system],
+                    ['Potência', specs.power_cv, ' cv'],
+                    ['RPM potência', specs.power_rpm, ' rpm'],
+                    ['Potência específica', specs.power_specific_cv_l, ' cv/L'],
+                    ['Torque', specs.torque_kgfm, ' kgfm'],
+                    ['RPM torque', specs.torque_rpm, ' rpm'],
+                    ['Torque específico', specs.torque_specific_kgfm_l, ' kgfm/L'],
+                    ['Peso/potência', specs.weight_power_ratio_kg_cv, ' kg/cv'],
+                    ['Peso/torque', specs.weight_torque_ratio_kg_kgfm, ' kg/kgfm']
+                ]],
+                ['Transmissão', [
+                    ['Tração', specs.drivetrain],
+                    ['Câmbio', specs.transmission_type],
+                    ['Embreagem', specs.clutch],
+                    ['Relações de marcha', specs.gear_ratios],
+                    ['Diferencial', specs.final_drive]
+                ]],
+                ['Suspensão, freios e direção', [
+                    ['Suspensão dianteira', specs.front_suspension],
+                    ['Suspensão traseira', specs.rear_suspension],
+                    ['Elemento elástico dianteiro', specs.front_spring],
+                    ['Elemento elástico traseiro', specs.rear_spring],
+                    ['Freios dianteiros', specs.front_brakes],
+                    ['Freios traseiros', specs.rear_brakes],
+                    ['Direção', specs.steering_assist],
+                    ['Diâmetro de giro', specs.turning_diameter_m, ' m']
+                ]],
+                ['Pneus', [
+                    ['Pneu dianteiro', specs.front_tire],
+                    ['Pneu traseiro', specs.rear_tire],
+                    ['Estepe', specs.spare_tire],
+                    ['Altura do flanco', specs.sidewall_height_mm, ' mm']
+                ]],
+                ['Dimensões e peso', [
+                    ['Peso', specs.weight_kg, ' kg'],
+                    ['Comprimento', specs.length_mm, ' mm'],
+                    ['Largura', specs.width_mm, ' mm'],
+                    ['Altura', specs.height_mm, ' mm'],
+                    ['Entre-eixos', specs.wheelbase_mm, ' mm'],
+                    ['Bitola dianteira', specs.front_track_mm, ' mm'],
+                    ['Bitola traseira', specs.rear_track_mm, ' mm'],
+                    ['Altura mínima do solo', specs.ground_clearance_mm, ' mm'],
+                    ['Porta-malas', specs.trunk_l, ' L'],
+                    ['Tanque', specs.fuel_tank_l, ' L'],
+                    ['Carga útil', specs.payload_kg, ' kg'],
+                    ['Reboque sem freio', specs.tow_no_brake_kg, ' kg'],
+                    ['Reboque com freio', specs.tow_with_brake_kg, ' kg']
+                ]],
+                ['Aerodinâmica', [
+                    ['Coeficiente de arrasto (Cx)', specs.cd_cx],
+                    ['Área frontal', specs.frontal_area_m2, ' m²'],
+                    ['Área frontal corrigida', specs.frontal_area_corrected_m2, ' m²']
+                ]],
+                ['Desempenho', [
+                    ['Velocidade máxima', specs.top_speed_kmh, ' km/h'],
+                    ['0-100 km/h', specs.accel_0_100_s, ' s'],
+                    ['40-100 km/h', specs.accel_40_100_s, ' s'],
+                    ['Aceleração lateral', specs.lateral_accel_g, ' g']
+                ]],
+                ['Consumo e autonomia', [
+                    ['Consumo urbano', specs.city_km_l, ' km/L'],
+                    ['Consumo rodoviário', specs.highway_km_l, ' km/L'],
+                    ['Autonomia urbana', specs.city_range_km, ' km'],
+                    ['Autonomia rodoviária', specs.highway_range_km, ' km']
+                ]]
             ];
 
-            const html = cards.map(([label, value, suffix]) => specCard(label, value, suffix || '')).join('');
+            const sectionsHtml = sections
+                .filter(([, fields]) => fields.some(([, value]) => value !== null && value !== undefined && value !== ''))
+                .map(([title, fields]) => {
+                    const cardsHtml = fields.map(([label, value, suffix]) => specCard(label, value, suffix || '')).join('');
+                    return `<h4 class="spec-section-title">${escapeHtml(title)}</h4><div class="spec-grid">${cardsHtml}</div>`;
+                })
+                .join('');
             const notes = specs.notes ? `<div class="spec-notes">${escapeHtml(specs.notes)}</div>` : '';
-            target.innerHTML = `<div class="spec-grid">${html}</div>${notes}`;
+            target.innerHTML = `${sectionsHtml}${notes}`;
         }
 
         function simularArrancada() {
