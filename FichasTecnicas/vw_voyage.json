@@ -24,7 +24,8 @@
         "motortudo.com (Voyage GL 1.8 1990, histórico)",
         "en.wikipedia.org/wiki/Volkswagen_Voyage"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx_aprox": 0.42
     },
     {
       "codigo_motor": "MD-270 1.6 ('Torque')",
@@ -46,7 +47,8 @@
       "_fontes": [
         "pt.wikipedia.org/wiki/Volkswagen_Parati"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx_aprox": 0.42
     },
     {
       "codigo_motor": "AP 1.6",
@@ -70,7 +72,8 @@
       "_fontes": [
         "lucianopreparacao.blogspot.com (Ficha técnica Motor AP - tabela completa de potências)"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx_aprox": 0.42
     },
     {
       "codigo_motor": "AE-1600 (CHT Ford, 'Alta Economia')",
@@ -90,7 +93,8 @@
         "pt.wikipedia.org/wiki/Volkswagen_Parati",
         "referência cruzada com ford_escort.json"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx_aprox": 0.42
     },
     {
       "codigo_motor": "AP 1.8",
@@ -127,7 +131,8 @@
         "lucianopreparacao.blogspot.com (tabela AP)",
         "pt.wikipedia.org/wiki/Volkswagen_Parati"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx_aprox": 0.42
     }
   ],
   "_pendente_proxima_rodada": [

@@ -25,3 +25,6 @@ dist-ssr
 .env
 .claude/
 data/cache/
+
+# Scans/PDFs de fontes de terceiros (direitos autorais) - não redistribuir
+FichasTecnicas/*.pdf

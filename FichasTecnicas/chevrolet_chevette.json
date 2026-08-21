@@ -13,7 +13,7 @@
       "aplicacao": "Chevette, Marajó, Chevy 500",
       "configuracao": "4 cilindros em linha, longitudinal, dianteiro, SOHC (comando no cabeçote acionado por correia dentada - pioneiro no Brasil), cabeçote de fluxo cruzado (crossflow), cabeçote de ferro fundido, tuchos mecânicos, 5 mancais",
       "cilindrada_cm3": 1398,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 66.2,
       "comprimento_biela_mm": 122,
       "relacao_biela_manivela_r_l": 0.271,
@@ -37,7 +37,13 @@
       "tanque_litros": 45,
       "coeficiente_aerodinamico_cx_aprox": 0.43,
       "observacoes": "Cx aproximado de 0.43 citado em fonte jornalística especializada (não medição de túnel de vento documentada). Primeiro motor nacional com correia dentada acionando o comando de válvulas. Motor foi 'castrado' de fábrica (baixa taxa/potência) por estratégia de economia de combustível da época. Dados de r/l e comprimento de biela confirmados por fonte técnica GM (comentário de leitor com acesso a informação técnica interna, corroborado por ex-engenheiro de desenvolvimento do motor). Peso/dimensões de referência: Chevette SL 1.4 sedan 2 portas 1979 (875kg em ordem de marcha) - pode variar para hatch/perua Marajó/pickup Chevy 500.",
-      "_fontes": ["autoentusiastasclassic.com.br (artigo + comentários técnicos)", "site.retroauto.com.br", "chevetteiroscuritiba.com.br", "jkcarros.com.br (Chevette SL 1.4 1979)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (artigo + comentários técnicos)",
+        "site.retroauto.com.br",
+        "chevetteiroscuritiba.com.br",
+        "jkcarros.com.br (Chevette SL 1.4 1979)"
+      ],
+      "coeficiente_aerodinamico_cx": 0.45
     },
     {
       "codigo_motor": "1.6",
@@ -46,10 +52,10 @@
       "aplicacao": "Chevette, Marajó, Chevy 500, SR/SL/E",
       "configuracao": "4 cilindros em linha, longitudinal, dianteiro, SOHC, cabeçote de ferro fundido, tuchos mecânicos, 5 mancais",
       "cilindrada_cm3": 1599,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 75.7,
       "comprimento_biela_mm": 122,
-      "relacao_biela_manivela_r_l": 0.310,
+      "relacao_biela_manivela_r_l": 0.31,
       "distancia_entre_centros_cilindros_mm": 93,
       "taxa_compressao": "7.8:1 (gasolina)",
       "alimentacao": "Carburador de corpo duplo (1980-83) / corpo simples de fluxo descendente (1984-87)",
@@ -62,7 +68,11 @@
       "peso_kg_aprox": 890,
       "coeficiente_aerodinamico_cx_aprox": 0.43,
       "observacoes": "Peso/Cx aproximados por semelhança à versão 1.4 desta mesma ficha (mesma carroceria Chevette, motor 1.6 ligeiramente mais pesado). Mesmo comprimento de biela do 1.4 (122mm) - apenas o curso do virabrequim muda. Curioso: mesmo com curso maior, r/l do 1.6 (0.310) é menor que o do Corsa 1.6 (Família I), devido ao curso proporcionalmente pequeno do motor Chevette.",
-      "_fontes": ["autoentusiastasclassic.com.br", "site.retroauto.com.br"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br",
+        "site.retroauto.com.br"
+      ],
+      "coeficiente_aerodinamico_cx": 0.45
     },
     {
       "codigo_motor": "1.6/S",
@@ -71,10 +81,10 @@
       "aplicacao": "Chevette, Chevy 500 (versões finais)",
       "configuracao": "4 cilindros em linha, longitudinal, dianteiro, SOHC, mesmo bloco/curso do 1.6 anterior",
       "cilindrada_cm3": 1599,
-      "diametro_cilindro_mm": 82.0,
+      "diametro_cilindro_mm": 82,
       "curso_pistao_mm": 75.7,
       "comprimento_biela_mm": 122,
-      "relacao_biela_manivela_r_l": 0.310,
+      "relacao_biela_manivela_r_l": 0.31,
       "taxa_compressao": "Superior ao 1.6 comum (valor exato não publicado em ficha técnica oficial, segundo fonte técnica GM)",
       "alimentacao": "Carburador Weber de corpo duplo, novo coletor de admissão",
       "combustivel": "Gasolina ou Álcool",
@@ -86,7 +96,11 @@
       "peso_kg_aprox": 890,
       "coeficiente_aerodinamico_cx_aprox": 0.43,
       "observacoes": "Peso/Cx aproximados por semelhança à versão 1.4 desta mesma ficha (mesma carroceria Chevette). Revisão completa do 1.6: pistões e anéis 'light weight & low friction', dutos de lubrificação redimensionados (resolvia falta de óleo no mancal mais distante, ponto fraco do motor em competição), pistões com domo (diferente do flat do 1.6 anterior) para elevar taxa de compressão mantendo mesma altura de compressão.",
-      "_fontes": ["autoentusiastasclassic.com.br (comentário técnico de ex-engenheiro GM)", "fichacompleta.com.br (Chevette SL 1.6 1989)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (comentário técnico de ex-engenheiro GM)",
+        "fichacompleta.com.br (Chevette SL 1.6 1989)"
+      ],
+      "coeficiente_aerodinamico_cx": 0.45
     },
     {
       "codigo_motor": "1.0 (Chevette Júnior)",
@@ -99,7 +113,10 @@
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "observacoes": "Motor 'downsized' às pressas para aproveitar incentivo fiscal do programa de carro popular, criado como resposta emergencial antes do lançamento do Corsa (1994). Desempenho fraco segundo o próprio engenheiro responsável (fonte primária GM). Dimensões de furo/curso não encontradas.",
-      "_fontes": ["autoentusiastasclassic.com.br (relato de engenheiro GM 1986-2011)"]
+      "_fontes": [
+        "autoentusiastasclassic.com.br (relato de engenheiro GM 1986-2011)"
+      ],
+      "coeficiente_aerodinamico_cx": 0.45
     }
   ],
   "_pendente_proxima_rodada": [

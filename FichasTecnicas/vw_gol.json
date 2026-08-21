@@ -24,7 +24,8 @@
       "_fontes": [
         "referência cruzada com ficha VW Fusca (mesmo motor)"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx": 0.45
     },
     {
       "codigo_motor": "AE-1000 (CHT, origem Ford/Renault)",
@@ -46,7 +47,8 @@
         "pecamentor.com.br (Gol 97: Detalhes, Motores e Consumo)",
         "en.wikipedia.org/wiki/Ford_CHT_engine (referência cruzada)"
       ],
-      "tracao": "Dianteira"
+      "tracao": "Dianteira",
+      "coeficiente_aerodinamico_cx": 0.45
     },
     {
       "codigo_motor": "AP 1.6 8V (EA-827)",

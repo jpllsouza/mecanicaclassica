@@ -18,7 +18,10 @@
       "combustivel": "Gasolina ou Álcool",
       "peso_kg_aprox": 950,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Parati, fase inicial). Mesmo motor de lançamento do Voyage (ver vw_voyage.json).",
-      "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Volkswagen_Parati"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     },
     {
       "codigo_motor": "MD-270 1.6 ('Torque')",
@@ -36,7 +39,11 @@
       "cambio": "4 marchas tipo '3+E' com efeito overdrive",
       "peso_kg_aprox": 950,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Parati). Motor mais potente fabricado pela VW do Brasil até então (1983) - mesmo motor do Passat da época. Foi crucial para a Parati virar sucesso de vendas (7º mais vendido em 1984).",
-      "_fontes": ["pt.wikipedia.org/wiki/Volkswagen_Parati", "wiki.nivel-teorico.com"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Volkswagen_Parati",
+        "wiki.nivel-teorico.com"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     },
     {
       "codigo_motor": "AP 1.6 (substitui o MD-270)",
@@ -44,7 +51,7 @@
       "aplicacao": "Parati LS, S, Plus",
       "configuracao": "4 cilindros em linha, mesmo bloco AP documentado em vw_gol.json",
       "cilindrada_cm3": 1596,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 77.4,
       "comprimento_biela_mm": 144,
       "relacao_biela_manivela_r_l": 0.268,
@@ -65,7 +72,11 @@
       "consumo_cidade_km_l": 7.7,
       "consumo_estrada_km_l": 11,
       "observacoes": "ACHADO ÚTIL: fonte descreve explicitamente que o AP 1.6 'recebe bielas maiores, pistões de maior diâmetro e virabrequim com menor curso' em relação ao MD-270 que substituiu - confirma a mudança de arquitetura completa (não é apenas atualização do motor antigo). Câmbio ganhou 2ª e 4ª mais longas.",
-      "_fontes": ["motortudo.com (Parati LS 1986 AP 1.6)", "referência cruzada vw_gol.json"]
+      "_fontes": [
+        "motortudo.com (Parati LS 1986 AP 1.6)",
+        "referência cruzada vw_gol.json"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     },
     {
       "codigo_motor": "AE-1600 (CHT Ford, AutoLatina)",
@@ -73,14 +84,17 @@
       "aplicacao": "Parati CL (versão de entrada)",
       "configuracao": "4 cilindros em linha, comando no bloco (OHV) - motor de origem Ford CHT",
       "cilindrada_cm3": 1555,
-      "diametro_cilindro_mm": 77.0,
+      "diametro_cilindro_mm": 77,
       "curso_pistao_mm": 83.5,
       "comprimento_biela_mm": null,
       "relacao_biela_manivela_r_l": null,
       "potencia_maxima_cv": 75,
       "peso_kg_aprox": 950,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (mesma carroceria Parati). Fruto da AutoLatina - mesmo motor do Ford Escort/Corcel/Del Rey (ver ford_escort.json). Substituído já em 1993 pelo AP 1.6 novamente.",
-      "_fontes": ["encontracarros.com.br (Volkswagen Parati - o que você precisa saber)"]
+      "_fontes": [
+        "encontracarros.com.br (Volkswagen Parati - o que você precisa saber)"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     },
     {
       "codigo_motor": "AP 1.6 (injetado, retorno em 1993)",
@@ -88,7 +102,7 @@
       "aplicacao": "Parati CL",
       "configuracao": "4 cilindros em linha, mesmo bloco AP",
       "cilindrada_cm3": 1596,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 77.4,
       "comprimento_biela_mm": 144,
       "relacao_biela_manivela_r_l": 0.268,
@@ -98,7 +112,10 @@
       "potencia_maxima_cv_alcool": 90,
       "peso_kg_aprox": 960,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 carburada desta mesma ficha (mesma carroceria Parati). Retorno do AP 1.6 (agora injetado) no lugar do AE-1600, encerrando de vez o uso do motor CHT/Ford na Parati.",
-      "_fontes": ["encontracarros.com.br"]
+      "_fontes": [
+        "encontracarros.com.br"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     },
     {
       "codigo_motor": "AP 1.8",
@@ -106,10 +123,10 @@
       "aplicacao": "Parati GL, GLS",
       "configuracao": "4 cilindros em linha, mesmo bloco AP",
       "cilindrada_cm3": 1781,
-      "diametro_cilindro_mm": 81.0,
+      "diametro_cilindro_mm": 81,
       "curso_pistao_mm": 86.4,
       "comprimento_biela_mm": 144,
-      "relacao_biela_manivela_r_l": 0.300,
+      "relacao_biela_manivela_r_l": 0.3,
       "alimentacao": "Carburador (fase inicial) / Injeção eletrônica (fase posterior)",
       "combustivel": "Gasolina ou Álcool",
       "potencia_maxima_cv_gasolina_padrao": 90,
@@ -118,7 +135,11 @@
       "potencia_maxima_cv_alcool_S_real": 106,
       "peso_kg_aprox": 985,
       "observacoes": "Peso aproximado por semelhança à versão AP 1.6 desta mesma ficha (motor 1.8 é ligeiramente mais pesado). Versão 'S' (Gol GT/GTS) tinha potência declarada de 99cv mas real de 106cv - a VW 'escondeu' a diferença para evitar alíquota de imposto maior sobre veículos com mais de 100cv (mesma prática relatada em outros modelos da época).",
-      "_fontes": ["autopapo.com.br (Motor AP: 7 curiosidades)", "encontracarros.com.br"]
+      "_fontes": [
+        "autopapo.com.br (Motor AP: 7 curiosidades)",
+        "encontracarros.com.br"
+      ],
+      "coeficiente_aerodinamico_cx_aprox": 0.45
     }
   ],
   "_pendente_proxima_rodada": [

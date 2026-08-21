@@ -7,7 +7,14 @@
   "motorizacoes": [
     {
       "codigo_motor": "'Chevrolet Brasil' 261 (4300cc, Série 10 antiga)",
-      "_targets": [{ "modelo": "Série 10" }, { "modelo": "Veraneio" }],
+      "_targets": [
+        {
+          "modelo": "Série 10"
+        },
+        {
+          "modelo": "Veraneio"
+        }
+      ],
       "periodo_producao": "1964-1981",
       "aplicacao": "Picape C-10/C-14, Veraneio (Série 10, fase antiga)",
       "configuracao": "6 cilindros em linha, comando no bloco (OHV), 5 mancais - primeiro motor fabricado pela GM do Brasil",
@@ -19,43 +26,67 @@
       "relacao_biela_manivela_r_l": null,
       "combustivel": "Gasolina",
       "observacoes": "Mesmo motor usado no caminhão 'Chevrolet Brasil' de mesmo nome. Substituído em 1981 pelo 250 (4.1, mesmo do Opala).",
-      "_fontes": ["picapesgm.com.br (ficha técnica Série 10)"]
+      "_fontes": [
+        "picapesgm.com.br (ficha técnica Série 10)"
+      ]
     },
     {
       "codigo_motor": "250 (4100, 6 cilindros) - gasolina/álcool",
-      "_targets": [{ "modelo": "Série 10" }],
+      "_targets": [
+        {
+          "modelo": "Série 10"
+        }
+      ],
       "periodo_producao": "1981-1994 (Série 10 tardia e Série 20)",
       "aplicacao": "D-20/C-20/A-20, Veraneio, Bonanza",
       "configuracao": "6 cilindros em linha, comando no bloco (OHV) - MESMO motor documentado em chevrolet_opala.json (ver esse arquivo para furo/curso/potência detalhados)",
       "cilindrada_cm3": 4093,
       "diametro_cilindro_mm": 98.43,
-      "curso_pistao_mm": 89.70,
-      "comprimento_biela_mm": null,
+      "curso_pistao_mm": 89.7,
+      "comprimento_biela_mm": 152.4,
       "relacao_biela_manivela_r_l": null,
       "combustivel": "Gasolina ou Álcool",
       "observacoes": "Motor com baixa potência específica mas torque elevado em baixas rotações e reconhecida durabilidade - características valorizadas em uso de trabalho pesado. Substituiu o antigo 4300 em 1981. Câmbio de 4 marchas.",
-      "_fontes": ["cars sport blogspot (Chevrolet D20)", "leocarssport.blogspot.com", "referência cruzada chevrolet_opala.json"]
+      "_fontes": [
+        "cars sport blogspot (Chevrolet D20)",
+        "leocarssport.blogspot.com",
+        "referência cruzada chevrolet_opala.json"
+      ]
     },
     {
       "codigo_motor": "4.1 Powertech (injetado, derivado do Omega/Lotus)",
-      "_targets": [{ "modelo": "C-20" }, { "modelo": "A-20" }],
+      "_targets": [
+        {
+          "modelo": "C-20"
+        },
+        {
+          "modelo": "A-20"
+        }
+      ],
       "periodo_producao": "1994-1997",
       "aplicacao": "C-20 (versão gasolina final)",
       "configuracao": "6 cilindros em linha, comando no bloco (OHV), preparado pela Lotus (Inglaterra) para o Omega",
       "cilindrada_cm3": 4093,
       "diametro_cilindro_mm": 98.43,
-      "curso_pistao_mm": 89.70,
-      "comprimento_biela_mm": null,
+      "curso_pistao_mm": 89.7,
+      "comprimento_biela_mm": 152.4,
       "relacao_biela_manivela_r_l": null,
       "alimentacao": "Injeção eletrônica sequencial multiponto Bosch Motronic",
       "combustivel": "Gasolina",
       "potencia_maxima_cv": 138,
       "observacoes": "Evolução tardia e mais moderna do clássico motor 250/4.1, com bloco/furo/curso idênticos mas cabeçote e gerenciamento eletrônico do Omega - trouxe torque em baixa rotação, menor consumo e menor emissão. A versão A-20 (álcool) foi descontinuada em 1995 por baixa demanda, ficando só essa versão a gasolina no fim da produção.",
-      "_fontes": ["pt.wikipedia.org/wiki/Chevrolet_Série_20", "cars sport blogspot"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Chevrolet_Série_20",
+        "cars sport blogspot"
+      ]
     },
     {
       "codigo_motor": "Perkins Q20B4 (diesel)",
-      "_targets": [{ "modelo": "D-20" }],
+      "_targets": [
+        {
+          "modelo": "D-20"
+        }
+      ],
       "periodo_producao": "1985-1990/91",
       "aplicacao": "D-20 (versão diesel, lançamento da Série 20)",
       "configuracao": "4 cilindros em linha, diesel, aspiração natural",
@@ -77,11 +108,19 @@
       "entre_eixos_mm": 3235,
       "tanque_litros": 76,
       "observacoes": "Motor diesel dominava as vendas da linha (70% das vendas eram diesel, segundo dados de época), apesar do maior preço inicial - vantagem de custo aparecia a partir de ~9.000km/mês rodados. Peso/dimensões de referência: D-20 CD Custom De Luxe Diesel (cabine dupla) 1989 (~1.800kg em ordem de marcha) - varia bastante por carroceria (cabine simples vs dupla, picape vs Veraneio).",
-      "_fontes": ["portalsaofrancisco.com.br (Chevrolet D-20)", "picapesgm.com.br", "jkcarros.com.br (D-20 CD Custom De Luxe Diesel 1989)"]
+      "_fontes": [
+        "portalsaofrancisco.com.br (Chevrolet D-20)",
+        "picapesgm.com.br",
+        "jkcarros.com.br (D-20 CD Custom De Luxe Diesel 1989)"
+      ]
     },
     {
       "codigo_motor": "Iochpe-Maxion S4 (diesel, aspirado)",
-      "_targets": [{ "modelo": "D-20" }],
+      "_targets": [
+        {
+          "modelo": "D-20"
+        }
+      ],
       "periodo_producao": "1990/92-1997",
       "aplicacao": "D-20",
       "configuracao": "4 cilindros em linha, diesel, aspiração natural - evolução do Perkins Q20B4 após aquisição pela Iochpe-Maxion (fim de 1991)",
@@ -94,11 +133,17 @@
       "potencia_maxima_cv": 90,
       "torque_maximo_kgfm": 27,
       "observacoes": "Peso reduzido e funcionamento mais suave que o Perkins original, mesmo com deslocamento praticamente igual.",
-      "_fontes": ["pt.wikipedia.org/wiki/Chevrolet_Série_20"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Chevrolet_Série_20"
+      ]
     },
     {
       "codigo_motor": "Iochpe-Maxion S4T (diesel turbo)",
-      "_targets": [{ "modelo": "D-20" }],
+      "_targets": [
+        {
+          "modelo": "D-20"
+        }
+      ],
       "periodo_producao": "1992-1994",
       "aplicacao": "D-20 (opcional turbo)",
       "configuracao": "4 cilindros em linha, diesel, turbocompressor",
@@ -110,11 +155,17 @@
       "combustivel": "Diesel",
       "potencia_maxima_cv": 125,
       "observacoes": "Lançado para concorrer com o Ford F-1000 Turbo. Base do S4T-Plus posterior.",
-      "_fontes": ["pt.wikipedia.org/wiki/Chevrolet_Série_20"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Chevrolet_Série_20"
+      ]
     },
     {
       "codigo_motor": "Iochpe-Maxion S4T-Plus (diesel turbo, Euro-II)",
-      "_targets": [{ "modelo": "D-20" }],
+      "_targets": [
+        {
+          "modelo": "D-20"
+        }
+      ],
       "periodo_producao": "1994-1997",
       "aplicacao": "D-20 (topo diesel, fase final)",
       "configuracao": "4 cilindros em linha, diesel, turbocompressor com waste gate",
@@ -126,7 +177,9 @@
       "combustivel": "Diesel",
       "potencia_maxima_cv": 150,
       "observacoes": "Reformulado com novos bicos injetores, cabeçote e turbo valvulado, visando norma de emissões Euro-II (motivado por exportações ao mercado europeu). Freios ABS traseiro nesta fase final.",
-      "_fontes": ["pt.wikipedia.org/wiki/Chevrolet_Série_20"]
+      "_fontes": [
+        "pt.wikipedia.org/wiki/Chevrolet_Série_20"
+      ]
     }
   ],
   "_pendente_proxima_rodada": [

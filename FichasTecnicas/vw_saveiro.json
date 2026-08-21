@@ -1,0 +1,50 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Volkswagen",
+  "modelo": "Saveiro",
+  "producao_brasil": "1982-1994 (recorte deste projeto: geração 'quadrada', derivada do Gol quadrado)",
+  "_nota": "Picape derivada da plataforma do Gol quadrado (motor dianteiro transversal, tração dianteira, refrigerado a água) - mesma família de motores AP/CHT documentada em vw_gol.json.",
+  "motorizacoes": [
+    {
+      "codigo_motor": "AP 1.6 8V (EA-827)",
+      "periodo_producao": "1982-1994",
+      "aplicacao": "Saveiro (versão principal da geração quadrada)",
+      "configuracao": "4 cilindros em linha, dianteiro transversal, comando no cabeçote (OHC), 8 válvulas - mesmo motor documentado em vw_gol.json",
+      "cilindrada_cm3": 1596,
+      "diametro_cilindro_mm": 81.0,
+      "curso_pistao_mm": 77.4,
+      "combustivel": "Gasolina ou Álcool",
+      "coeficiente_aerodinamico_cx_aprox": 0.47,
+      "tracao": "Dianteira",
+      "valvulas_por_cilindro": 2,
+      "observacoes": "Motor idêntico ao AP 1.6 do Gol quadrado (mesmo bloco/furo/curso). Cx estimado por tipo de carroceria (picape com caçamba aberta tende a ter arrasto maior que o hatch/sedã da mesma plataforma, por turbulência atrás da cabine) - não é medição de túnel de vento, tratar como estimativa. Potência, torque, peso e dimensões específicos da Saveiro não pesquisados nesta rodada.",
+      "_fontes": [
+        "referência cruzada vw_gol.json (mesmo motor)"
+      ]
+    },
+    {
+      "codigo_motor": "AP 1.8 8V (EA-827)",
+      "periodo_producao": "1984-1994",
+      "aplicacao": "Saveiro (versão de maior cilindrada)",
+      "configuracao": "4 cilindros em linha, dianteiro transversal, comando no cabeçote (OHC), 8 válvulas - mesmo motor documentado em vw_gol.json",
+      "cilindrada_cm3": 1781,
+      "diametro_cilindro_mm": 81.0,
+      "curso_pistao_mm": 86.4,
+      "combustivel": "Gasolina ou Álcool",
+      "coeficiente_aerodinamico_cx_aprox": 0.47,
+      "tracao": "Dianteira",
+      "valvulas_por_cilindro": 2,
+      "observacoes": "Motor idêntico ao AP 1.8 do Gol quadrado (mesmo bloco/furo/curso). Mesma ressalva de Cx estimado da versão 1.6 desta ficha. Potência, torque, peso e dimensões específicos não pesquisados nesta rodada.",
+      "_fontes": [
+        "referência cruzada vw_gol.json (mesmo motor)"
+      ]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Potência/torque específicos de cada motorização da Saveiro",
+    "Peso, dimensões (comprimento/largura/altura/entre-eixos), capacidade de carga",
+    "Confirmar se a versão CHT 1.6/1.0 (AE-1000) também equipou a Saveiro quadrada",
+    "Cx real (medição), se existir - o valor atual é estimativa por tipo de carroceria",
+    "Gerações posteriores (Saveiro G2/G3/G4/G5, motor 1.6 EA111, 1.6/1.8/2.0 Total Flex etc.) fora do escopo desta rodada"
+  ]
+}

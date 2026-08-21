@@ -1,0 +1,34 @@
+{
+  "_schema_versao": "1.0",
+  "fabricante": "Volkswagen",
+  "modelo": "Marajó",
+  "producao_brasil": "1980-1983",
+  "_nota": "3 portas, carroceria fastback/hatch sobre a mesma plataforma mecânica da Brasília (motor traseiro boxer refrigerado a ar). Produção curta e baixo volume - um dos VW nacionais mais raros da época.",
+  "motorizacoes": [
+    {
+      "codigo_motor": "1600 (carburador simples)",
+      "periodo_producao": "1980-1983",
+      "aplicacao": "Marajó (única motorização oferecida)",
+      "configuracao": "4 cilindros boxer, refrigerado a ar, traseiro - mesmo motor documentado em vw_brasilia.json e vw_fusca.json",
+      "cilindrada_cm3": 1584,
+      "diametro_cilindro_mm": 85.5,
+      "curso_pistao_mm": 69.0,
+      "comprimento_biela_mm": 137.06,
+      "relacao_biela_manivela_r_l": 0.2517,
+      "combustivel": "Gasolina ou Álcool",
+      "coeficiente_aerodinamico_cx_aprox": 0.42,
+      "tracao": "Traseira",
+      "valvulas_por_cilindro": 2,
+      "observacoes": "Bloco/furo/curso/biela idênticos à ficha do Brasília 1600 (mesmo motor, mesma plataforma). Cx estimado por semelhança de forma (carroceria fastback com traseira mais inclinada que o Brasília/Fusca, tipicamente mais aerodinâmica que um notchback quadrado, mas sem medição de túnel de vento documentada - tratar como estimativa, não fonte confirmada). Potência, torque, peso e dimensões específicas do Marajó não pesquisados nesta rodada; reutilizar os do Brasília 1600 seria uma aproximação razoável mas não foi feito para não misturar dado de veículo diferente sem nota clara.",
+      "_fontes": [
+        "referência cruzada vw_brasilia.json (mesmo motor)"
+      ]
+    }
+  ],
+  "_pendente_proxima_rodada": [
+    "Potência/torque específicos do Marajó (não confirmado se idêntico ao Brasília 1600)",
+    "Peso, dimensões, velocidade máxima - não pesquisados",
+    "Confirmar se houve versão com carburador duplo (mais potente) como no Brasília",
+    "Cx real (medição), se existir - o valor atual é estimativa por semelhança de carroceria"
+  ]
+}
